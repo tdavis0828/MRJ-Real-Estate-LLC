@@ -1,5 +1,61 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
+// Styles for the nav bar
+export const StyledNav = styled.nav`
+  height: 100vh;
+  width: 300px;
+  background: #f5f5f5;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  transform: translateX(300px);
+  transition: transform 0.35s ease;
+  &.open {
+    transform: translateX(0);
+    transition: transform 0.35s ease;
+  }
+  & .close-icon {
+    & img {
+      margin: 1.5rem;
+      height: 25px;
+      width: 25px;
+      cursor: pointer;
+    }
+  }
+  & .nav-links {
+    height: 75%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #f05454;
+    & a {
+      text-decoration: none;
+      color: #f05454;
+      font-size: 1.25rem;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  & .nav-info {
+    width: 90%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #f05454;
+    & p {
+      margin: 0;
+      font-size: 1.15rem;
+      font-weight: 500;
+    }
+  }
+`;
 // Styles for the main hero UI
 export const StyledHero = styled.main`
   height: 100vh;
@@ -8,7 +64,7 @@ export const StyledHero = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8');
+  background-image: url("https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8");
   background-postion: center;
   background-repeat: no-repeat;
   background-size: 100% 110%;
@@ -18,7 +74,7 @@ export const StyledHero = styled.main`
     transition: all 0.35s ease;
   }
   & .logo {
-    position: fixed;
+    position: absolute;
     top: -45px;
     left: 0;
     margin: 1rem;
@@ -40,7 +96,7 @@ export const StyledHero = styled.main`
       padding: 1rem 2rem;
       border: none;
       border-radius: 5px;
-      font-family: 'Quicksand', sans-serif;
+      font-family: "Quicksand", sans-serif;
       font-size: 1.25rem;
       font-weight: 500;
       cursor: pointer;
@@ -71,13 +127,13 @@ export const StyledHero = styled.main`
     position: fixed;
     bottom: 0;
     left: 0;
-    margin: 2rem;
+    margin: 1rem;
     & a {
       color: #fff;
       margin: 1rem;
       & img {
-        height: 50px;
-        width: 50px;
+        height: 30px;
+        width: 30px;
       }
     }
   }
@@ -151,7 +207,7 @@ export const StyledReviews = styled.section`
   & .reviews-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    height: 60%;
+    height: 80%;
   }
   & .review {
     background: #fff;
@@ -230,7 +286,7 @@ export const StyledContact = styled.section`
       }
     }
     &.contact-text {
-      background: url('https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8');
+      background: url("https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -248,6 +304,7 @@ export const StyledFooter = styled.footer`
   height: 10vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 1.1rem;

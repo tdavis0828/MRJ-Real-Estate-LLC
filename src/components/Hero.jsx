@@ -1,19 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import { StyledHero } from '../styles/Stylesheet';
-import logoLight from '../images/logo-light.png';
-import logoDark from '../images/logo-dark.png';
-import menuIconLight from '../images/hamburger-light.png';
-import menuIconDark from '../images/hamburger-dark.png';
-import phoneLight from '../images/phone-light.png';
-import phoneDark from '../images/phone-dark.png';
-import cellphoneLight from '../images/smartphone-light.png';
-import cellphoneDark from '../images/smartphone-dark.png';
-import emailLight from '../images/email-light.png';
-import emailDark from '../images/email-dark.png';
-import houseLight from '../images/home-light.png';
-import houseDark from '../images/home-dark.png';
+import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { StyledHero } from "../styles/Stylesheet";
+import logoLight from "../images/logo-light.png";
+import logoDark from "../images/logo-dark.png";
+import menuIconLight from "../images/hamburger-light.png";
+import menuIconDark from "../images/hamburger-dark.png";
+import phoneLight from "../images/phone-light.png";
+import phoneDark from "../images/phone-dark.png";
+import cellphoneLight from "../images/smartphone-light.png";
+import cellphoneDark from "../images/smartphone-dark.png";
+import emailLight from "../images/email-light.png";
+import emailDark from "../images/email-dark.png";
+import houseLight from "../images/home-light.png";
+import houseDark from "../images/home-dark.png";
+import { setIsOpen } from "../store/NavbarSlice";
 
 const Hero = () => {
+  const dispatch = useDispatch();
+  const isOpen = useSelector((state) => state.navbar);
   const [scrollPostion, setScrollPostion] = useState();
 
   function getPostion() {
@@ -21,8 +25,13 @@ const Hero = () => {
     console.log(scrollPostion);
   }
 
+  function handleClick() {
+    dispatch(setIsOpen(true));
+    console.log(isOpen);
+  }
+
   useEffect(() => {
-    window.addEventListener('scroll', getPostion, { passive: true });
+    window.addEventListener("scroll", getPostion, { passive: true });
   });
 
   return (
@@ -40,7 +49,7 @@ const Hero = () => {
       </div>
 
       <div className="menu-icon">
-        <button type="button" className="navbar-btn">
+        <button type="button" className="navbar-btn" onClick={handleClick}>
           <img
             src={scrollPostion > 850 ? menuIconDark : menuIconLight}
             alt="hamburger menu"
