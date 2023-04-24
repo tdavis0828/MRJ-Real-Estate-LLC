@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyledReviews } from '../styles/Stylesheet';
-import stars from '../images/stars.png';
+// import stars from '../images/stars.png';
 
 const Reviews = () => {
   return (
-    <StyledReviews>
-      <h1>A few words from previous clients</h1>
+    <StyledReviews id="reviews">
+      <h1>Testimonial Compliments</h1>
       <div className="reviews-container">
         <div className="review">
           <p className="author">Brenda Martinez</p>
