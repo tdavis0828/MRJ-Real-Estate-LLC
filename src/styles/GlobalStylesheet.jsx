@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
     body {
@@ -11,7 +11,6 @@ const GlobalStyles = createGlobalStyle`
     }
     * {
       scroll-behavior: smooth;
-      color: #fff;
     }
     /* width */
 ::-webkit-scrollbar {
@@ -20,7 +19,7 @@ const GlobalStyles = createGlobalStyle`
 
 /* Track */
 ::-webkit-scrollbar-track {
-  ${'' /* box-shadow: inset 0 0 5px #f5f5f5; */}
+  ${"" /* box-shadow: inset 0 0 5px #f5f5f5; */}
 }
 
 /* Handle */
