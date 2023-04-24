@@ -27,6 +27,7 @@ export const StyledNav = styled.nav`
     display: flex;
     justify-content: space-around;
     align-items: center;
+    text-transform: uppercase;
     & a {
       text-decoration: none;
       background: rgb(180, 132, 132);
@@ -38,7 +39,21 @@ export const StyledNav = styled.nav`
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      font-size: 1.15rem;
+      font-size: 1.05rem;
+      font-weight: 500;
+    }
+    & button {
+      text-decoration: none;
+      background: rgb(180, 132, 132);
+      background: linear-gradient(
+        0deg,
+        rgba(180, 132, 132, 1) 0%,
+        rgba(255, 255, 255, 1) 48%,
+        rgba(180, 132, 132, 1) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 1.05rem;
       font-weight: 400;
     }
   }
