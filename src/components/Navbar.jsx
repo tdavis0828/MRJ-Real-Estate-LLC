@@ -1,32 +1,22 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { StyledNav } from '../styles/Stylesheet';
-import closeBtn from '../images/close.png';
-import { setIsOpen } from '../store/NavbarSlice';
+import React from "react";
+import { Link } from "react-router-dom";
+import { StyledNav } from "../styles/Stylesheet";
 
 const Navbar = () => {
-  const dispatch = useDispatch();
-  const { isOpen } = useSelector((state) => state.navbar);
-
-  function handleClick() {
-    dispatch(setIsOpen(false));
-    console.log(isOpen);
-  }
   return (
-    <StyledNav className={isOpen === false ? 'closed' : 'open'}>
-      <div className="close-icon">
-        <img src={closeBtn} alt="close icon" onClick={handleClick} />
-      </div>
+    <StyledNav>
       <div className="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="#faqs">FAQs</a>
+        <Link to="home">Home</Link>
+        <Link to="listings">Listings</Link>
+        <Link to="resources">Resources</Link>
+        <Link to="contact">Contact</Link>
+        <Link to="#faqs">FAQs</Link>
+        <Link to="blog">Blog</Link>
       </div>
-      <div className="nav-info">
+      {/* <div className="nav-info">
         <p>9312 LaCroix court, Bakersfield, CA 93311</p>
         <p>DRE#: 02081683</p>
-      </div>
+      </div> */}
     </StyledNav>
   );
 };

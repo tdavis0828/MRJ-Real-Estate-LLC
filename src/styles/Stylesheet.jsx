@@ -1,36 +1,32 @@
 import styled from "styled-components";
 
+//Styles for the header
+export const StyledHeader = styled.div`
+  height: 35vh;
+  width: 100%;
+  background: #fff;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & img {
+    height: 350px;
+    width: 350px;
+  }
+`;
+
 // Styles for the nav bar
 export const StyledNav = styled.nav`
-  height: 100vh;
-  width: 300px;
+  height: 10vh;
+  width: 100%;
   background: #20262e;
-  position: fixed;
-  right: 0;
-  top: 0;
   z-index: 20;
-  transform: translateX(300px);
-  transition: transform 0.35s ease;
-  &.open {
-    transform: translateX(0);
-    transition: transform 0.35s ease;
-  }
-  & .close-icon {
-    & img {
-      margin: 1.5rem;
-      height: 25px;
-      width: 25px;
-      cursor: pointer;
-    }
-  }
   & .nav-links {
-    height: 75%;
+    height: 100%;
     width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 1px solid rgb(180, 132, 132);
     & a {
       text-decoration: none;
       background: rgb(180, 132, 132);
@@ -42,12 +38,8 @@ export const StyledNav = styled.nav`
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      font-size: 1.45rem;
-      font-weight: 500;
-
-      &:hover {
-        text-decoration: underline;
-      }
+      font-size: 1.15rem;
+      font-weight: 400;
     }
   }
   & .nav-info {
