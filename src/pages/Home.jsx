@@ -9,12 +9,12 @@ import Contact from "../components/Contact";
 function Home() {
   return (
     <>
-      <Hero />
+      {/* <Hero />
       <Certifications />
       <About />
       <Reviews />
       <FAQ />
-      <Contact />
+      <Contact /> */}
     </>
   );
 }
