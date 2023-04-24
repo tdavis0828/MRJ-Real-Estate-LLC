@@ -3,7 +3,7 @@ import { StyledAbout } from '../styles/Stylesheet';
 
 const About = () => {
   return (
-    <StyledAbout>
+    <StyledAbout id="about">
       <div className="about-container">
         <img
           src="https://ap.rdcpix.com/7f0e9ca475f1f6e543f686cdd6b3be71a-e2979978654sd-w260_h260_q50.jpg"

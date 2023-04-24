@@ -1,33 +1,24 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { StyledHero } from "../styles/Stylesheet";
 import logoLight from "../images/logo-light.png";
-import logoDark from "../images/logo-dark.png";
 import menuIconLight from "../images/hamburger-light.png";
-import menuIconDark from "../images/hamburger-dark.png";
-import phoneLight from "../images/phone-light.png";
-import phoneDark from "../images/phone-dark.png";
 import cellphoneLight from "../images/smartphone-light.png";
-import cellphoneDark from "../images/smartphone-dark.png";
 import emailLight from "../images/email-light.png";
-import emailDark from "../images/email-dark.png";
 import houseLight from "../images/home-light.png";
-import houseDark from "../images/home-dark.png";
 import { setIsOpen } from "../store/NavbarSlice";
+// import backgroundVideo from '../images/backgroundVideo.mp4';
 
 const Hero = () => {
   const dispatch = useDispatch();
-  const isOpen = useSelector((state) => state.navbar);
   const [scrollPostion, setScrollPostion] = useState();
 
   function getPostion() {
     setScrollPostion(window.scrollY);
-    console.log(scrollPostion);
   }
 
   function handleClick() {
     dispatch(setIsOpen(true));
-    console.log(isOpen);
   }
 
   useEffect(() => {
@@ -35,61 +26,47 @@ const Hero = () => {
   });
 
   return (
-    <StyledHero>
+    <StyledHero id="home">
+      {/* <div className="background-video-container">
+        <div className="overlay" />
+        <video autoPlay muted>
+          <source src={backgroundVideo} type="video/mp4"></source>
+        </video>
+      </div> */}
       <div className="logo">
-        <img
-          src={scrollPostion > 800 ? logoDark : logoLight}
-          alt="company logo"
-        />
+        <img src={logoLight} alt="company logo" />
       </div>
 
       <div className="text-content">
-        <p>Marcy Renee Jones Realty, LLC.</p>
-        <button type="button">Contact Us</button>
+        <p>Marcy Renae Jones Realty, LLC.</p>
+        <div className="hero-buttons-container">
+          <a href="#certifications">Contact Realtor</a>
+          <hr></hr>
+          <a href="#certifications">Licensing</a>
+        </div>
       </div>
 
       <div className="menu-icon">
         <button type="button" className="navbar-btn" onClick={handleClick}>
-          <img
-            src={scrollPostion > 850 ? menuIconDark : menuIconLight}
-            alt="hamburger menu"
-          />
+          <img src={menuIconLight} alt="hamburger menu" />
         </button>
       </div>
 
       <div className="contact-links">
-        <a href="/" target="_blank">
-          <img
-            src={scrollPostion > 100 ? phoneDark : phoneLight}
-            alt="Office Phone Number"
-          />
+        <a href="tel:6613193369">
+          <img src={cellphoneLight} alt="Cell Phone Number" />
         </a>
-        <a href="/" target="_blank">
-          <img
-            src={scrollPostion > 100 ? cellphoneDark : cellphoneLight}
-            alt="Cell Phone Number"
-          />
+        <a href="mailto: jonesrealty3369@gmail.com">
+          <img src={emailLight} alt="Email Address" />
         </a>
-        <a href="/" target="_blank">
-          <img
-            src={scrollPostion > 100 ? emailDark : emailLight}
-            alt="Email Address"
-          />
-        </a>
-        <a href="/" target="_blank">
-          <img
-            src={scrollPostion > 100 ? houseDark : houseLight}
-            alt="Link to realtors.com"
-          />
+        <a
+          href="https://www.realtor.com/realestateagents/5f4925e3b4e2f10011c4342b"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={houseLight} alt="Link to realtors.com" />
         </a>
       </div>
-
-      {/* <div className="dre-number">
-        <p className={scrollPostion > 100 ? 'dark-text' : ''}>
-          4900 California Avenue, Bakersfield , CA, 93309
-        </p>
-        <p className={scrollPostion > 100 ? 'dark-text' : ''}>DRE#: 02081683</p>
-      </div> */}
     </StyledHero>
   );
 };

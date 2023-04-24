@@ -4,11 +4,11 @@ import styled from "styled-components";
 export const StyledNav = styled.nav`
   height: 100vh;
   width: 300px;
-  background: #f5f5f5;
+  background: #20262e;
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 10;
+  z-index: 20;
   transform: translateX(300px);
   transition: transform 0.35s ease;
   &.open {
@@ -30,11 +30,21 @@ export const StyledNav = styled.nav`
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 1px solid #f05454;
+    border-bottom: 1px solid rgb(180, 132, 132);
     & a {
       text-decoration: none;
-      color: #f05454;
-      font-size: 1.25rem;
+      background: rgb(180, 132, 132);
+      background: linear-gradient(
+        0deg,
+        rgba(180, 132, 132, 1) 0%,
+        rgba(255, 255, 255, 1) 48%,
+        rgba(180, 132, 132, 1) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 1.45rem;
+      font-weight: 500;
+
       &:hover {
         text-decoration: underline;
       }
@@ -48,14 +58,23 @@ export const StyledNav = styled.nav`
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #f05454;
+    background: rgb(180, 132, 132);
+    background: linear-gradient(
+      0deg,
+      rgba(180, 132, 132, 1) 0%,
+      rgba(255, 255, 255, 1) 48%,
+      rgba(180, 132, 132, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     & p {
-      margin: 0;
+      margin: 0.75rem;
       font-size: 1.15rem;
       font-weight: 500;
     }
   }
 `;
+
 // Styles for the main hero UI
 export const StyledHero = styled.main`
   height: 100vh;
@@ -69,6 +88,24 @@ export const StyledHero = styled.main`
   background-repeat: no-repeat;
   background-size: 100% 110%;
   position: relative;
+  & .background-video-container {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    & .overlay {
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.25);
+      position: absolute;
+      top: 0;
+    }
+    & video {
+      height: 100%;
+      width: 100%;
+      object-fit: fill;
+    }
+  }
   & .dark-text {
     color: #000;
     transition: all 0.35s ease;
@@ -77,10 +114,10 @@ export const StyledHero = styled.main`
     position: absolute;
     top: -45px;
     left: 0;
-    margin: 1rem;
+    margin: 2rem;
     & img {
-      height: 200px;
-      width: 175px;
+      height: 250px;
+      width: 225px;
     }
   }
   & .text-content {
@@ -91,19 +128,32 @@ export const StyledHero = styled.main`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    & button {
-      background: #fff;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 5px;
-      font-family: "Quicksand", sans-serif;
-      font-size: 1.25rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.35s ease;
-      &:hover {
-        transform: scale(1.05);
-        text-decoration: underline;
+    z-index: 10;
+    margin-top: 100px;
+    font-family: "Alkatra", cursive;
+    & p {
+      background: rgba(0, 0, 0, 0.25);
+      letter-spacing: 5px;
+    }
+    & .hero-buttons-container {
+      display: flex;
+      & a {
+        background: #fff;
+        padding: 1rem 2rem;
+        margin: 2rem;
+        border: none;
+        border-radius: 5px;
+        font-family: "Quicksand", sans-serif;
+        font-size: 1.25rem;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+        color: #000;
+        transition: all 0.35s ease;
+        &:hover {
+          transform: scale(1.05);
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -157,8 +207,63 @@ export const StyledHero = styled.main`
   }
 `;
 
-// Styling for the about section;
+// Styling for the certification section;
+export const StlyedCertification = styled.section`
+  height: 55vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  background: #222831;
+  text-decoration: italics;
+  & .cert-container {
+    &:nth-child(1) {
+      border-right: 1px solid #fff;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+    & h2 {
+      text-decoration: underline;
+      background: rgb(180, 132, 132);
+      background: linear-gradient(
+        0deg,
+        rgba(180, 132, 132, 1) 0%,
+        rgba(255, 255, 255, 1) 48%,
+        rgba(180, 132, 132, 1) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: "Alkatra", cursive;
+      font-size: 1.75rem;
+    }
+    & img {
+      height: 85px;
+      width: 85px;
+    }
+    & p {
+      font-size: 1.25rem;
+      & a {
+        background: rgb(180, 132, 132);
+        background: linear-gradient(
+          0deg,
+          rgba(180, 132, 132, 1) 0%,
+          rgba(255, 255, 255, 1) 48%,
+          rgba(180, 132, 132, 1) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+`;
 
+// Styling for the about section;
 export const StyledAbout = styled.section`
   height: 85vh;
   width: 100%;
@@ -180,6 +285,7 @@ export const StyledAbout = styled.section`
       text-align: center;
       & p {
         margin: 0;
+        font-family: "Alkatra", cursive;
       }
     }
     & img {
@@ -189,7 +295,15 @@ export const StyledAbout = styled.section`
       margin: 1rem;
     }
     & span {
-      color: #f05454;
+      background: rgb(180, 132, 132);
+      background: linear-gradient(
+        0deg,
+        rgba(180, 132, 132, 1) 0%,
+        rgba(255, 255, 255, 1) 48%,
+        rgba(180, 132, 132, 1) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       font-weight: 500;
     }
   }
@@ -203,15 +317,18 @@ export const StyledReviews = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #fff;
+  background: #222831;
+  & h1 {
+    font-family: "Alkatra", cursive;
+  }
   & .reviews-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: 80%;
   }
   & .review {
-    background: #fff;
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    background: #222831;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
     text-align: center;
     padding: 1rem;
     display: flex;
@@ -222,7 +339,15 @@ export const StyledReviews = styled.section`
       width: 75%;
       font-size: 1.15rem;
       &.author {
-        color: #f05454;
+        background: rgb(180, 132, 132);
+        background: linear-gradient(
+          0deg,
+          rgba(180, 132, 132, 1) 0%,
+          rgba(255, 255, 255, 1) 48%,
+          rgba(180, 132, 132, 1) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         font-size: 1.75rem;
         font-weight: 500;
       }
@@ -256,12 +381,18 @@ export const StyledContact = styled.section`
     align-items: center;
     justify-content: center;
     &.contact-form {
-      background: #f05454;
+      background: rgb(180, 132, 132);
+      background: linear-gradient(
+        0deg,
+        rgba(180, 132, 132, 1) 0%,
+        rgba(255, 255, 255, 1) 48%,
+        rgba(180, 132, 132, 1) 100%
+      );
       & form {
         display: flex;
         flex-direction: column;
         & label {
-          color: #fff;
+          color: #000;
           font-size: 1.25rem;
         }
         & input {
@@ -271,9 +402,12 @@ export const StyledContact = styled.section`
           border-radius: 50px;
           border: none;
           display: block;
+          color: #bebebe;
+          background: #bebebe;
           &::placeholder {
             font-size: 1.15rem;
             padding-left: 1rem;
+            color: #000;
           }
         }
         & button {
@@ -282,6 +416,7 @@ export const StyledContact = styled.section`
           width: 525px;
           height: 30px;
           cursor: pointer;
+          color: #000;
         }
       }
     }
@@ -290,6 +425,10 @@ export const StyledContact = styled.section`
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      & p {
+        font-family: "Alkatra", cursive;
+        width: 80%;
+      }
       & .overlay {
         color: #fff;
         font-size: 2rem;
@@ -308,7 +447,36 @@ export const StyledFooter = styled.footer`
   justify-content: center;
   align-items: center;
   font-size: 1.1rem;
+  color: #fff;
   & a {
-    color: #f05454;
+    background: rgb(180, 132, 132);
+    background: linear-gradient(
+      0deg,
+      rgba(180, 132, 132, 1) 0%,
+      rgba(255, 255, 255, 1) 48%,
+      rgba(180, 132, 132, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+`;
+
+// Styles for the FAQ page
+export const StyledFaq = styled.main`
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & div {
+    width: 50%;
+    text-align: center;
+  }
+  & h1 {
+    font-family: "Alkatra", cursive;
+  }
+  & div p {
+    font-size: 1.15rem;
   }
 `;
