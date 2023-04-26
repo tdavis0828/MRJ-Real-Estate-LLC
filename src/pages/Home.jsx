@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "../components/Hero";
+import Listings from "./Listings";
 import Certifications from "../components/Certifications";
 import About from "../components/About";
 import Reviews from "../components/Reviews";
@@ -9,12 +10,13 @@ import Contact from "../components/Contact";
 function Home() {
   return (
     <>
-      {/* <Hero />
-      <Certifications />
-      <About />
-      <Reviews />
-      <FAQ />
-      <Contact /> */}
+      <Hero />
+      <Listings />
+      {/* <Certifications /> */}
+      {/* <About /> */}
+      {/* <Reviews /> */}
+      {/* <FAQ /> */}
+      {/* <Contact /> */}
     </>
   );
 }
