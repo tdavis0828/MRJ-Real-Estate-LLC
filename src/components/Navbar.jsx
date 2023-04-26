@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <StyledNav>
       <div className="nav-links">
-        <Link to="home">Home</Link>
+        <Link to="/">Home</Link>
         <Link to="listings">Listings</Link>
         <Button
           id="fade-button"
