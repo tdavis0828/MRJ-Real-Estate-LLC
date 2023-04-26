@@ -94,6 +94,7 @@ export const StyledHero = styled.main`
   background-postion: center;
   background-repeat: no-repeat;
   background-size: 100% 110%;
+  background-attachment: fixed;
   position: relative;
   & .background-video-container {
     height: 100vh;
@@ -278,6 +279,7 @@ export const StyledAbout = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #fff;
   & .about-container {
     width: 50%;
     height: 100%;
@@ -325,6 +327,7 @@ export const StyledReviews = styled.section`
   justify-content: center;
   align-items: center;
   background: #222831;
+  color: #fff;
   & h1 {
     font-family: "Alkatra", cursive;
   }
@@ -370,7 +373,8 @@ export const StyledReviews = styled.section`
 export const StyledListings = styled.section`
   height: 80vh;
   width: 100%;
-  background: #000;
+  background: #fff;
+  color: #fff;
 `;
 
 // Styling for the contact form
@@ -380,6 +384,8 @@ export const StyledContact = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #fff;
+
   & div {
     height: 100%;
     width: 100%;
@@ -470,12 +476,13 @@ export const StyledFooter = styled.footer`
 
 // Styles for the FAQ page
 export const StyledFaq = styled.main`
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #fff;
   & div {
     width: 50%;
     text-align: center;
