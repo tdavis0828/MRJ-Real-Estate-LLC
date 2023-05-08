@@ -1,14 +1,14 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Resources from "./pages/Resources";
-import Listings from "./pages/Listings";
-import Blog from "./pages/Blog";
-import Contact from "./components/Contact";
-import Faq from "./pages/Faq";
-import Footer from "./components/Footer";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Resources from './pages/Resources';
+// import Listings from './pages/Listings';
+import Blog from './pages/Blog';
+import Contact from './components/Contact';
+import Faq from './pages/Faq';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="resources" element={<Resources />} />
-        <Route path="listings" element={<Listings />} />
+        {/* <Route path="listings" element={<Listings />} /> */}
         <Route path="blog" element={<Blog />} />
         <Route path="contact" element={<Contact />} />
         <Route path="faq" element={<Faq />} />
