@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 //Styles for the header
 export const StyledHeader = styled.div`
-  height: 35vh;
+  height: 25vh;
   width: 100%;
   background: #fff;
-  color: #000;
+  color: #03001c;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,9 +17,9 @@ export const StyledHeader = styled.div`
 
 // Styles for the nav bar
 export const StyledNav = styled.nav`
-  height: 10vh;
+  height: 5vh;
   width: 100%;
-  background: #20262e;
+  background: #181818;
   z-index: 20;
   & .nav-links {
     height: 100%;
@@ -84,7 +84,7 @@ export const StyledNav = styled.nav`
 
 // Styles for the main hero UI
 export const StyledHero = styled.main`
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -94,7 +94,7 @@ export const StyledHero = styled.main`
   background-postion: center;
   background-repeat: no-repeat;
   background-size: 100% 110%;
-  background-attachment: fixed;
+  ${'' /* background-attachment: fixed; */}
   position: relative;
   & .background-video-container {
     height: 100vh;
@@ -114,20 +114,6 @@ export const StyledHero = styled.main`
       object-fit: fill;
     }
   }
-  & .dark-text {
-    color: #000;
-    transition: all 0.35s ease;
-  }
-  & .logo {
-    position: absolute;
-    top: -45px;
-    left: 0;
-    margin: 2rem;
-    & img {
-      height: 250px;
-      width: 225px;
-    }
-  }
   & .text-content {
     color: #fff;
     font-size: 3rem;
@@ -140,7 +126,7 @@ export const StyledHero = styled.main`
     margin-top: 100px;
     font-family: 'Alkatra', cursive;
     & p {
-      background: rgba(0, 0, 0, 0.25);
+      ${'' /* background: rgba(0, 0, 0, 0.25); */}
       letter-spacing: 5px;
     }
     & .hero-buttons-container {
@@ -165,52 +151,30 @@ export const StyledHero = styled.main`
       }
     }
   }
-  & .menu-icon {
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin: 3rem;
-    & button {
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: #fff;
-      & img {
-        height: 55px;
-        width: 55px;
-      }
+`;
+
+// Styles for the resources bar
+export const StyledResourcesBar = styled.aside`
+  height: 10vh;
+  width: 100%;
+  background: #181818;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  & div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & img {
+      width: 40px;
+      height: 40px;
+      margin: 0 1rem;
     }
-  }
-  & .contact-links {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    margin: 1rem;
     & a {
       color: #fff;
-      margin: 1rem;
-      & img {
-        height: 30px;
-        width: 30px;
-      }
-    }
-  }
-  & .dre-number {
-    width: 30%;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    color: #fff;
-    margin: 2.5rem 0.55rem;
-    font-size: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
-    & p {
-      width: 60%;
-      margin: 0;
-      transition: all 0.35s ease;
+      text-decoration: none;
+      font-size: 1.25rem;
     }
   }
 `;
@@ -224,7 +188,7 @@ export const StlyedCertification = styled.section`
   align-items: center;
   color: #fff;
   border-bottom: 1px solid #fff;
-  background: #222831;
+  background: #181818;
   text-decoration: italics;
   & .cert-container {
     &:nth-child(1) {
@@ -279,7 +243,7 @@ export const StyledAbout = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: #000;
   & .about-container {
     width: 50%;
     height: 100%;
@@ -304,7 +268,8 @@ export const StyledAbout = styled.section`
       margin: 1rem;
     }
     & span {
-      background: rgb(180, 132, 132);
+      ${
+        '' /* background: rgb(180, 132, 132);
       background: linear-gradient(
         0deg,
         rgba(180, 132, 132, 1) 0%,
@@ -312,8 +277,9 @@ export const StyledAbout = styled.section`
         rgba(180, 132, 132, 1) 100%
       );
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: 500;
+      -webkit-text-fill-color: transparent; */
+      }
+      font-weight: 600;
     }
   }
 `;
@@ -326,7 +292,8 @@ export const StyledReviews = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #222831;
+  background: #181818;
+  border-bottom: 1px solid #fff;
   color: #fff;
   & h1 {
     font-family: 'Alkatra', cursive;
@@ -337,7 +304,6 @@ export const StyledReviews = styled.section`
     height: 80%;
   }
   & .review {
-    background: #222831;
     border-right: 1px solid rgba(255, 255, 255, 0.5);
     text-align: center;
     padding: 1rem;
@@ -373,27 +339,30 @@ export const StyledReviews = styled.section`
 export const StyledListings = styled.section`
   height: 80vh;
   width: 100%;
+  ${'' /* background: #181818; */}
   & h1 {
     text-align: center;
-    margin-top: 2rem;
-    color: #fff;
+    padding-top: 2rem;
+    color: #000;
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 500;
   }
   & .image-slider {
-    height: 90%;
+    height: 85%;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
+    border-radius: 5px;
     & div {
       display: flex;
       justify-content: center;
       align-items: center;
+      border-radius: 5px;
       &.slide-content {
-        height: 600px;
-        width: 900px;
+        height: 550px;
+        width: 50vw;
         flex-direction: column;
         & p {
           z-index: 10;
@@ -403,8 +372,9 @@ export const StyledListings = styled.section`
         & .overlay {
           background: rgba(0, 0, 0, 0.25);
           height: 600px;
-          width: 900px;
+          width: 50vw;
           position: absolute;
+          border-radius: 5px;
         }
       }
   }
@@ -494,6 +464,7 @@ export const StyledFooter = styled.footer`
   align-items: center;
   font-size: 1.1rem;
   color: #fff;
+  background: #181818;
   & a {
     background: rgb(180, 132, 132);
     background: linear-gradient(
