@@ -4,7 +4,7 @@ const GlobalStyles = createGlobalStyle`
     body {
         box-sizing: border-box;
         scroll-behavior: smooth;
-        background: #181823;
+        ${'' /* background: #181818; */}
         font-family: 'Quicksand', sans-serif;
     }
     * {
@@ -15,11 +15,6 @@ const GlobalStyles = createGlobalStyle`
     /* width */
 ::-webkit-scrollbar {
   width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  ${'' /* box-shadow: inset 0 0 5px #f5f5f5; */}
 }
 
 /* Handle */

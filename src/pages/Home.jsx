@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
+import ResourcesBar from '../components/ResourcesBar';
 import Listings from '../components/Listings';
 import Certifications from '../components/Certifications';
 import About from '../components/About';
@@ -11,10 +12,11 @@ function Home() {
   return (
     <>
       <Hero />
+      <ResourcesBar />
+      <About />
+      <Certifications />
       <Listings />
-      {/* <Certifications /> */}
-      {/* <About /> */}
-      {/* <Reviews /> */}
+      <Reviews />
       {/* <FAQ /> */}
       {/* <Contact /> */}
     </>

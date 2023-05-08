@@ -11,7 +11,6 @@ const About = () => {
         />
         <div className="dre-info">
           <p>DRE#: 02081683</p>
-          {/* <p>4900 California Avenue, Bakersfield , CA, 93309</p> */}
         </div>
         <p>
           I am <span>Marcy Jones</span> a Kern County Resident and Realtor. I am
