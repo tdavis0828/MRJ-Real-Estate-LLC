@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 //Styles for the header
 export const StyledHeader = styled.div`
@@ -90,7 +90,7 @@ export const StyledHero = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8");
+  background-image: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8');
   background-postion: center;
   background-repeat: no-repeat;
   background-size: 100% 110%;
@@ -138,7 +138,7 @@ export const StyledHero = styled.main`
     align-items: center;
     z-index: 10;
     margin-top: 100px;
-    font-family: "Alkatra", cursive;
+    font-family: 'Alkatra', cursive;
     & p {
       background: rgba(0, 0, 0, 0.25);
       letter-spacing: 5px;
@@ -151,7 +151,7 @@ export const StyledHero = styled.main`
         margin: 2rem;
         border: none;
         border-radius: 5px;
-        font-family: "Quicksand", sans-serif;
+        font-family: 'Quicksand', sans-serif;
         font-size: 1.25rem;
         font-weight: 500;
         cursor: pointer;
@@ -247,7 +247,7 @@ export const StlyedCertification = styled.section`
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      font-family: "Alkatra", cursive;
+      font-family: 'Alkatra', cursive;
       font-size: 1.75rem;
     }
     & img {
@@ -294,7 +294,7 @@ export const StyledAbout = styled.section`
       text-align: center;
       & p {
         margin: 0;
-        font-family: "Alkatra", cursive;
+        font-family: 'Alkatra', cursive;
       }
     }
     & img {
@@ -329,7 +329,7 @@ export const StyledReviews = styled.section`
   background: #222831;
   color: #fff;
   & h1 {
-    font-family: "Alkatra", cursive;
+    font-family: 'Alkatra', cursive;
   }
   & .reviews-container {
     display: grid;
@@ -373,8 +373,41 @@ export const StyledReviews = styled.section`
 export const StyledListings = styled.section`
   height: 80vh;
   width: 100%;
-  background: #fff;
-  color: #fff;
+  & h1 {
+    text-align: center;
+    margin-top: 2rem;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  & .image-slider {
+    height: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    & div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &.slide-content {
+        height: 600px;
+        width: 900px;
+        flex-direction: column;
+        & p {
+          z-index: 10;
+          font-size: 1.75rem;
+          margin: 1rem;
+        }
+        & .overlay {
+          background: rgba(0, 0, 0, 0.25);
+          height: 600px;
+          width: 900px;
+          position: absolute;
+        }
+      }
+  }
 `;
 
 // Styling for the contact form
@@ -434,12 +467,12 @@ export const StyledContact = styled.section`
       }
     }
     &.contact-text {
-      background: url("https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8");
+      background: url('https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       & p {
-        font-family: "Alkatra", cursive;
+        font-family: 'Alkatra', cursive;
         width: 80%;
       }
       & .overlay {
@@ -488,7 +521,7 @@ export const StyledFaq = styled.main`
     text-align: center;
   }
   & h1 {
-    font-family: "Alkatra", cursive;
+    font-family: 'Alkatra', cursive;
   }
   & div p {
     font-size: 1.15rem;
