@@ -22,19 +22,6 @@ function Listings() {
             className="slide-content"
             style={{
               background:
-                'url(https://ap.rdcpix.com/967f5ddaad5856f117cfb1bcafe1385el-m4152255083od-w480_h360_x2.webp?w=640&q=75)',
-            }}
-          >
-            <div className="overlay" />
-            <p>713 Woodrow Ave, Bakersfield, CA 93308</p>
-            <p>3 bed | 1 bath | 824 square feet | 6,098sqft lot</p>
-          </div>
-        </div>
-        <div className="slide">
-          <div
-            className="slide-content"
-            style={{
-              background:
                 'url(https://ap.rdcpix.com/d256462895026384d52a6aa85ec89b41l-m2399071125od-w480_h360_x2.webp?w=640&q=75)',
             }}
           >
