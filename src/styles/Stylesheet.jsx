@@ -286,34 +286,33 @@ export const StyledAbout = styled.section`
 
 // Styling for reviews section
 export const StyledReviews = styled.section`
-  height: 100vh;
+  height: 60vh;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background: #181818;
   border-bottom: 1px solid #fff;
   color: #fff;
+  text-align: center;
+  & .image-slider {
+    height: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   & h1 {
     font-family: 'Alkatra', cursive;
-  }
-  & .reviews-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    height: 80%;
+    padding-top: 2rem;
   }
   & .review {
-    border-right: 1px solid rgba(255, 255, 255, 0.5);
-    text-align: center;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     & p {
-      width: 75%;
+      width: 70%;
       font-size: 1.15rem;
+      margin: auto;
       &.author {
         background: rgb(180, 132, 132);
         background: linear-gradient(
@@ -326,6 +325,7 @@ export const StyledReviews = styled.section`
         -webkit-text-fill-color: transparent;
         font-size: 1.75rem;
         font-weight: 500;
+        padding-bottom: 1rem;
       }
     }
     & img {
@@ -348,7 +348,7 @@ export const StyledListings = styled.section`
     font-weight: 500;
   }
   & .image-slider {
-    height: 85%;
+    height: 80%;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -361,7 +361,7 @@ export const StyledListings = styled.section`
       align-items: center;
       border-radius: 5px;
       &.slide-content {
-        height: 550px;
+        height: 450px;
         width: 50vw;
         flex-direction: column;
         & p {
@@ -463,8 +463,8 @@ export const StyledFooter = styled.footer`
   justify-content: center;
   align-items: center;
   font-size: 1.1rem;
-  color: #fff;
-  background: #181818;
+  color: #000;
+  ${'' /* background: #181818; */}
   & a {
     background: rgb(180, 132, 132);
     background: linear-gradient(
