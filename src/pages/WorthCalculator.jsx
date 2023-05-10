@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { StyledWorthCalculator } from '../styles/Stylesheet';
-import { set } from 'react-hook-form';
 
 function WorthCalculator() {
   // Initialize state variables
@@ -142,6 +141,7 @@ function WorthCalculator() {
           Any other note-worthy things about your property?
           <textarea
             name="additionalFeatures"
+            value={notes}
             onChange={(e) => setNotes(e.target.value)}
           />
         </label>
