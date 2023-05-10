@@ -14,8 +14,22 @@ function WorthCalculator() {
   const [squareFootage, setSquareFootage] = useState('');
   const [notes, setNotes] = useState('');
 
-  function handleSubmit() {
-    console.log('submitted');
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    const newInquiry = {
+      name,
+      email,
+      phoneNumber,
+      address,
+      propertyType,
+      propertyCondition,
+      bedrooms,
+      bathrooms,
+      squareFootage,
+      notes,
+    };
+    console.log(newInquiry);
   }
 
   return (
@@ -62,6 +76,7 @@ function WorthCalculator() {
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
             placeholder="555-555-5555"
+            required
           />
         </label>
 
@@ -74,6 +89,7 @@ function WorthCalculator() {
             value={address}
             onChange={(e) => setAddress(e.target.value)}
             placeholder="123 Easy Street, Pleasantville, CA 55555"
+            required
           />
         </label>
 
@@ -86,6 +102,7 @@ function WorthCalculator() {
             value={propertyType}
             onChange={(e) => setPropertyType(e.target.value)}
             placeholder="House, Land, Commercial, etc..."
+            required
           />
         </label>
 
@@ -110,6 +127,7 @@ function WorthCalculator() {
             value={bedrooms}
             onChange={(e) => setBedrooms(e.target.value)}
             placeholder="4"
+            required
           />
         </label>
 
@@ -122,6 +140,7 @@ function WorthCalculator() {
             value={bathrooms}
             onChange={(e) => setBathrooms(e.target.value)}
             placeholder="3"
+            required
           />
         </label>
 
@@ -134,6 +153,7 @@ function WorthCalculator() {
             value={squareFootage}
             onChange={(e) => setSquareFootage(e.target.value)}
             placeholder="1,965"
+            required
           />
         </label>
 

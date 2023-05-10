@@ -536,6 +536,7 @@ export const StyledWorthCalculator = styled.main`
     }
     & input {
       width: 70%;
+      height: 25px;
     }
     & textarea {
       width: 95%;
