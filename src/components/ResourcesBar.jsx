@@ -10,7 +10,7 @@ function ResourcesBar() {
     <StyledResourcesBar>
       <div>
         <img src={dollarSign} alt="" />
-        <Link to="/">What is my home worth</Link>
+        <Link to="worth-calculator">What is my home worth</Link>
       </div>
       <div>
         <img src={calculator} alt="" />

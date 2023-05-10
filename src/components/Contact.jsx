@@ -1,9 +1,9 @@
-import React, { useState, useRef } from "react";
-import { StyledContact } from "../styles/Stylesheet";
+import React, { useState, useRef } from 'react';
+import { StyledContact } from '../styles/Stylesheet';
 // import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  const [nameInput, setNameInput] = useState("");
+  const [nameInput, setNameInput] = useState('');
   const [phoneNumberInput, setPhoneNumberInput] = useState();
   const [emailInput, setEmailInput] = useState();
   const form = useRef();

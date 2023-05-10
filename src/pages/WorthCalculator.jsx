@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { StyledWorthCalculator } from '../styles/Stylesheet';
+import Alert from '../components/Alert';
+import emailjs from 'emailjs-com';
 
 function WorthCalculator() {
+  const form = useRef();
+
   // Initialize state variables
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -13,28 +17,38 @@ function WorthCalculator() {
   const [bathrooms, setBathrooms] = useState(0);
   const [squareFootage, setSquareFootage] = useState('');
   const [notes, setNotes] = useState('');
+  const [alertIsVisible, setAlertIsVisible] = useState(false);
+  const [isErr, setIsErr] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
-
-    const newInquiry = {
-      name,
-      email,
-      phoneNumber,
-      address,
-      propertyType,
-      propertyCondition,
-      bedrooms,
-      bathrooms,
-      squareFootage,
-      notes,
-    };
-    console.log(newInquiry);
+    emailjs
+      .sendForm(
+        'service_sktr7g1',
+        'template_ihijgv7',
+        form.current,
+        'uHBGQxiG0Tp_1kI1r'
+      )
+      .then(
+        (result) => {
+          setIsErr(false);
+          setAlertIsVisible(true);
+          setTimeout(() => {
+            setAlertIsVisible(false);
+          }, 3000);
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+          setIsErr(true);
+        }
+      );
   }
 
   return (
     <StyledWorthCalculator>
-      <form onSubmit={handleSubmit}>
+      <form ref={form} onSubmit={handleSubmit}>
+        {alertIsVisible && <Alert isErr={isErr ? 'false' : 'success'} />}
         <div>
           <h3>Find out what your home is worth</h3>
           <p>

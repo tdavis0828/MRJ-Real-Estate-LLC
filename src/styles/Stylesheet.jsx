@@ -564,3 +564,20 @@ export const StyledWorthCalculator = styled.main`
     }
   }
 `;
+
+export const StyledAlert = styled.div`
+  width: 1000px;
+  height: 50px;
+  position: fixed;
+  top: 5%;
+  left: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.4);
+  & p {
+    font-size: 1.75rem;
+    color: #fff;
+  }
+`;
