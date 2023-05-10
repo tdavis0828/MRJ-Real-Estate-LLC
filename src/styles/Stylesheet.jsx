@@ -377,6 +377,7 @@ export const StyledListings = styled.section`
           border-radius: 5px;
         }
       }
+    }
   }
 `;
 
@@ -496,5 +497,69 @@ export const StyledFaq = styled.main`
   }
   & div p {
     font-size: 1.15rem;
+  }
+`;
+
+// Styles for Home Worth Calculator
+export const StyledWorthCalculator = styled.main`
+  height: 100vh;
+  width: 100%;
+  background: #181818;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & div {
+    & h3 {
+      margin-bottom: 0.5rem;
+    }
+    & p {
+      font-size: 0.85rem;
+    }
+  }
+  & form {
+    height: 90%;
+    width: 35vw;
+    background: #fff;
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    & #bedrooms,
+    #bathrooms,
+    #squareFootage {
+      width: 55%;
+    }
+    & input,
+    textarea {
+      margin-left: 1rem;
+    }
+    & input {
+      width: 70%;
+    }
+    & textarea {
+      width: 95%;
+      height: 75px;
+      margin-top: 0.5rem;
+    }
+    & button {
+      height: 35px;
+      background: #181818;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      transition: all 0.65s ease;
+      cursor: pointer;
+      &:hover {
+        background: linear-gradient(
+          0deg,
+          rgba(180, 132, 132, 1) 0%,
+          rgba(255, 255, 255, 1) 48%,
+          rgba(180, 132, 132, 1) 100%
+        );
+        color: #000;
+        transition: all 0.65s ease;
+      }
+    }
   }
 `;

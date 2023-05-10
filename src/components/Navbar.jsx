@@ -1,12 +1,14 @@
-import React from "react";
-import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import Fade from "@mui/material/Fade";
-import { Link } from "react-router-dom";
-import { StyledNav } from "../styles/Stylesheet";
+import React from 'react';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Fade from '@mui/material/Fade';
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { StyledNav } from '../styles/Stylesheet';
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -23,9 +25,9 @@ const Navbar = () => {
         <Link to="listings">Listings</Link>
         <Button
           id="fade-button"
-          aria-controls={open ? "fade-menu" : undefined}
+          aria-controls={open ? 'fade-menu' : undefined}
           aria-haspopup="true"
-          aria-expanded={open ? "true" : undefined}
+          aria-expanded={open ? 'true' : undefined}
           onClick={handleClick}
         >
           Resources
@@ -33,26 +35,43 @@ const Navbar = () => {
         <Menu
           id="fade-menu"
           MenuListProps={{
-            "aria-labelledby": "fade-button",
+            'aria-labelledby': 'fade-button',
           }}
           anchorEl={anchorEl}
           open={open}
           onClose={handleClose}
           TransitionComponent={Fade}
         >
-          <MenuItem onClick={handleClose}>We Buy Houses Cash</MenuItem>
-          <MenuItem onClick={handleClose}>Mortgage Calculator</MenuItem>
-          <MenuItem onClick={handleClose}>What is my house worth?</MenuItem>
+          <MenuItem
+            onClick={() => {
+              handleClose();
+              navigate('we-buy-houses');
+            }}
+          >
+            We Buy Houses Cash
+          </MenuItem>
+          <MenuItem
+            onClick={() => {
+              handleClose();
+              navigate('mortgage-calculator');
+            }}
+          >
+            Mortgage Calculator
+          </MenuItem>
+          <MenuItem
+            onClick={() => {
+              handleClose();
+              navigate('worth-calculator');
+            }}
+          >
+            What is my house worth?
+          </MenuItem>
         </Menu>
 
         <Link to="contact">Contact</Link>
         <Link to="#faqs">FAQs</Link>
         <Link to="blog">Blog</Link>
       </div>
-      {/* <div className="nav-info">
-        <p>9312 LaCroix court, Bakersfield, CA 93311</p>
-        <p>DRE#: 02081683</p>
-      </div> */}
     </StyledNav>
   );
 };
