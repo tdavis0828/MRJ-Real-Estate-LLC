@@ -1,10 +1,10 @@
-import React from "react";
-import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import Fade from "@mui/material/Fade";
-import { Link } from "react-router-dom";
-import { StyledNav } from "../styles/Stylesheet";
+import React from 'react';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Fade from '@mui/material/Fade';
+import { Link } from 'react-router-dom';
+import { StyledNav } from '../styles/Stylesheet';
 
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -23,9 +23,9 @@ const Navbar = () => {
         <Link to="listings">Listings</Link>
         <Button
           id="fade-button"
-          aria-controls={open ? "fade-menu" : undefined}
+          aria-controls={open ? 'fade-menu' : undefined}
           aria-haspopup="true"
-          aria-expanded={open ? "true" : undefined}
+          aria-expanded={open ? 'true' : undefined}
           onClick={handleClick}
         >
           Resources
@@ -33,7 +33,7 @@ const Navbar = () => {
         <Menu
           id="fade-menu"
           MenuListProps={{
-            "aria-labelledby": "fade-button",
+            'aria-labelledby': 'fade-button',
           }}
           anchorEl={anchorEl}
           open={open}

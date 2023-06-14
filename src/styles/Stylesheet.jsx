@@ -377,6 +377,7 @@ export const StyledListings = styled.section`
           border-radius: 5px;
         }
       }
+    }
   }
 `;
 
@@ -454,30 +455,6 @@ export const StyledContact = styled.section`
   }
 `;
 
-//Styling for the footer section
-export const StyledFooter = styled.footer`
-  height: 10vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.1rem;
-  color: #000;
-  ${'' /* background: #181818; */}
-  & a {
-    background: rgb(180, 132, 132);
-    background: linear-gradient(
-      0deg,
-      rgba(180, 132, 132, 1) 0%,
-      rgba(255, 255, 255, 1) 48%,
-      rgba(180, 132, 132, 1) 100%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-`;
-
 // Styles for the FAQ page
 export const StyledFaq = styled.main`
   height: 100%;
@@ -496,5 +473,77 @@ export const StyledFaq = styled.main`
   }
   & div p {
     font-size: 1.15rem;
+  }
+`;
+
+export const StyledCalculator = styled.main`
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  & form {
+    height: 575px;
+    width: 550px;
+    margin: 1rem 0rem;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    & button {
+      background: rgb(180, 132, 132);
+      background: linear-gradient(
+        0deg,
+        rgba(180, 132, 132, 1) 0%,
+        rgba(255, 255, 255, 1) 48%,
+        rgba(180, 132, 132, 1) 100%
+      );
+      width: 450px;
+      height: 45px;
+      border: 1px solid #000;
+      border-radius: 5px;
+      font-size: 1.15rem;
+      cursor: pointer;
+    }
+    & label {
+      font-size: 1.5rem;
+      margin: 0 0.5rem;
+    }
+    & input {
+      font-size: 1.25rem;
+      font-family: inherit;
+    }
+  }
+  & div {
+    margin: 1rem;
+    & p {
+      font-size: 1.55rem;
+    }
+  }
+`;
+
+//Styling for the footer section
+export const StyledFooter = styled.footer`
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #fff;
+  background: #181818;
+  & a {
+    background: rgb(180, 132, 132);
+    background: linear-gradient(
+      0deg,
+      rgba(180, 132, 132, 1) 0%,
+      rgba(255, 255, 255, 1) 48%,
+      rgba(180, 132, 132, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 `;

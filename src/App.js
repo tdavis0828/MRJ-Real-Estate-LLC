@@ -9,6 +9,7 @@ import Blog from './pages/Blog';
 import Contact from './components/Contact';
 import Faq from './pages/Faq';
 import Footer from './components/Footer';
+import Calculator from './pages/Calculator';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="resources" element={<Resources />} />
+        <Route path="calculator" element={<Calculator />} />
         {/* <Route path="listings" element={<Listings />} /> */}
         <Route path="blog" element={<Blog />} />
         <Route path="contact" element={<Contact />} />

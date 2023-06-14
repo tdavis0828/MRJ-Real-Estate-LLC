@@ -14,7 +14,7 @@ function ResourcesBar() {
       </div>
       <div>
         <img src={calculator} alt="" />
-        <Link to="/">Mortgage calculator</Link>
+        <Link to="calculator">Mortgage calculator</Link>
       </div>
       <div>
         <img src={payment} alt="" />
