@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import Faq from './pages/Faq';
 import Footer from './components/Footer';
 import Calculator from './pages/Calculator';
+import HomeWorth from './pages/HomeWorth';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="resources" element={<Resources />} />
         <Route path="calculator" element={<Calculator />} />
+        <Route path="home-worth" element={<HomeWorth />} />
         {/* <Route path="listings" element={<Listings />} /> */}
         <Route path="blog" element={<Blog />} />
         <Route path="contact" element={<Contact />} />

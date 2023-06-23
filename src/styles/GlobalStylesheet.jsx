@@ -4,7 +4,6 @@ const GlobalStyles = createGlobalStyle`
     body {
         box-sizing: border-box;
         scroll-behavior: smooth;
-        ${'' /* background: #181818; */}
         font-family: 'Quicksand', sans-serif;
     }
     * {

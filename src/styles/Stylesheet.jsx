@@ -524,6 +524,89 @@ export const StyledCalculator = styled.main`
   }
 `;
 
+// Styling for the "what is my home worth" page
+export const StyledHomeWorth = styled.main`
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(https://images.unsplash.com/photo-1565402170291-8491f14678db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0;
+  & .overlay {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(2px);
+    z-index: 5;
+  }
+  & form {
+    background: #fff;
+    height: 100%;
+    width: 35%;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 10;
+    position: relative;
+    & .header {
+      position: absolute;
+      top: 0;
+      & h2 {
+        margin: 0.75rem 0;
+      }
+    }
+    & label {
+      font-size: 1.15rem;
+      margin-right: 10rem;
+      align-self: flex-end;
+    }
+    & input {
+      margin: 0 1rem;
+      height: 22px;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      border-radius: 3px;
+      text-align: center;
+      &::placeholder {
+        text-align: center;
+      }
+    }
+    & textarea {
+      width: 275px;
+      margin: 0 1rem;
+      font-family: 'Quicksand', sans-serif;
+      padding: 5px;
+    }
+    small {
+      text-align: center;
+      margin: 10px;
+    }
+    & button {
+      height: 35px;
+      width: 75%;
+      margin-left: 5rem;
+      background: rgb(180, 132, 132);
+      background: linear-gradient(
+        0deg,
+        rgba(180, 132, 132, 1) 0%,
+        rgba(255, 255, 255, 1) 48%,
+        rgba(180, 132, 132, 1) 100%
+      );
+      color: #000;
+      border: 1px solid #000;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+`;
+
 //Styling for the footer section
 export const StyledFooter = styled.footer`
   height: 10vh;
