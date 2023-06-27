@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { StyledHomeWorth } from '../styles/Stylesheet';
+import emailjs from '@emailjs/browser';
 
 const HomeWorth = () => {
+  const form = useRef();
   const [formData, setFormData] = useState({
     name: '',
     number: '',
@@ -22,16 +24,45 @@ const HomeWorth = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  function sendEmail(e) {
     e.preventDefault();
-    // You can perform form validation or submit the data to an API here
-    console.log(formData);
-  };
+    emailjs
+      .sendForm(
+        'service_sktr7g1',
+        'template_ihijgv7',
+        form.current,
+        'uHBGQxiG0Tp_1kI1r'
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    setFormData({
+      name: '',
+      number: '',
+      email: '',
+      address: '',
+      city: '',
+      state: '',
+      propertyType: '',
+      condition: '',
+      bedrooms: '',
+      bathrooms: '',
+      size: '',
+      buildYear: '',
+      additionalComments: '',
+    });
+  }
 
   return (
     <StyledHomeWorth>
       <div className="overlay" />
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={sendEmail} ref={form}>
         <div className="header">
           <h2>Find out what your home is worth</h2>
           <p>
@@ -47,6 +78,7 @@ const HomeWorth = () => {
             value={formData.name}
             onChange={handleChange}
             placeholder="Jane Doe"
+            required
           />
         </label>
         <br />
@@ -58,6 +90,7 @@ const HomeWorth = () => {
             value={formData.number}
             onChange={handleChange}
             placeholder="555-555-5555"
+            required
           />
         </label>
         <br />
@@ -69,6 +102,7 @@ const HomeWorth = () => {
             value={formData.email}
             onChange={handleChange}
             placeholder="janedoe@email.com"
+            required
           />
         </label>
         <br />
@@ -80,6 +114,7 @@ const HomeWorth = () => {
             value={formData.address}
             onChange={handleChange}
             placeholder="123 easy street"
+            required
           />
         </label>
         <br />
@@ -87,10 +122,11 @@ const HomeWorth = () => {
           City:
           <input
             type="text"
-            name="address"
+            name="city"
             value={formData.city}
             onChange={handleChange}
             placeholder="Pleasantville"
+            required
           />
         </label>
         <br />
@@ -98,10 +134,11 @@ const HomeWorth = () => {
           State:
           <input
             type="text"
-            name="address"
+            name="state"
             value={formData.state}
             onChange={handleChange}
             placeholder="CA"
+            required
           />
         </label>
         <br />
@@ -109,10 +146,11 @@ const HomeWorth = () => {
           Type of property:
           <input
             type="text"
-            name="address"
+            name="propertyType"
             value={formData.propertyType}
             onChange={handleChange}
             placeholder="Residential or Commercial"
+            required
           />
         </label>
         <br />
@@ -126,6 +164,7 @@ const HomeWorth = () => {
             value={formData.bedrooms}
             onChange={handleChange}
             placeholder="3"
+            required
           />
         </label>
         <br />
@@ -139,6 +178,7 @@ const HomeWorth = () => {
             value={formData.bathrooms}
             onChange={handleChange}
             placeholder="2.5"
+            required
           />
         </label>
         <br />
@@ -167,7 +207,7 @@ const HomeWorth = () => {
         <label>
           Add ons:
           <textarea
-            name="buildYear"
+            name="additionalComments"
             value={formData.additionalComments}
             onChange={handleChange}
             placeholder="New roofing, close to a school, remodeled bathrooms"
