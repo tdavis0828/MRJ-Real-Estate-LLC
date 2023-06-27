@@ -18,7 +18,7 @@ function ResourcesBar() {
       </div>
       <div>
         <img src={payment} alt="" />
-        <Link to="/">We buy houses</Link>
+        <Link to="we-buy-houses">We buy houses</Link>
       </div>
     </StyledResourcesBar>
   );

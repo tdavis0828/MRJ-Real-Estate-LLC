@@ -20,6 +20,7 @@ function Calculator() {
 
   return (
     <StyledCalculator>
+      {/* <div className="overlay" /> */}
       <div>
         <form onSubmit={calculateMortgage}>
           <h1>Mortgage Calculator</h1>
@@ -60,12 +61,12 @@ function Calculator() {
             />
           </div>
           <button type="submit">Calculate</button>
+          <div>
+            <p>
+              Estimated Monthly Payment: <strong>${monthlyPayment}</strong>
+            </p>
+          </div>
         </form>
-        <div>
-          <p>
-            Estimated Monthly Payment: <strong>${monthlyPayment}</strong>
-          </p>
-        </div>
       </div>
     </StyledCalculator>
   );

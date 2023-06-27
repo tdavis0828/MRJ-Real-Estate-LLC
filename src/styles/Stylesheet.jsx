@@ -482,16 +482,31 @@ export const StyledCalculator = styled.main`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background: url('https://images.unsplash.com/photo-1592595896551-12b371d546d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-postion: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0;
+  & .overlay {
+    position: absolute;
+    bottom: -20px;
+    height: 85vh;
+    width: 100%;
+    backdrop-filter: blur(2px);
+    z-index: 5;
+  }
   & form {
-    height: 575px;
-    width: 550px;
+    height: 85vh;
+    width: 650px;
     margin: 1rem 0rem;
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border-radius: 5px;
+    background: #fff;
+    z-index: 10;
     & button {
       background: rgb(180, 132, 132);
       background: linear-gradient(
@@ -603,6 +618,53 @@ export const StyledHomeWorth = styled.main`
       border: 1px solid #000;
       border-radius: 5px;
       cursor: pointer;
+    }
+  }
+`;
+
+// Styling for the We Buy Houses page
+export const StyledBuyHouses = styled.main`
+  height: 100vh;
+  width: 100%;
+  background: url('https://images.unsplash.com/photo-1556912167-f556f1f39fdf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & .links-container {
+    height: 100%;
+    width: 45vw;
+    background: #fff;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    & h2 {
+      margin: 1rem;
+      text-align: center;
+    }
+    & .link {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.35rem;
+      margin: 5rem 0;
+      & p {
+        width: 65%;
+        text-align: center;
+        &.header {
+          font-size: 1.5rem;
+          font-weight: 500;
+        }
+      }
+      & img {
+        width: 600px;
+        height: 500px;
+        margin: 1rem;
+      }
     }
   }
 `;

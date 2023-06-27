@@ -11,6 +11,7 @@ import Faq from './pages/Faq';
 import Footer from './components/Footer';
 import Calculator from './pages/Calculator';
 import HomeWorth from './pages/HomeWorth';
+import BuyHouses from './pages/BuyHouses';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="resources" element={<Resources />} />
         <Route path="calculator" element={<Calculator />} />
         <Route path="home-worth" element={<HomeWorth />} />
+        <Route path="we-buy-houses" element={<BuyHouses />} />
         {/* <Route path="listings" element={<Listings />} /> */}
         <Route path="blog" element={<Blog />} />
         <Route path="contact" element={<Contact />} />
