@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 //Styles for the header
 export const StyledHeader = styled.div`
@@ -17,7 +17,7 @@ export const StyledHeader = styled.div`
 
 // Styles for the nav bar
 export const StyledNav = styled.nav`
-  height: 5vh;
+  height: 10vh;
   width: 100%;
   background: #181818;
   z-index: 20;
@@ -90,11 +90,11 @@ export const StyledHero = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8');
+  background-image: url("https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8");
   background-postion: center;
   background-repeat: no-repeat;
   background-size: 100% 110%;
-  ${'' /* background-attachment: fixed; */}
+  ${"" /* background-attachment: fixed; */}
   position: relative;
   & .background-video-container {
     height: 100vh;
@@ -116,17 +116,18 @@ export const StyledHero = styled.main`
   }
   & .text-content {
     color: #fff;
-    font-size: 3rem;
-    font-weight: 400;
+    font-size: 5rem;
+    // font-weight: 400;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 10;
     margin-top: 100px;
-    font-family: 'Alkatra', cursive;
+    font-family: "Corinthia", cursive;
+    // font-family: "Alkatra", cursive;
     & p {
-      ${'' /* background: rgba(0, 0, 0, 0.25); */}
+      ${"" /* background: rgba(0, 0, 0, 0.25); */}
       letter-spacing: 5px;
     }
     & .hero-buttons-container {
@@ -137,7 +138,7 @@ export const StyledHero = styled.main`
         margin: 2rem;
         border: none;
         border-radius: 5px;
-        font-family: 'Quicksand', sans-serif;
+        font-family: "Quicksand", sans-serif;
         font-size: 1.25rem;
         font-weight: 500;
         cursor: pointer;
@@ -211,7 +212,7 @@ export const StlyedCertification = styled.section`
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      font-family: 'Alkatra', cursive;
+      font-family: "Alkatra", cursive;
       font-size: 1.75rem;
     }
     & img {
@@ -258,7 +259,7 @@ export const StyledAbout = styled.section`
       text-align: center;
       & p {
         margin: 0;
-        font-family: 'Alkatra', cursive;
+        font-family: "Alkatra", cursive;
       }
     }
     & img {
@@ -269,7 +270,7 @@ export const StyledAbout = styled.section`
     }
     & span {
       ${
-        '' /* background: rgb(180, 132, 132);
+        "" /* background: rgb(180, 132, 132);
       background: linear-gradient(
         0deg,
         rgba(180, 132, 132, 1) 0%,
@@ -300,7 +301,7 @@ export const StyledReviews = styled.section`
     align-items: center;
   }
   & h1 {
-    font-family: 'Alkatra', cursive;
+    font-family: "Alkatra", cursive;
     padding-top: 2rem;
   }
   & .review {
@@ -339,7 +340,7 @@ export const StyledReviews = styled.section`
 export const StyledListings = styled.section`
   height: 80vh;
   width: 100%;
-  ${'' /* background: #181818; */}
+  ${"" /* background: #181818; */}
   & h1 {
     text-align: center;
     padding-top: 2rem;
@@ -438,12 +439,12 @@ export const StyledContact = styled.section`
       }
     }
     &.contact-text {
-      background: url('https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8');
+      background: url("https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       & p {
-        font-family: 'Alkatra', cursive;
+        font-family: "Alkatra", cursive;
         width: 80%;
       }
       & .overlay {
@@ -469,7 +470,7 @@ export const StyledFaq = styled.main`
     text-align: center;
   }
   & h1 {
-    font-family: 'Alkatra', cursive;
+    font-family: "Alkatra", cursive;
   }
   & div p {
     font-size: 1.15rem;
@@ -482,7 +483,7 @@ export const StyledCalculator = styled.main`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: url('https://images.unsplash.com/photo-1592595896551-12b371d546d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background: url("https://images.unsplash.com/photo-1592595896551-12b371d546d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-postion: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -541,7 +542,7 @@ export const StyledCalculator = styled.main`
 
 // Styling for the "what is my home worth" page
 export const StyledHomeWorth = styled.main`
-  height: 85vh;
+  height: 110vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -596,7 +597,7 @@ export const StyledHomeWorth = styled.main`
     & textarea {
       width: 275px;
       margin: 0 1rem;
-      font-family: 'Quicksand', sans-serif;
+      font-family: "Quicksand", sans-serif;
       padding: 5px;
     }
     small {
@@ -626,7 +627,7 @@ export const StyledHomeWorth = styled.main`
 export const StyledBuyHouses = styled.main`
   height: 100vh;
   width: 100%;
-  background: url('https://images.unsplash.com/photo-1556912167-f556f1f39fdf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background: url("https://images.unsplash.com/photo-1556912167-f556f1f39fdf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -671,24 +672,72 @@ export const StyledBuyHouses = styled.main`
 
 //Styling for the footer section
 export const StyledFooter = styled.footer`
-  height: 10vh;
+  height: 55vh;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   font-size: 1.1rem;
   color: #fff;
   background: #181818;
-  & a {
-    background: rgb(180, 132, 132);
-    background: linear-gradient(
-      0deg,
-      rgba(180, 132, 132, 1) 0%,
-      rgba(255, 255, 255, 1) 48%,
-      rgba(180, 132, 132, 1) 100%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  position: relative;
+  & .logo {
+    & img {
+      height: 300px;
+      width: 300px;
+    }
+  }
+  & div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 100%;
+    border-right: 1px solid rgba(255, 255, 255, 0.35);
+    & p {
+      margin: 5px 0;
+    }
+    & img {
+      height: 25px;
+      width: 25px;
+      padding: 0px 10px;
+    }
+    &.socials {
+      border-right: 0;
+      height: 75px;
+      flex-direction: row;
+      & a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 1rem;
+      }
+    }
+    & .legal {
+      & .legal-logos {
+        display: flex;
+        flex-direction: row;
+      }
+      & img {
+        height: 65px;
+        width: 65px;
+      }
+    }
+  }
+
+  & .copyright {
+    position: absolute;
+    bottom: 15px;
+    & a {
+      background: rgb(180, 132, 132);
+      background: linear-gradient(
+        0deg,
+        rgba(180, 132, 132, 1) 0%,
+        rgba(255, 255, 255, 1) 48%,
+        rgba(180, 132, 132, 1) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 `;

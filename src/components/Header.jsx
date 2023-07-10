@@ -1,6 +1,6 @@
 import React from "react";
 import { StyledHeader } from "../styles/Stylesheet";
-import logo from "../images/REALTOR-dark.png";
+import logo from "../images/logo2-dark.png";
 
 function Header() {
   return (
