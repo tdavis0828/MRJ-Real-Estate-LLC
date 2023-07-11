@@ -9,6 +9,7 @@ import instagramIcom from "../images/instagram.png";
 import linkedInIcon from "../images/linkedin.png";
 import facebookIcon from "../images/facebook-app-symbol.png";
 import logo from "../images/logo2-light.png";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (

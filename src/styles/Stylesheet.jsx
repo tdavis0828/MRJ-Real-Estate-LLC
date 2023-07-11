@@ -80,9 +80,6 @@ export const StyledNav = styled.nav`
       font-weight: 500;
     }
   }
-  & .MuiMenu-list {
-    background: blue;
-  }
 `;
 
 // Styles for the main hero UI
@@ -113,11 +110,11 @@ export const StyledHero = styled.main`
     align-items: center;
     z-index: 10;
     margin-top: 100px;
-    font-family: "Corinthia", cursive;
+    // font-family: "Corinthia", cursive;a
     // font-family: "Alkatra", cursive;
     & p {
       letter-spacing: 5px;
-      font-size: 6rem;
+      font-size: 4rem;
     }
     & .hero-buttons-container {
       display: flex;
@@ -207,8 +204,9 @@ export const StlyedCertification = styled.section`
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      font-family: "Alkatra", cursive;
+      // font-family: "Alkatra", cursive;
       font-size: 1.75rem;
+      margin-bottom: 1rem;
     }
     & img {
       height: 85px;
@@ -233,7 +231,7 @@ export const StlyedCertification = styled.section`
 
 // Styling for the about section;
 export const StyledAbout = styled.section`
-  height: 85vh;
+  height: 95vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -249,6 +247,7 @@ export const StyledAbout = styled.section`
     align-items: center;
     font-size: 1.4rem;
     line-height: 2rem;
+    text-align: center;
     & .dre-info {
       font-size: 1.15rem;
       text-align: center;
@@ -285,8 +284,10 @@ export const StyledReviews = styled.section`
     align-items: center;
   }
   & h1 {
-    font-family: "Alkatra", cursive;
+    // font-family: "Alkatra", cursive;
     padding-top: 2rem;
+    letter-spacing: 2px;
+    font-size: 1.75rem;
   }
   & .review {
     padding: 1rem;
@@ -427,7 +428,7 @@ export const StyledContact = styled.section`
       background-position: center;
       background-repeat: no-repeat;
       & p {
-        font-family: "Alkatra", cursive;
+        // font-family: "Alkatra", cursive;
         width: 80%;
       }
       & .overlay {
@@ -441,17 +442,40 @@ export const StyledContact = styled.section`
 
 // Styles for the FAQ page
 export const StyledFaq = styled.main`
-  height: 120vh;
+  height: 150vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   color: #181818;
+  background: url("https://images.unsplash.com/photo-1605146769289-440113cc3d00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fHJlYWwlMjBlc3RhdGUlMjBhZ2VudHxlbnwwfDB8MHx8fDA%3D");
+  background-size: cover;
+  backround-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  & .header {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    & h1 {
+      margin: 2rem;
+      width: 20%;
+    }
+  }
+
   & .faq {
+    background: #fff;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+    margin: 1.5rem;
+    &:last-child {
+      border: none;
+    }
     & p:first-child {
       margin: 1rem;
-      font-weight: 500;
+      font-weight: 600;
     }
   }
   & div {
@@ -459,7 +483,7 @@ export const StyledFaq = styled.main`
     text-align: center;
   }
   & h1 {
-    font-family: "Alkatra", cursive;
+    // font-family: "Alkatra", cursive;
   }
   & div p {
     font-size: 1.15rem;
@@ -483,7 +507,6 @@ export const StyledCalculator = styled.main`
     bottom: -20px;
     height: 85vh;
     width: 100%;
-    backdrop-filter: blur(2px);
     z-index: 5;
   }
   & form {
@@ -531,7 +554,7 @@ export const StyledCalculator = styled.main`
 
 // Styling for the "what is my home worth" page
 export const StyledHomeWorth = styled.main`
-  height: 120vh;
+  height: 110vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -548,7 +571,6 @@ export const StyledHomeWorth = styled.main`
     bottom: 0;
     height: 100%;
     width: 100%;
-    backdrop-filter: blur(2px);
     z-index: 5;
   }
   & form {
@@ -572,6 +594,9 @@ export const StyledHomeWorth = styled.main`
       font-size: 1.15rem;
       margin-right: 10rem;
       align-self: flex-end;
+      &.textarea {
+        margin-right: 5rem;
+      }
     }
     & input {
       margin: 0 1rem;
@@ -669,6 +694,17 @@ export const StyledBlog = styled.main`
   align-items: center;
   position: relative;
   overflow: scroll;
+  background: url("https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  & .overlay {
+    height: 100%;
+    width: 100%;
+    // background: rgba(0, 0, 0, 0.35);
+    position: absolute;
+    bottom: 0;
+  }
   & .header {
     position: absolute;
     top: 0;
@@ -680,11 +716,13 @@ export const StyledBlog = styled.main`
 
 // Styling for individual blog post
 export const StyledSingleBlog = styled.div`
-  height: 225px;
+  height: 200px;
   width: 750px;
   margin-top: 1rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.35);
   position: relative;
+  background: #fff;
+  padding: 1rem;
   &:last-child {
     border: none;
   }
@@ -697,13 +735,13 @@ export const StyledSingleBlog = styled.div`
   }
   & .post-title {
     position: absolute;
-    top: 0;
+    top: 10%;
     left: 30%;
     font-size: 1.5rem;
   }
   & .post-desc {
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 30%;
   }
 

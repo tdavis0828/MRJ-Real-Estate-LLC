@@ -1,23 +1,23 @@
-import React, { useState, useRef } from 'react';
-import { StyledHomeWorth } from '../styles/Stylesheet';
-import emailjs from '@emailjs/browser';
+import React, { useState, useRef } from "react";
+import { StyledHomeWorth } from "../styles/Stylesheet";
+import emailjs from "@emailjs/browser";
 
 const HomeWorth = () => {
   const form = useRef();
   const [formData, setFormData] = useState({
-    name: '',
-    number: '',
-    email: '',
-    address: '',
-    city: '',
-    state: '',
-    propertyType: '',
-    condition: '',
-    bedrooms: '',
-    bathrooms: '',
-    size: '',
-    buildYear: '',
-    additionalComments: '',
+    name: "",
+    number: "",
+    email: "",
+    address: "",
+    city: "",
+    state: "",
+    propertyType: "",
+    condition: "",
+    bedrooms: "",
+    bathrooms: "",
+    size: "",
+    buildYear: "",
+    additionalComments: "",
   });
 
   const handleChange = (e) => {
@@ -28,10 +28,10 @@ const HomeWorth = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        'service_sktr7g1',
-        'template_ihijgv7',
+        "service_sktr7g1",
+        "template_ihijgv7",
         form.current,
-        'uHBGQxiG0Tp_1kI1r'
+        "uHBGQxiG0Tp_1kI1r"
       )
       .then(
         (result) => {
@@ -43,19 +43,19 @@ const HomeWorth = () => {
       );
 
     setFormData({
-      name: '',
-      number: '',
-      email: '',
-      address: '',
-      city: '',
-      state: '',
-      propertyType: '',
-      condition: '',
-      bedrooms: '',
-      bathrooms: '',
-      size: '',
-      buildYear: '',
-      additionalComments: '',
+      name: "",
+      number: "",
+      email: "",
+      address: "",
+      city: "",
+      state: "",
+      propertyType: "",
+      condition: "",
+      bedrooms: "",
+      bathrooms: "",
+      size: "",
+      buildYear: "",
+      additionalComments: "",
     });
   }
 
@@ -183,7 +183,7 @@ const HomeWorth = () => {
         </label>
         <br />
         <label>
-          Aprox. Size (in square feet):
+          Aprox. Size:
           <input
             type="number"
             name="size"
@@ -204,7 +204,7 @@ const HomeWorth = () => {
           />
         </label>
         <br />
-        <label>
+        <label className="textarea">
           Add ons:
           <textarea
             name="additionalComments"

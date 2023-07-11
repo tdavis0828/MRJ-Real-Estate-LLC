@@ -5,6 +5,8 @@ import SingleBlog from "../components/SingleBlog";
 function Blog() {
   return (
     <StyledBlog>
+      <div className="overlay" />
+
       <div className="header">
         <h2>Blogs</h2>
         <p>News & Events</p>

@@ -1,10 +1,12 @@
-import React from 'react';
-import { StyledFaq } from '../styles/Stylesheet';
+import React from "react";
+import { StyledFaq } from "../styles/Stylesheet";
 
 function FAQ() {
   return (
     <StyledFaq id="faqs">
-      <h1>Frequently asked questions</h1>
+      <div className="header">
+        <h1>Frequently Asked Questions</h1>
+      </div>
       <div className="faq">
         <p>Q: What the first step of the home buying process?</p>
         <p>
@@ -19,7 +21,7 @@ function FAQ() {
           A: From start (searching online) to finish (closing escrow), buying a
           home takes about 10 to 12 weeks. Once a home is selected an the offer
           is accepted, the average time to complete the escrow period on a home
-          is 30 to 45 days (under normal market conditions).{' '}
+          is 30 to 45 days (under normal market conditions).{" "}
         </p>
       </div>
       <div className="faq">
