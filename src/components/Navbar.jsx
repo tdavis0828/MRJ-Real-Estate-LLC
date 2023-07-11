@@ -45,7 +45,7 @@ const Navbar = () => {
         </Menu>
 
         <Link to="contact">Contact</Link>
-        <Link to="#faqs">FAQs</Link>
+        <Link to="faq">FAQs</Link>
         <Link to="blog">Blog</Link>
       </div>
       {/* <div className="nav-info">

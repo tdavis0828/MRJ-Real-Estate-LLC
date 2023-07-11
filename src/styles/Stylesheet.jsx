@@ -84,7 +84,7 @@ export const StyledNav = styled.nav`
 
 // Styles for the main hero UI
 export const StyledHero = styled.main`
-  height: 80vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -94,40 +94,19 @@ export const StyledHero = styled.main`
   background-postion: center;
   background-repeat: no-repeat;
   background-size: 100% 110%;
-  ${"" /* background-attachment: fixed; */}
   position: relative;
-  & .background-video-container {
-    height: 100vh;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    & .overlay {
-      height: 100%;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.25);
-      position: absolute;
-      top: 0;
-    }
-    & video {
-      height: 100%;
-      width: 100%;
-      object-fit: fill;
-    }
-  }
   & .text-content {
     color: #fff;
-    font-size: 5rem;
-    // font-weight: 400;
+    font-size: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 10;
     margin-top: 100px;
-    font-family: "Corinthia", cursive;
-    // font-family: "Alkatra", cursive;
+    // font-family: "Corinthia", cursive;
+    font-family: "Alkatra", cursive;
     & p {
-      ${"" /* background: rgba(0, 0, 0, 0.25); */}
       letter-spacing: 5px;
     }
     & .hero-buttons-container {
@@ -269,17 +248,6 @@ export const StyledAbout = styled.section`
       margin: 1rem;
     }
     & span {
-      ${
-        "" /* background: rgb(180, 132, 132);
-      background: linear-gradient(
-        0deg,
-        rgba(180, 132, 132, 1) 0%,
-        rgba(255, 255, 255, 1) 48%,
-        rgba(180, 132, 132, 1) 100%
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; */
-      }
       font-weight: 600;
     }
   }
@@ -290,7 +258,7 @@ export const StyledReviews = styled.section`
   height: 60vh;
   width: 100%;
   background: #181818;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
   color: #fff;
   text-align: center;
   & .image-slider {
@@ -458,13 +426,19 @@ export const StyledContact = styled.section`
 
 // Styles for the FAQ page
 export const StyledFaq = styled.main`
-  height: 100%;
+  height: 120vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  color: #fff;
+  color: #181818;
+  & .faq {
+    & p:first-child {
+      margin: 1rem;
+      font-weight: 500;
+    }
+  }
   & div {
     width: 50%;
     text-align: center;
@@ -542,7 +516,7 @@ export const StyledCalculator = styled.main`
 
 // Styling for the "what is my home worth" page
 export const StyledHomeWorth = styled.main`
-  height: 110vh;
+  height: 120vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -670,9 +644,69 @@ export const StyledBuyHouses = styled.main`
   }
 `;
 
+// Styling for the blog page
+export const StyledBlog = styled.main`
+  height 120vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  & .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 2rem;
+    font-size: 1.65rem;
+  }
+`;
+
+// Styling for individual blog post
+export const StyledSingleBlog = styled.div`
+  height: 225px;
+  width: 750px;
+  margin-top: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+  position: relative;
+  &:last-child {
+    border: none;
+  }
+  & .post-img {
+    postion: absolute;
+    bottom: 0;
+    left: 0;
+    width: 185px;
+    height: 185px;
+  }
+  & .post-title {
+    position: absolute;
+    top: 0;
+    left: 30%;
+    font-size: 1.5rem;
+  }
+  & .post-desc {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+  }
+
+  & .post-author {
+    position: absolute;
+    left: 30%;
+    bottom: 20%;
+  }
+
+  & .post-tag {
+    position: absolute;
+    left: 65%;
+    bottom: 20%;
+  }
+`;
+
 //Styling for the footer section
 export const StyledFooter = styled.footer`
-  height: 55vh;
+  height: 50vh;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -728,6 +762,7 @@ export const StyledFooter = styled.footer`
   & .copyright {
     position: absolute;
     bottom: 15px;
+    font-size: 1rem;
     & a {
       background: rgb(180, 132, 132);
       background: linear-gradient(
