@@ -4,6 +4,7 @@ import { StyledHero } from "../styles/Stylesheet";
 const Hero = () => {
   return (
     <StyledHero id="home">
+      <div className="overlay" />
       <div className="text-content">
         <p>Marcy Renae Jones Realty</p>
         <div className="hero-buttons-container">

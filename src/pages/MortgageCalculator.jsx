@@ -64,7 +64,6 @@ const MortgageCalculator = () => {
       </form>
       <div>
         <h2>Estimated Monthly Payment: ${monthlyPayment}</h2>
-        {/* <p>Total Interest Paid: ${totalInterest}</p> */}
       </div>
       <div className="disclaimer">
         <small>

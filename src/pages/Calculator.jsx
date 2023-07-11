@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { StyledCalculator } from '../styles/Stylesheet';
+import React, { useState } from "react";
+import { StyledCalculator } from "../styles/Stylesheet";
 
 function Calculator() {
   const [loanAmount, setLoanAmount] = useState(300000);
@@ -20,7 +20,6 @@ function Calculator() {
 
   return (
     <StyledCalculator>
-      {/* <div className="overlay" /> */}
       <div>
         <form onSubmit={calculateMortgage}>
           <h1>Mortgage Calculator</h1>

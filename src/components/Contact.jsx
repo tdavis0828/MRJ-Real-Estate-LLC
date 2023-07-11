@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { StyledContact } from "../styles/Stylesheet";
-// import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [nameInput, setNameInput] = useState("");
@@ -11,21 +11,21 @@ const Contact = () => {
   function sendEmail(e) {
     e.preventDefault();
 
-    // emailjs
-    //   .sendForm(
-    //     'service_sktr7g1',
-    //     'template_ihijgv7',
-    //     form.current,
-    //     'uHBGQxiG0Tp_1kI1r'
-    //   )
-    //   .then(
-    //     (result) => {
-    //       console.log(result.text);
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
+    emailjs
+      .sendForm(
+        "service_sktr7g1",
+        "template_ihijgv7",
+        form.current,
+        "uHBGQxiG0Tp_1kI1r"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   }
 
   return (

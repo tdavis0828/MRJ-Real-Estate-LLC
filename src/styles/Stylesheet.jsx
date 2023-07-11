@@ -39,7 +39,7 @@ export const StyledNav = styled.nav`
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      font-size: 1.05rem;
+      font-size: 1.15rem;
       font-weight: 500;
     }
     & button {
@@ -98,26 +98,39 @@ export const StyledHero = styled.main`
   background-repeat: no-repeat;
   background-size: 100% 110%;
   position: relative;
+  & .overlay {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+  }
   & .text-content {
     color: #fff;
-    font-size: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 10;
     margin-top: 100px;
-    // font-family: "Corinthia", cursive;
-    font-family: "Alkatra", cursive;
+    font-family: "Corinthia", cursive;
+    // font-family: "Alkatra", cursive;
     & p {
       letter-spacing: 5px;
+      font-size: 6rem;
     }
     & .hero-buttons-container {
       display: flex;
+      margin-top: 1rem;
       & a {
         background: #fff;
-        padding: 1rem 2rem;
-        margin: 2rem;
+        width: 200px;
+        height: 55px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
         border: none;
         border-radius: 5px;
         font-family: "Quicksand", sans-serif;
@@ -311,7 +324,6 @@ export const StyledReviews = styled.section`
 export const StyledListings = styled.section`
   height: 80vh;
   width: 100%;
-  ${"" /* background: #181818; */}
   & h1 {
     text-align: center;
     padding-top: 2rem;
