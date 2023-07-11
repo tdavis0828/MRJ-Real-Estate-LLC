@@ -1,10 +1,33 @@
 import React from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 import Fade from "@mui/material/Fade";
+import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { StyledNav } from "../styles/Stylesheet";
+
+const StyledMenu = styled(Menu)`
+  & ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: #181818;
+    & a {
+      color: #fff;
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+      transition: hover 0.35s ease;
+
+      &:hover {
+        text-decoration: underline;
+        background: #3c4048;
+        transition: all 0.35s ease;
+      }
+    }
+  }
+`;
 
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -29,7 +52,7 @@ const Navbar = () => {
         >
           Resources
         </Button>
-        <Menu
+        <StyledMenu
           id="fade-menu"
           MenuListProps={{
             "aria-labelledby": "fade-button",
@@ -39,19 +62,21 @@ const Navbar = () => {
           onClose={handleClose}
           TransitionComponent={Fade}
         >
-          <MenuItem onClick={handleClose}>We Buy Houses Cash</MenuItem>
-          <MenuItem onClick={handleClose}>Mortgage Calculator</MenuItem>
-          <MenuItem onClick={handleClose}>What is my house worth?</MenuItem>
-        </Menu>
+          <Link to="we-buy-houses" onClick={handleClose}>
+            We Buy Houses Cash
+          </Link>
+          <Link to="calculator" onClick={handleClose}>
+            Mortgage Calculator
+          </Link>
+          <Link to="home-worth" onClick={handleClose}>
+            What is my house worth?
+          </Link>
+        </StyledMenu>
 
         <Link to="contact">Contact</Link>
         <Link to="faq">FAQs</Link>
         <Link to="blog">Blog</Link>
       </div>
-      {/* <div className="nav-info">
-        <p>9312 LaCroix court, Bakersfield, CA 93311</p>
-        <p>DRE#: 02081683</p>
-      </div> */}
     </StyledNav>
   );
 };

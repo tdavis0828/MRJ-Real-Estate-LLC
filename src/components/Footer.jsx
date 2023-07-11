@@ -31,10 +31,16 @@ const Footer = () => {
           Jonesrealty3369@gmail.com
         </p>
         <div className="socials">
-          <Link to="/">
+          <Link
+            to="https://www.instagram.com/realtormarcyjones/"
+            target="_blank"
+          >
             <img src={instagramIcom} alt="Instagram Icon" />
           </Link>
-          <Link to="/">
+          <Link
+            to="https://www.linkedin.com/in/marcy-jones-494163258/"
+            target="_blank"
+          >
             <img src={linkedInIcon} alt="Linked In Icon" />
           </Link>
           <Link to="/">

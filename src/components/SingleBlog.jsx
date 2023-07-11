@@ -1,12 +1,12 @@
 import React from "react";
 import { StyledSingleBlog } from "../styles/Stylesheet";
 
-function Blog({ image, title, desc, tag, author }) {
+function Blog({ image, link, title, desc, tag, author }) {
   return (
     <StyledSingleBlog>
       <img src={image} alt="Post Thumbnail" className="post-img" />
 
-      <a href="/" className="post-title">
+      <a href={link} target="_blank" className="post-title" rel="noreferrer">
         {title}
       </a>
       <p className="post-desc">{desc}</p>

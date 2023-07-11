@@ -80,6 +80,9 @@ export const StyledNav = styled.nav`
       font-weight: 500;
     }
   }
+  & .MuiMenu-list {
+    background: blue;
+  }
 `;
 
 // Styles for the main hero UI
@@ -352,7 +355,7 @@ export const StyledListings = styled.section`
 
 // Styling for the contact form
 export const StyledContact = styled.section`
-  height: 50vh;
+  height: 70vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -653,6 +656,7 @@ export const StyledBlog = styled.main`
   justify-content: space-around;
   align-items: center;
   position: relative;
+  overflow: scroll;
   & .header {
     position: absolute;
     top: 0;
@@ -753,6 +757,7 @@ export const StyledFooter = styled.footer`
         flex-direction: row;
       }
       & img {
+        margin-top: 10px;
         height: 65px;
         width: 65px;
       }
