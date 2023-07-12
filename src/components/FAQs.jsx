@@ -4,6 +4,8 @@ import { StyledFaq } from "../styles/Stylesheet";
 function FAQ() {
   return (
     <StyledFaq id="faqs">
+      <div className="overlay" />
+
       <div className="header">
         <h1>Frequently Asked Questions</h1>
       </div>

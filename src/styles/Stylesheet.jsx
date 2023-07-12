@@ -187,6 +187,28 @@ export const StlyedCertification = styled.section`
     &:nth-child(1) {
       border-right: 1px solid #fff;
     }
+    & p {
+      margin-bottom: 1rem;
+    }
+    & .email-btn {
+      text-decoration: none;
+      font-size: 1.15rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 5px;
+      color: #181818;
+      padding: 1rem 2rem;
+      background: rgb(180, 132, 132);
+      background: linear-gradient(
+        0deg,
+        rgba(180, 132, 132, 1) 0%,
+        rgba(255, 255, 255, 1) 48%,
+        rgba(180, 132, 132, 1) 100%
+      );
+      &:hover {
+        border: 1px solid #fff;
+      }
+    }
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -434,7 +456,8 @@ export const StyledContact = styled.section`
       & .overlay {
         color: #fff;
         font-size: 2rem;
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(2px);
       }
     }
   }
@@ -454,6 +477,14 @@ export const StyledFaq = styled.main`
   backround-position: center;
   background-repeat: no-repeat;
   position: relative;
+  & .overlay {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    backdrop-filter: blur(2px);
+  }
   & .header {
     width: 50%;
     position: absolute;
@@ -470,6 +501,7 @@ export const StyledFaq = styled.main`
     padding: 1.5rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.35);
     margin: 1.5rem;
+    z-index: 10;
     &:last-child {
       border: none;
     }
@@ -501,13 +533,15 @@ export const StyledCalculator = styled.main`
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  z-index: 0;
+  z-index: -1;
   & .overlay {
+    background: rgba(0, 0, 0, 0.1);
     position: absolute;
-    bottom: -20px;
-    height: 85vh;
+    bottom: 0;
+    height: 100%;
     width: 100%;
-    z-index: 5;
+    backdrop-filter: blur(2px);
+    z-index: -2;
   }
   & form {
     height: 85vh;
@@ -519,7 +553,6 @@ export const StyledCalculator = styled.main`
     justify-content: space-around;
     align-items: center;
     background: #fff;
-    z-index: 10;
     & button {
       background: rgb(180, 132, 132);
       background: linear-gradient(
@@ -545,7 +578,6 @@ export const StyledCalculator = styled.main`
     }
   }
   & div {
-    margin: 1rem;
     & p {
       font-size: 1.55rem;
     }
@@ -572,6 +604,8 @@ export const StyledHomeWorth = styled.main`
     height: 100%;
     width: 100%;
     z-index: 5;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
   }
   & form {
     background: #fff;
@@ -648,11 +682,21 @@ export const StyledBuyHouses = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
+  backdrop-filter: blur(2px);
+  & .overlay {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    position: absolute;
+    bottom: 0;
+  }
   & .links-container {
     height: 100%;
     width: 45vw;
     background: #fff;
     overflow: scroll;
+    z-index: 10;
     &::-webkit-scrollbar {
       display: none;
     }
@@ -701,7 +745,8 @@ export const StyledBlog = styled.main`
   & .overlay {
     height: 100%;
     width: 100%;
-    // background: rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
     position: absolute;
     bottom: 0;
   }
@@ -717,9 +762,10 @@ export const StyledBlog = styled.main`
 // Styling for individual blog post
 export const StyledSingleBlog = styled.div`
   height: 200px;
-  width: 750px;
+  width: 800px;
   margin-top: 1rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+  border-radius: 3px;
   position: relative;
   background: #fff;
   padding: 1rem;
@@ -730,31 +776,33 @@ export const StyledSingleBlog = styled.div`
     postion: absolute;
     bottom: 0;
     left: 0;
-    width: 185px;
-    height: 185px;
+    width: 250px;
+    height: 200px;
   }
   & .post-title {
     position: absolute;
     top: 10%;
-    left: 30%;
-    font-size: 1.5rem;
+    left: 35%;
+    font-size: 1.3rem;
   }
   & .post-desc {
     position: absolute;
     top: 40%;
-    left: 30%;
+    left: 35%;
   }
 
   & .post-author {
     position: absolute;
-    left: 30%;
-    bottom: 20%;
+    left: 35%;
+    bottom: 10%;
   }
 
   & .post-tag {
     position: absolute;
     left: 65%;
-    bottom: 20%;
+    bottom: 10%;
+    font-size: 0.85rem;
+    opacity: 0.75;
   }
 `;
 

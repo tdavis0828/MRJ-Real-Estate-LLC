@@ -20,6 +20,8 @@ function Calculator() {
 
   return (
     <StyledCalculator>
+      <div className="overlay" />
+
       <div>
         <form onSubmit={calculateMortgage}>
           <h1>Mortgage Calculator</h1>

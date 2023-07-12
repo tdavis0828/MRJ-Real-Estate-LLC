@@ -23,7 +23,7 @@ const MortgageCalculator = () => {
 
   return (
     <StyledCalculator>
-      <h1>Mortgage Calculator</h1>
+      <h1>Mortgage Calculator </h1>
       <form onSubmit={calculateMortgage}>
         <div>
           <label>List Price:</label>

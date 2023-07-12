@@ -1,14 +1,15 @@
-import React from 'react';
-import { StyledBuyHouses } from '../styles/Stylesheet';
-import moneyHouse from '../images/moneyHouse.png';
-import flower from '../images/flower.png';
-import avoidSign from '../images/avoidSign.png';
-import piggyBank from '../images/piggyBank.png';
-import mapImage from '../images/mapImage.png';
+import React from "react";
+import { StyledBuyHouses } from "../styles/Stylesheet";
+import moneyHouse from "../images/moneyHouse.png";
+import flower from "../images/flower.png";
+import avoidSign from "../images/avoidSign.png";
+import piggyBank from "../images/piggyBank.png";
+import mapImage from "../images/mapImage.png";
 
 function BuyHouses() {
   return (
     <StyledBuyHouses>
+      <div className="overlay" />
       <div className="links-container">
         <h2>Fast Cash For Your House. We Buy Houses On The Spot!</h2>
 

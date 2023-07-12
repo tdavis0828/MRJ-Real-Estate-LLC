@@ -13,29 +13,28 @@ function Blog() {
       </div>
 
       <SingleBlog
-        link="https://www.nar.realtor/blogs/styled-staged-sold/the-most-popular-finishes-in-kitchen-remodels"
-        image="https://cdn.nar.realtor/sites/default/files/styles/inline_image_auto_height__287_/public/sss_f_kitchen_teaser_otherfeatureslikepremium-gradestainlesssteelgivetheappliancesanupscalelookandfeel_.jpg?itok=hjBhZWk-"
-        title="The Most Popular Finishes in Kitchen Remodels"
-        desc="From sinks to faucets, find out what consumers prefer when outfitting
-        their new kitchen."
-        author="Melissa Dittmann Tracey"
+        link="https://www.nar.realtor/blogs/styled-staged-sold/home-maintenance-checklist-to-avoid-costly-repairs"
+        image="https://cdn.nar.realtor/sites/default/files/styles/inline_paragraph_image/public/sss_maintenance_gettyimages-857493376.jpg?itok=1nMKKw16"
+        title="Home Maintenance Checklist to Avoid Costly Repairs"
+        desc="Many homeowners have anxiety when it comes to maintaining their home, a survey shows. Here’s a breakdown of the top projects."
+        author="Realtor.com"
         tag="Styled, Staged & Sold"
       />
       <SingleBlog
         link="https://www.nar.realtor/blogs/culture-scan/a-history-and-a-mission-of-breaking-barriers"
-        image="https://cdn.nar.realtor/sites/default/files/styles/inline_image_auto_height__287_/public/cs_summer23_pioneers_tdallassmith.jpeg?itok=l59Uf37p"
-        title="A History and a Mission of Breaking Barriers"
-        desc="Atlanta broker’s book is part memoir, part guide for young Black men and women seeking to make it in commercial real estate."
-        author="Anne-Marie Siudzinski"
-        tag="Culture Scan"
+        image="https://cdn.nar.realtor/sites/default/files/styles/inline_paragraph_image/public/gettyimages-1268388241.jpg?itok=L25fcQwL"
+        title="8 Strategies for Maintaining a Home as an Asset"
+        desc="High-profile bank failures offer lessons worth sharing with your clients and customers."
+        author="Daniel Smith"
+        tag="Marketing, Homeownership Education & Counseling"
       />
       <SingleBlog
-        link="https://www.nar.realtor/blogs/spaces-to-places/fair-housing-placemaking-projects-support-underserved-communities"
-        image="https://cdn.nar.realtor/sites/default/files/styles/inline_image_auto_height__287_/public/spaces-to-places-blog-burnsville-juneteenth-flag-03-24-2023-1300w-867h.jpg?itok=6Z9TV7zl"
-        title="Fair Housing Placemaking Projects Support Underserved Communities"
-        desc="The Saint Paul Area Association of REALTORS® championed diversity, equity and inclusion in new public gathering places."
-        author="Becky Wegscheid"
-        tag="Fair Housing, Smart Growth"
+        link="https://www.nar.realtor/magazine/real-estate-news/buyers-reveal-their-most-unexpected-housing-costs"
+        image="https://cdn.nar.realtor/sites/default/files/styles/inline_paragraph_image/public/assets/images/103919678.jpg?itok=wqNXfWx3"
+        title="Buyers Reveal Their Most Unexpected Housing Costs"
+        desc="As home buyers have stretched their budgets to buy, they have discovered more unexpected costs of homeownership."
+        author="Realtor Magazine"
+        tag="Homeownership Education & Counseling"
       />
     </StyledBlog>
   );
