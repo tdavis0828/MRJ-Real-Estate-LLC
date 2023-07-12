@@ -387,6 +387,19 @@ export const StyledListings = styled.section`
     }
   }
 `;
+//Styles for the alerts
+export const StyledAlert = styled.aside`
+  width: 450px;
+  height: 40px;
+  background: #5d9c59;
+  position: absolute;
+  bottom: 10%;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+`;
 
 // Styling for the contact form
 export const StyledContact = styled.section`
@@ -396,7 +409,7 @@ export const StyledContact = styled.section`
   justify-content: center;
   align-items: center;
   color: #fff;
-
+  position: relative;
   & div {
     height: 100%;
     width: 100%;
@@ -419,21 +432,29 @@ export const StyledContact = styled.section`
           color: #000;
           font-size: 1.25rem;
         }
-        & input {
+        & input,
+        textarea {
           margin: 1rem;
           width: 500px;
           height: 30px;
           border-radius: 50px;
           border: none;
           display: block;
-          color: #bebebe;
+          color: #181818;
           background: #bebebe;
+          padding-left: 1rem;
+          font-size: 1.05rem;
+          font-family: inherit;
           &::placeholder {
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             padding-left: 1rem;
-            color: #000;
+            color: #181818;
+          }
+          &:focus {
+            outline: 1px solid #181818;
           }
         }
+
         & button {
           border: none;
           border-radius: 50px;
