@@ -9,7 +9,7 @@ import instagramIcom from "../images/instagram.png";
 import linkedInIcon from "../images/linkedin.png";
 import facebookIcon from "../images/facebook-app-symbol.png";
 import logo from "../images/logo2-light.png";
-
+import nextLevelLogo from "../images/nextLevelLogo.png";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
@@ -65,8 +65,13 @@ const Footer = () => {
               alt="Equal Opportunity Housing Logo"
             />
             <img
-              src="https://www.nar.realtor/sites/default/files/downloadable/web_R_blue.jpg"
-              alt="Equal Opportunity Housing Logo"
+              src="https://www.nar.realtor/sites/default/files/downloadable/nar_membershipmark_white.png"
+              alt="Realtor.com Logo"
+            />
+            <img
+              src={nextLevelLogo}
+              alt="Next Level Logo"
+              className="next-level"
             />
           </div>
         </div>

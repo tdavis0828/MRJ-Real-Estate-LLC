@@ -3,6 +3,23 @@ import { StyledBlog } from "../styles/Stylesheet";
 import SingleBlog from "../components/SingleBlog";
 
 function Blog() {
+  const articles = [];
+
+  async function getBlogs() {
+    const res = await fetch(
+      "https://newsapi.org/v2/everything?q=real+estate&searchIn=title&sortBy=popularity&apiKey=f14c617bf0ec4f8681fbb7fc84b2747d"
+    );
+    const data = await res.json();
+
+    data.articles.map((article) => {
+      if (article.urlToImage && articles.length <= 2) {
+        articles.push(article);
+      }
+    });
+
+    // console.log(articles);
+  }
+  // getBlogs();
   return (
     <StyledBlog>
       <div className="overlay" />
@@ -11,7 +28,17 @@ function Blog() {
         <h2>Blogs</h2>
         <p>News & Events</p>
       </div>
-
+      {/* {articles.forEach((article) => {
+        return (
+          <SingleBlog
+            link={article.url}
+            image={article.urlToImage}
+            title={article.title}
+            author={article.author}
+            tag="Styled, Staged & Sold"
+          />
+        );
+      })} */}
       <SingleBlog
         link="https://www.nar.realtor/blogs/styled-staged-sold/home-maintenance-checklist-to-avoid-costly-repairs"
         image="https://cdn.nar.realtor/sites/default/files/styles/inline_paragraph_image/public/sss_maintenance_gettyimages-857493376.jpg?itok=1nMKKw16"
@@ -21,7 +48,7 @@ function Blog() {
         tag="Styled, Staged & Sold"
       />
       <SingleBlog
-        link="https://www.nar.realtor/blogs/culture-scan/a-history-and-a-mission-of-breaking-barriers"
+        link="https://www.nar.realtor/magazine/real-estate-news/sales-marketing/8-strategies-for-maintaining-a-home-as-an-asset"
         image="https://cdn.nar.realtor/sites/default/files/styles/inline_paragraph_image/public/gettyimages-1268388241.jpg?itok=L25fcQwL"
         title="8 Strategies for Maintaining a Home as an Asset"
         desc="High-profile bank failures offer lessons worth sharing with your clients and customers."

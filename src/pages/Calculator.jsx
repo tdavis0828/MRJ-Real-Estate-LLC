@@ -20,7 +20,7 @@ function Calculator() {
 
   return (
     <StyledCalculator>
-      <div className="overlay" />
+      {/* <div className="overlay" /> */}
 
       <div>
         <form onSubmit={calculateMortgage}>

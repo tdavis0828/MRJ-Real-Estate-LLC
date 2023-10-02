@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Calculator from "./pages/Calculator";
 import HomeWorth from "./pages/HomeWorth";
 import BuyHouses from "./pages/BuyHouses";
+import CurrentListings from "./pages/CurrentListings";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="calculator" element={<Calculator />} />
         <Route path="home-worth" element={<HomeWorth />} />
         <Route path="we-buy-houses" element={<BuyHouses />} />
+        <Route path="current-listings" element={<CurrentListings />} />
         <Route path="blog" element={<Blog />} />
         <Route path="contact" element={<Contact />} />
         <Route path="faq" element={<Faq />} />

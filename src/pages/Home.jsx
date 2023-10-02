@@ -7,9 +7,18 @@ import About from "../components/About";
 import Reviews from "../components/Reviews";
 
 function Home() {
+  const options = {
+    method: "GET",
+    headers: {
+      accept: "application/json",
+      "content-type": "application/json",
+      "REPLIERS-API-KEY": "aMLQQCBdLnhXkkVV7H9gkWfITGaY5D",
+    },
+  };
   async function getMLSData() {
     const res = await fetch(
-      "https://api.bridgedataoutput.com/api/v2/test/listings?access_token=6baca547742c6f96a6ff71b138424f21"
+      "https://sandbox.repliers.io/listings?listings=true&operator=AND&sortBy=updatedOnDesc&status=A",
+      options
     );
     const data = await res.json();
     console.log(data);

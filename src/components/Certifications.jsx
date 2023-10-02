@@ -15,6 +15,7 @@ const Certifications = () => {
             Jonesrealty3369@gmail.com
           </a>
         </p>
+        <p>DRE#: 02081683</p>
         <Link to="contact" className="email-btn">
           Reach out
         </Link>

@@ -13,6 +13,8 @@ export const StyledHeader = styled.div`
     height: 350px;
     width: 350px;
   }
+  @media (min-width: 576px) {
+  }
 `;
 
 // Styles for the nav bar
@@ -30,29 +32,31 @@ export const StyledNav = styled.nav`
     text-transform: uppercase;
     & a {
       text-decoration: none;
-      background: rgb(180, 132, 132);
-      background: linear-gradient(
-        0deg,
-        rgba(180, 132, 132, 1) 0%,
-        rgba(255, 255, 255, 1) 48%,
-        rgba(180, 132, 132, 1) 100%
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #fff;
+      // background: rgb(180, 132, 132);
+      // background: linear-gradient(
+      //   0deg,
+      //   rgba(180, 132, 132, 1) 0%,
+      //   rgba(255, 255, 255, 1) 48%,
+      //   rgba(180, 132, 132, 1) 100%
+      // );
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
       font-size: 1.15rem;
       font-weight: 500;
     }
     & button {
       text-decoration: none;
-      background: rgb(180, 132, 132);
-      background: linear-gradient(
-        0deg,
-        rgba(180, 132, 132, 1) 0%,
-        rgba(255, 255, 255, 1) 48%,
-        rgba(180, 132, 132, 1) 100%
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #fff;
+      // background: rgb(180, 132, 132);
+      // background: linear-gradient(
+      //   0deg,
+      //   rgba(180, 132, 132, 1) 0%,
+      //   rgba(255, 255, 255, 1) 48%,
+      //   rgba(180, 132, 132, 1) 100%
+      // );
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
       font-size: 1.05rem;
       font-weight: 400;
     }
@@ -90,10 +94,11 @@ export const StyledHero = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8");
+  // background-image: url("https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8");
+  background-image: url("https://images.unsplash.com/photo-1571624436279-b272aff752b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-postion: center;
   background-repeat: no-repeat;
-  background-size: 100% 110%;
+  background-size: cover;
   position: relative;
   & .overlay {
     height: 100%;
@@ -112,6 +117,11 @@ export const StyledHero = styled.main`
     margin-top: 100px;
     // font-family: "Corinthia", cursive;a
     // font-family: "Alkatra", cursive;
+    & img {
+      width: 1100px;
+      height: 375px;
+      // box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+    }
     & p {
       letter-spacing: 5px;
       font-size: 4rem;
@@ -198,13 +208,13 @@ export const StlyedCertification = styled.section`
       border-radius: 5px;
       color: #181818;
       padding: 1rem 2rem;
-      background: rgb(180, 132, 132);
-      background: linear-gradient(
-        0deg,
-        rgba(180, 132, 132, 1) 0%,
-        rgba(255, 255, 255, 1) 48%,
-        rgba(180, 132, 132, 1) 100%
-      );
+      background: #fff;
+      // background: linear-gradient(
+      //   0deg,
+      //   rgba(180, 132, 132, 1) 0%,
+      //   rgba(255, 255, 255, 1) 48%,
+      //   rgba(180, 132, 132, 1) 100%
+      // );
       &:hover {
         border: 1px solid #fff;
       }
@@ -217,15 +227,15 @@ export const StlyedCertification = styled.section`
     height: 60%;
     & h2 {
       text-decoration: underline;
-      background: rgb(180, 132, 132);
-      background: linear-gradient(
-        0deg,
-        rgba(180, 132, 132, 1) 0%,
-        rgba(255, 255, 255, 1) 48%,
-        rgba(180, 132, 132, 1) 100%
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #fff;
+      // background: linear-gradient(
+      //   0deg,
+      //   rgba(180, 132, 132, 1) 0%,
+      //   rgba(255, 255, 255, 1) 48%,
+      //   rgba(180, 132, 132, 1) 100%
+      // );
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
       // font-family: "Alkatra", cursive;
       font-size: 1.75rem;
       margin-bottom: 1rem;
@@ -237,15 +247,15 @@ export const StlyedCertification = styled.section`
     & p {
       font-size: 1.25rem;
       & a {
-        background: rgb(180, 132, 132);
-        background: linear-gradient(
-          0deg,
-          rgba(180, 132, 132, 1) 0%,
-          rgba(255, 255, 255, 1) 48%,
-          rgba(180, 132, 132, 1) 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: #fff;
+        // background: linear-gradient(
+        //   0deg,
+        //   rgba(180, 132, 132, 1) 0%,
+        //   rgba(255, 255, 255, 1) 48%,
+        //   rgba(180, 132, 132, 1) 100%
+        // );
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
       }
     }
   }
@@ -292,7 +302,7 @@ export const StyledAbout = styled.section`
 
 // Styling for reviews section
 export const StyledReviews = styled.section`
-  height: 60vh;
+  height: 475px;
   width: 100%;
   background: #181818;
   border-bottom: 1px solid rgba(255, 255, 255, 0.35);
@@ -322,15 +332,7 @@ export const StyledReviews = styled.section`
       font-size: 1.15rem;
       margin: auto;
       &.author {
-        background: rgb(180, 132, 132);
-        background: linear-gradient(
-          0deg,
-          rgba(180, 132, 132, 1) 0%,
-          rgba(255, 255, 255, 1) 48%,
-          rgba(180, 132, 132, 1) 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: #fff;
         font-size: 1.75rem;
         font-weight: 500;
         padding-bottom: 1rem;
@@ -386,6 +388,13 @@ export const StyledListings = styled.section`
       }
     }
   }
+  @media (max-width: 576px) {
+    height: 100vh;
+    & .image-slider {
+      height: 300px;
+      width: 300px;
+    }
+  }
 `;
 //Styles for the alerts
 export const StyledAlert = styled.aside`
@@ -418,19 +427,14 @@ export const StyledContact = styled.section`
     align-items: center;
     justify-content: center;
     &.contact-form {
-      background: rgb(180, 132, 132);
-      background: linear-gradient(
-        0deg,
-        rgba(180, 132, 132, 1) 0%,
-        rgba(255, 255, 255, 1) 48%,
-        rgba(180, 132, 132, 1) 100%
-      );
+      background: #fff;
       & form {
         display: flex;
         flex-direction: column;
         & label {
           color: #000;
           font-size: 1.25rem;
+          font-weight: 500;
         }
         & input,
         textarea {
@@ -444,6 +448,7 @@ export const StyledContact = styled.section`
           background: #bebebe;
           padding-left: 1rem;
           font-size: 1.05rem;
+          font-weight: 500;
           font-family: inherit;
           &::placeholder {
             font-size: 1.05rem;
@@ -461,24 +466,36 @@ export const StyledContact = styled.section`
           width: 525px;
           height: 30px;
           cursor: pointer;
-          color: #000;
+          color: #fff;
+          background: #000;
         }
       }
     }
     &.contact-text {
-      background: url("https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8");
+      background: url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fG9mZmljZSUyMHNwYWNlfGVufDB8MHwwfHx8MA%3D%3D");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      // padding: 1rem;
+      text-align: center;
       & p {
+        // background: #bebebe;
+        background: #fff;
+        color: #181818;
+        padding-top: 0.75rem;
         // font-family: "Alkatra", cursive;
         width: 80%;
+        padding-left: 0.75rem;
+        font-weight: 500;
+        &:last-child {
+          padding-top: 0;
+          padding-bottom: 0.75rem;
+          padding-left: 0.75rem;
+        }
       }
       & .overlay {
         color: #fff;
         font-size: 2rem;
-        background: rgba(0, 0, 0, 0.35);
-        backdrop-filter: blur(2px);
       }
     }
   }
@@ -554,7 +571,6 @@ export const StyledCalculator = styled.main`
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  z-index: -1;
   & .overlay {
     background: rgba(0, 0, 0, 0.1);
     position: absolute;
@@ -562,7 +578,6 @@ export const StyledCalculator = styled.main`
     height: 100%;
     width: 100%;
     backdrop-filter: blur(2px);
-    z-index: -2;
   }
   & form {
     height: 85vh;
@@ -575,13 +590,8 @@ export const StyledCalculator = styled.main`
     align-items: center;
     background: #fff;
     & button {
-      background: rgb(180, 132, 132);
-      background: linear-gradient(
-        0deg,
-        rgba(180, 132, 132, 1) 0%,
-        rgba(255, 255, 255, 1) 48%,
-        rgba(180, 132, 132, 1) 100%
-      );
+      background: #000;
+      color: #fff;
       width: 450px;
       height: 45px;
       border: 1px solid #000;
@@ -613,7 +623,8 @@ export const StyledHomeWorth = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url(https://images.unsplash.com/photo-1565402170291-8491f14678db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  // background: url(https://images.unsplash.com/photo-1565402170291-8491f14678db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background: url("https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -626,7 +637,7 @@ export const StyledHomeWorth = styled.main`
     width: 100%;
     z-index: 5;
     background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(2px);
+    // backdrop-filter: blur(2px);
   }
   & form {
     background: #fff;
@@ -677,14 +688,8 @@ export const StyledHomeWorth = styled.main`
       height: 35px;
       width: 75%;
       margin-left: 5rem;
-      background: rgb(180, 132, 132);
-      background: linear-gradient(
-        0deg,
-        rgba(180, 132, 132, 1) 0%,
-        rgba(255, 255, 255, 1) 48%,
-        rgba(180, 132, 132, 1) 100%
-      );
-      color: #000;
+      background: #000;
+      color: #fff;
       border: 1px solid #000;
       border-radius: 5px;
       cursor: pointer;
@@ -696,7 +701,7 @@ export const StyledHomeWorth = styled.main`
 export const StyledBuyHouses = styled.main`
   height: 100vh;
   width: 100%;
-  background: url("https://images.unsplash.com/photo-1556912167-f556f1f39fdf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background: url("https://images.unsplash.com/photo-1609766856939-5b5a934af3d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -708,7 +713,7 @@ export const StyledBuyHouses = styled.main`
     height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(2px);
+    // backdrop-filter: blur(2px);
     position: absolute;
     bottom: 0;
   }
@@ -827,9 +832,27 @@ export const StyledSingleBlog = styled.div`
   }
 `;
 
+// Styling for the current listings page
+export const StyledCurrentListings = styled.main`
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & .map {
+    width: 70%;
+  }
+  & .list {
+    width: 30%;
+  }
+  & div {
+    height: 100%;
+    border: 1px solid black;
+  }
+`;
 //Styling for the footer section
 export const StyledFooter = styled.footer`
-  height: 50vh;
+  height: 100%;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -855,6 +878,7 @@ export const StyledFooter = styled.footer`
     & p {
       margin: 5px 0;
     }
+
     & img {
       height: 25px;
       width: 25px;
@@ -877,8 +901,12 @@ export const StyledFooter = styled.footer`
       }
       & img {
         margin-top: 10px;
-        height: 65px;
-        width: 65px;
+        height: 45px;
+        width: 45px;
+        &:last-child {
+          height: 100px;
+          width: 100px;
+        }
       }
     }
   }
@@ -899,4 +927,19 @@ export const StyledFooter = styled.footer`
       -webkit-text-fill-color: transparent;
     }
   }
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    & div {
+      height: 50%;
+      &.legal {
+        padding-bottom: 2rem;
+      }
+      &.realtor-info {
+        padding-top: 2rem;
+      }
+    }
+  }
 `;
+
+// s-small: 576px

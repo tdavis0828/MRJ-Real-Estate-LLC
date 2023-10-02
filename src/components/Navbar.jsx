@@ -43,6 +43,7 @@ const Navbar = () => {
     <StyledNav>
       <div className="nav-links">
         <Link to="/">Home</Link>
+        <Link to="current-listings">Listings</Link>
         <Button
           id="fade-button"
           aria-controls={open ? "fade-menu" : undefined}
