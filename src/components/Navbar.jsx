@@ -1,10 +1,12 @@
-import React from "react";
-import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
-import Fade from "@mui/material/Fade";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { StyledNav } from "../styles/Stylesheet";
+import React, { useEffect } from 'react';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import Fade from '@mui/material/Fade';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import { StyledNav } from '../styles/Stylesheet';
+import { shallowEqual, useDispatch, useSelector } from 'react-redux';
+import { setIsLoggedIn } from '../store/adminSlice';
 
 const StyledMenu = styled(Menu)`
   & ul {
@@ -30,6 +32,8 @@ const StyledMenu = styled(Menu)`
 `;
 
 const Navbar = () => {
+  const dispatch = useDispatch();
+  const { isLoggedIn } = useSelector((state) => state.navbar, shallowEqual);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -39,6 +43,10 @@ const Navbar = () => {
     setAnchorEl(null);
   };
 
+  useEffect(() => {
+    console.log(isLoggedIn);
+  });
+
   return (
     <StyledNav>
       <div className="nav-links">
@@ -46,9 +54,9 @@ const Navbar = () => {
         <Link to="current-listings">Listings</Link>
         <Button
           id="fade-button"
-          aria-controls={open ? "fade-menu" : undefined}
+          aria-controls={open ? 'fade-menu' : undefined}
           aria-haspopup="true"
-          aria-expanded={open ? "true" : undefined}
+          aria-expanded={open ? 'true' : undefined}
           onClick={handleClick}
         >
           Resources
@@ -56,7 +64,7 @@ const Navbar = () => {
         <StyledMenu
           id="fade-menu"
           MenuListProps={{
-            "aria-labelledby": "fade-button",
+            'aria-labelledby': 'fade-button',
           }}
           anchorEl={anchorEl}
           open={open}
@@ -77,6 +85,16 @@ const Navbar = () => {
         <Link to="contact">Contact</Link>
         <Link to="faq">FAQs</Link>
         <Link to="blog">Blog</Link>
+        <Link
+          to="/"
+          onClick={
+            isLoggedIn
+              ? () => dispatch(setIsLoggedIn(false))
+              : () => dispatch(setIsLoggedIn(true))
+          }
+        >
+          Login
+        </Link>
       </div>
     </StyledNav>
   );

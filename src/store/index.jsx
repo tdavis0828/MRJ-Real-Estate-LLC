@@ -1,9 +1,9 @@
-import { configureStore } from "@reduxjs/toolkit";
-import NavbarSlice from "./NavbarSlice";
+import { configureStore } from '@reduxjs/toolkit';
+import adminSlice from './adminSlice';
 
 const store = configureStore({
   reducer: {
-    navbar: NavbarSlice,
+    navbar: adminSlice,
   },
 });
 
