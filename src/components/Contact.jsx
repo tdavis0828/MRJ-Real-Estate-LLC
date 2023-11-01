@@ -1,7 +1,7 @@
-import React, { useState, useRef } from "react";
-import { StyledContact } from "../styles/Stylesheet";
-import emailjs from "@emailjs/browser";
-import Alert from "./Alert";
+import React, { useState, useRef } from 'react';
+import { StyledContact } from '../styles/Stylesheet';
+import emailjs from '@emailjs/browser';
+import Alert from './Alert';
 
 const Contact = () => {
   const form = useRef();
@@ -15,18 +15,18 @@ const Contact = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_sktr7g1",
-        "template_o4ggcv1",
+        'service_sktr7g1',
+        'template_o4ggcv1',
         form.current,
-        "uHBGQxiG0Tp_1kI1r"
+        'uHBGQxiG0Tp_1kI1r'
       )
       .then(
         (result) => {
           console.log(result.text);
-          setNameInput("");
-          setPhoneNumberInput("");
-          setEmailInput("");
-          setMessageInput("");
+          setNameInput('');
+          setPhoneNumberInput('');
+          setEmailInput('');
+          setMessageInput('');
           setShowAlert(true);
 
           setTimeout(() => {

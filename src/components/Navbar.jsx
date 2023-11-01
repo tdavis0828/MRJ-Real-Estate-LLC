@@ -43,10 +43,6 @@ const Navbar = () => {
     setAnchorEl(null);
   };
 
-  useEffect(() => {
-    console.log(isLoggedIn);
-  });
-
   return (
     <StyledNav>
       <div className="nav-links">
@@ -82,9 +78,11 @@ const Navbar = () => {
           </Link>
         </StyledMenu>
 
+        <Link to="blog">Blog</Link>
+        <Link to="blog">About</Link>
         <Link to="contact">Contact</Link>
         <Link to="faq">FAQs</Link>
-        <Link to="blog">Blog</Link>
+
         <Link
           to="/"
           onClick={

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 //Styles for the header
 export const StyledHeader = styled.div`
@@ -95,7 +95,7 @@ export const StyledHero = styled.main`
   align-items: center;
   justify-content: center;
   // background-image: url("https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8");
-  background-image: url("https://images.unsplash.com/photo-1571624436279-b272aff752b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url('https://images.unsplash.com/photo-1571624436279-b272aff752b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-postion: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -140,7 +140,7 @@ export const StyledHero = styled.main`
         margin: 1rem;
         border: none;
         border-radius: 5px;
-        font-family: "Quicksand", sans-serif;
+        font-family: 'Quicksand', sans-serif;
         font-size: 1.25rem;
         font-weight: 500;
         cursor: pointer;
@@ -285,7 +285,7 @@ export const StyledAbout = styled.section`
       text-align: center;
       & p {
         margin: 0;
-        font-family: "Alkatra", cursive;
+        font-family: 'Alkatra', cursive;
       }
     }
     & img {
@@ -472,7 +472,7 @@ export const StyledContact = styled.section`
       }
     }
     &.contact-text {
-      background: url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fG9mZmljZSUyMHNwYWNlfGVufDB8MHwwfHx8MA%3D%3D");
+      background: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fG9mZmljZSUyMHNwYWNlfGVufDB8MHwwfHx8MA%3D%3D');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -510,7 +510,7 @@ export const StyledFaq = styled.main`
   justify-content: space-around;
   align-items: center;
   color: #181818;
-  background: url("https://images.unsplash.com/photo-1605146769289-440113cc3d00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fHJlYWwlMjBlc3RhdGUlMjBhZ2VudHxlbnwwfDB8MHx8fDA%3D");
+  background: url('https://images.unsplash.com/photo-1605146769289-440113cc3d00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fHJlYWwlMjBlc3RhdGUlMjBhZ2VudHxlbnwwfDB8MHx8fDA%3D');
   background-size: cover;
   backround-position: center;
   background-repeat: no-repeat;
@@ -566,7 +566,7 @@ export const StyledCalculator = styled.main`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: url("https://images.unsplash.com/photo-1592595896551-12b371d546d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background: url('https://images.unsplash.com/photo-1592595896551-12b371d546d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-postion: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -624,7 +624,7 @@ export const StyledHomeWorth = styled.main`
   justify-content: center;
   align-items: center;
   // background: url(https://images.unsplash.com/photo-1565402170291-8491f14678db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-  background: url("https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background: url('https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -677,7 +677,7 @@ export const StyledHomeWorth = styled.main`
     & textarea {
       width: 275px;
       margin: 0 1rem;
-      font-family: "Quicksand", sans-serif;
+      font-family: 'Quicksand', sans-serif;
       padding: 5px;
     }
     small {
@@ -701,7 +701,7 @@ export const StyledHomeWorth = styled.main`
 export const StyledBuyHouses = styled.main`
   height: 100vh;
   width: 100%;
-  background: url("https://images.unsplash.com/photo-1609766856939-5b5a934af3d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background: url('https://images.unsplash.com/photo-1609766856939-5b5a934af3d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -837,17 +837,116 @@ export const StyledCurrentListings = styled.main`
   height: 90vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  & .map {
-    width: 70%;
+  position: relative;
+  font-family: 'Roboto';
+  & .open-page {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #000;
+    & img {
+      height: 25px;
+      width: 25px;
+      cursor: pointer;
+      margin: 1rem;
+    }
+  }
+  & .map-container {
+    width: 100%;
+    height: 100%;
   }
   & .list {
-    width: 30%;
-  }
-  & div {
-    height: 100%;
-    border: 1px solid black;
+    postion: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    transition: all 0.55s ease-in-out;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    & .listing {
+      width: 425px;
+      height: 275px;
+      display: flex;
+      flex-direction: column;
+      margin: 1rem auto;
+      border-radius: 5px;
+      box-shadow: 0 0 7px rgba(0, 0, 0, 0.55);
+      transition: 0.35s ease;
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      transition: transform 0.35s ease;
+
+      &.selected {
+        transform: scale(1.08);
+        border: 5px solid #181818;
+        transition: transform 0.35s ease;
+      }
+      & .listing-image {
+        height: 60%;
+        width: 100%;
+        border-radius: 5px;
+
+        & img {
+          height: 100%;
+          width: 100%;
+          border-radius: 5px 5px 0px 0px;
+        }
+      }
+      & .listing-info {
+        width: 100%;
+        height: 40%;
+        display: flex;
+        justify-content: center;
+        border-radius: 0 0 5px 5px;
+        position: relative;
+        & .price {
+          font-size: 1.35rem;
+          font-weight: 400;
+          position: absolute;
+          top: 0;
+          left: 0;
+          margin: 0.75rem;
+        }
+        & .home-type {
+          text-transform: lowercase;
+        }
+        & .details {
+          position: absolute;
+          top: 35%;
+          left: 0;
+          margin: 0.5rem 0.75rem;
+        }
+        & .address {
+          position: absolute;
+          bottom: 5px;
+          left: 0;
+          margin: 0.5rem 0.75rem;
+          color: #fff;
+          text-decoration: none;
+          & img {
+            height: 25px;
+            width: 25px;
+            margin: 0 0.5rem;
+            transform: translateY(5px);
+          }
+        }
+        & .email-btn {
+          position: absolute;
+          bottom: 10px;
+          right: 20px;
+          padding: 0.25rem;
+          cursor: pointer;
+        }
+      }
+    }
   }
 `;
 //Styling for the footer section
