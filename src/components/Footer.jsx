@@ -1,15 +1,16 @@
-import React from "react";
-import { StyledFooter } from "../styles/Stylesheet";
-import { Link } from "react-router-dom";
-import homeIcon from "../images/home-light.png";
-import locationIcon from "../images/location-light.png";
-import phoneIcon from "../images/telephone-light.png";
-import emailIcon from "../images/email-light.png";
-import instagramIcom from "../images/instagram.png";
-import linkedInIcon from "../images/linkedin.png";
-import facebookIcon from "../images/facebook-app-symbol.png";
-import logo from "../images/logo2-light.png";
-import nextLevelLogo from "../images/nextLevelLogo.png";
+import React from 'react';
+import { StyledFooter } from '../styles/Stylesheet';
+import { Link } from 'react-router-dom';
+import homeIcon from '../images/home-light.png';
+import locationIcon from '../images/location-light.png';
+import phoneIcon from '../images/telephone-light.png';
+import emailIcon from '../images/email-light.png';
+import instagramIcom from '../images/instagram.png';
+import linkedInIcon from '../images/linkedin.png';
+import facebookIcon from '../images/facebook-app-symbol.png';
+import logo from '../images/logo2-light.png';
+import mrjLogo from '../images/mrjLogo.png';
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
@@ -21,7 +22,7 @@ const Footer = () => {
         </p>
         <p>
           <img src={locationIcon} alt="/" />
-          9312 Lacroix Ct, Bakersfield, CA 93311
+          10803 Myers Ranch Ct. Bakersfield, CA 9331
         </p>
         <p>
           <img src={phoneIcon} alt="/" />
@@ -38,12 +39,7 @@ const Footer = () => {
           >
             <img src={instagramIcom} alt="Instagram Icon" />
           </Link>
-          <Link
-            to="https://www.linkedin.com/in/marcy-jones-494163258/"
-            target="_blank"
-          >
-            <img src={linkedInIcon} alt="Linked In Icon" />
-          </Link>
+
           <Link to="/">
             <img src={facebookIcon} alt="Facebook Icon" />
           </Link>
@@ -51,6 +47,18 @@ const Footer = () => {
       </div>
       <div className="logo">
         <img src={logo} alt="/" />
+        <div className="legal">
+          <div className="legal-logos primary">
+            <img
+              src="https://equalhousinglogo.com/wp-content/uploads/2019/03/equal-housing-logowhite-250.png"
+              alt="Equal Opportunity Housing Logo"
+            />
+            <img
+              src="https://www.nar.realtor/sites/default/files/downloadable/nar_membershipmark_white.png"
+              alt="Realtor.com Logo"
+            />
+          </div>
+        </div>
       </div>
       <div>
         <div className="legal">
@@ -60,24 +68,13 @@ const Footer = () => {
           <p>SIC: 6531 Real Estate Agent Managers</p>
 
           <div className="legal-logos">
-            <img
-              src="https://equalhousinglogo.com/wp-content/uploads/2019/03/equal-housing-logowhite-250.png"
-              alt="Equal Opportunity Housing Logo"
-            />
-            <img
-              src="https://www.nar.realtor/sites/default/files/downloadable/nar_membershipmark_white.png"
-              alt="Realtor.com Logo"
-            />
-            <img
-              src={nextLevelLogo}
-              alt="Next Level Logo"
-              className="next-level"
-            />
+            <img src={linkedInIcon} alt="/" />
+            <img src={mrjLogo} alt="/" className="mrjLogo" />
           </div>
         </div>
       </div>
       <p className="copyright">
-        Created by <a href="/">Davis Digital Designs</a> Copyright ©{" "}
+        Created by <a href="/">Davis Digital Designs</a> Copyright ©{' '}
         {currentYear}
       </p>
     </StyledFooter>

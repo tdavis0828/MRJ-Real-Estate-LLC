@@ -77,22 +77,9 @@ const Navbar = () => {
             What is my house worth?
           </Link>
         </StyledMenu>
-
         <Link to="blog">Blog</Link>
-        <Link to="blog">About</Link>
         <Link to="contact">Contact</Link>
         <Link to="faq">FAQs</Link>
-
-        <Link
-          to="/"
-          onClick={
-            isLoggedIn
-              ? () => dispatch(setIsLoggedIn(false))
-              : () => dispatch(setIsLoggedIn(true))
-          }
-        >
-          Login
-        </Link>
       </div>
     </StyledNav>
   );

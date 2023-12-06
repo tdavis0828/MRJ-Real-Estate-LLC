@@ -226,7 +226,7 @@ export const StlyedCertification = styled.section`
     width: 100%;
     height: 60%;
     & h2 {
-      text-decoration: underline;
+      ${'' /* text-decoration: underline; */}
       color: #fff;
       // background: linear-gradient(
       //   0deg,
@@ -248,6 +248,7 @@ export const StlyedCertification = styled.section`
       font-size: 1.25rem;
       & a {
         color: #fff;
+        text-decoration: none;
         // background: linear-gradient(
         //   0deg,
         //   rgba(180, 132, 132, 1) 0%,
@@ -844,7 +845,7 @@ export const StyledCurrentListings = styled.main`
   font-family: 'Roboto';
   & .open-page {
     width: 100%;
-    height: 50px;
+    height: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -865,35 +866,33 @@ export const StyledCurrentListings = styled.main`
     bottom: 0;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     transition: all 0.55s ease-in-out;
     overflow: scroll;
     &::-webkit-scrollbar {
       display: none;
     }
     & .listing {
-      width: 425px;
-      height: 275px;
+      width: 325px;
+      height: 335px;
       display: flex;
       flex-direction: column;
       margin: 1rem auto;
       border-radius: 5px;
       box-shadow: 0 0 7px rgba(0, 0, 0, 0.55);
       transition: 0.35s ease;
-      background: rgba(0, 0, 0, 0.8);
+      background: #181818;
       color: #fff;
       transition: transform 0.35s ease;
-
       &.selected {
-        transform: scale(1.08);
         border: 5px solid #181818;
         transition: transform 0.35s ease;
       }
       & .listing-image {
-        height: 60%;
+        height: 65%;
         width: 100%;
         border-radius: 5px;
-
+        position: relative;
         & img {
           height: 100%;
           width: 100%;
@@ -902,7 +901,7 @@ export const StyledCurrentListings = styled.main`
       }
       & .listing-info {
         width: 100%;
-        height: 40%;
+        height: 35%;
         display: flex;
         justify-content: center;
         border-radius: 0 0 5px 5px;
@@ -913,41 +912,55 @@ export const StyledCurrentListings = styled.main`
           position: absolute;
           top: 0;
           left: 0;
-          margin: 0.75rem;
+          margin: 0.55rem;
         }
         & .home-type {
           text-transform: lowercase;
         }
         & .details {
           position: absolute;
-          top: 35%;
+          top: 25%;
           left: 0;
-          margin: 0.5rem 0.75rem;
+          margin: 0.5rem 0.55rem;
         }
         & .address {
           position: absolute;
           bottom: 5px;
           left: 0;
-          margin: 0.5rem 0.75rem;
+          margin: 0.35rem 0.55rem;
           color: #fff;
           text-decoration: none;
+          display: block;
+          font-size: 0.95rem;
           & img {
-            height: 25px;
-            width: 25px;
+            height: 20px;
+            width: 20px;
             margin: 0 0.5rem;
             transform: translateY(5px);
           }
         }
         & .email-btn {
           position: absolute;
-          bottom: 10px;
-          right: 20px;
-          padding: 0.25rem;
+          top: 10px;
+          right: 15px;
+          ${'' /* padding: 0.25rem; */}
           cursor: pointer;
+          background: none;
+          border: none;
+          & img {
+            height: 25px;
+            width: 25px;
+          }
         }
       }
     }
   }
+`;
+
+// Styling for capabilities page
+export const StyledCapabilities = styled.div`
+  height: 130vh;
+  width: 100%;
 `;
 //Styling for the footer section
 export const StyledFooter = styled.footer`
@@ -960,9 +973,13 @@ export const StyledFooter = styled.footer`
   color: #fff;
   background: #181818;
   position: relative;
+  & .realtor-info {
+    height: 198px;
+    border-right: 1px solid rgba(255, 255, 255, 0.35);
+  }
   & .logo {
     & img {
-      height: 300px;
+      height: 350px;
       width: 300px;
     }
   }
@@ -973,7 +990,6 @@ export const StyledFooter = styled.footer`
     align-items: center;
     height: 70%;
     width: 100%;
-    border-right: 1px solid rgba(255, 255, 255, 0.35);
     & p {
       margin: 5px 0;
     }
@@ -990,21 +1006,28 @@ export const StyledFooter = styled.footer`
       & a {
         color: #fff;
         text-decoration: none;
-        margin: 0 1rem;
+        ${'' /* margin: 0 1rem; */}
       }
     }
+
     & .legal {
+      position: relative;
+      border-left: 1px solid rgba(255, 255, 255, 0.35);
       & .legal-logos {
         display: flex;
         flex-direction: row;
+        &.primary {
+          position: absolute;
+          bottom: 90px;
+        }
       }
       & img {
         margin-top: 10px;
         height: 45px;
         width: 45px;
-        &:last-child {
-          height: 100px;
-          width: 100px;
+        &.mrjLogo {
+          width: 175px;
+          height: 60px;
         }
       }
     }
@@ -1015,15 +1038,7 @@ export const StyledFooter = styled.footer`
     bottom: 15px;
     font-size: 1rem;
     & a {
-      background: rgb(180, 132, 132);
-      background: linear-gradient(
-        0deg,
-        rgba(180, 132, 132, 1) 0%,
-        rgba(255, 255, 255, 1) 48%,
-        rgba(180, 132, 132, 1) 100%
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #fff;
     }
   }
 

@@ -1,7 +1,7 @@
-import React from "react";
-import { StyledHero } from "../styles/Stylesheet";
-import { motion } from "framer-motion";
-import heroImage from "../images/IMG-3402.jpg";
+import React from 'react';
+import { StyledHero } from '../styles/Stylesheet';
+import { motion } from 'framer-motion';
+import heroImage from '../images/IMG-3402.jpg';
 
 const Hero = () => {
   return (
@@ -18,7 +18,7 @@ const Hero = () => {
         <div className="hero-buttons-container">
           <a href="#certifications">Contact Realtor</a>
           <hr></hr>
-          <a href="#certifications">Licensing</a>
+          <a href="#certifications">SBE License</a>
         </div>
       </motion.div>
     </StyledHero>

@@ -13,6 +13,7 @@ import Calculator from './pages/Calculator';
 import HomeWorth from './pages/HomeWorth';
 import BuyHouses from './pages/BuyHouses';
 import CurrentListings from './pages/CurrentListings';
+import Capabilities from './pages/Capabilities';
 
 function App() {
   const { isLoggedIn } = useSelector((state) => state.navbar, shallowEqual);
@@ -33,6 +34,7 @@ function App() {
         <Route path="blog" element={<Blog />} />
         <Route path="contact" element={<Contact />} />
         <Route path="faq" element={<Faq />} />
+        <Route path="capabilities" element={<Capabilities />} />
       </Routes>
       <Footer />
     </div>
