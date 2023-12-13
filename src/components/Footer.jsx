@@ -73,6 +73,16 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <div className="privacy-policy">
+        <p>Privacy Policy</p>
+        <small>
+          IDX information is provided exclusively for consumers personal,
+          non-commercial, that it may not be used for any other purpose than to
+          identify prospective properties consumers may be interested in
+          purchasing, and that the information is deemed reliable but is not
+          guarunteed, Copyright Golden Empire MLS, Inc. 2023
+        </small>
+      </div>
       <p className="copyright">
         Created by <a href="/">Davis Digital Designs</a> Copyright ©{' '}
         {currentYear}

@@ -24,7 +24,7 @@ function CurrentListings() {
     },
   };
   async function getMLSData() {
-    // Formats price of the home, adds comma
+    // (Helper function) Formats price of the home, adds comma
     const formatNumber = (num) => {
       parseInt(num);
       const options = { maximumFractionDigits: 2 };
@@ -36,33 +36,46 @@ function CurrentListings() {
       'https://zillow56.p.rapidapi.com/search?location=bakersfield%2C%20ca',
       options
     );
-
     const data = await res.json();
-    data.results.forEach((res, i) => {
-      // Formats price, inserts commas where needed
-      res.price = formatNumber(res.price);
-      // Removes the underscore from the home type key value pair
+
+    // Removes the underscore from the home type key value pair
+    data.results.forEach((res) => {
       if (res.homeType.includes('_')) {
         res.homeType = res.homeType.replace('_', ' ');
       }
-      // Removes any listings that are plotes of land with no houses
+    });
+
+    // Removes any listings that are plotes of land with no houses
+    data.results.forEach((res, i) => {
       if (res.homeType === 'LOT') {
         data.results.splice(i, 1);
       }
-      // Removes any listings without images
+    });
+
+    // Removes any listings without images
+    data.results.forEach((res, i) => {
       if (res.imgSrc.includes('googleapis')) {
         data.results.splice(i, 1);
       }
-      // Removes any listings with a price of 0
+    });
+
+    // Removes any listings with a price of 0
+    data.results.forEach((res, i) => {
       if (res.price === 0) {
         data.results.splice(i, 1);
       }
+    });
+
+    // Formats price, inserts commas where needed
+    data.results.forEach((res) => {
+      res.price = formatNumber(res.price);
     });
     setHomes(data.results);
   }
 
   useEffect(() => {
     getMLSData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

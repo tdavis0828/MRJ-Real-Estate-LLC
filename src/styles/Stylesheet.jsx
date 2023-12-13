@@ -624,7 +624,6 @@ export const StyledHomeWorth = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // background: url(https://images.unsplash.com/photo-1565402170291-8491f14678db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   background: url('https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-size: cover;
   background-position: center;
@@ -638,7 +637,6 @@ export const StyledHomeWorth = styled.main`
     width: 100%;
     z-index: 5;
     background: rgba(0, 0, 0, 0.1);
-    // backdrop-filter: blur(2px);
   }
   & form {
     background: #fff;
@@ -647,12 +645,12 @@ export const StyledHomeWorth = styled.main`
     padding: 4rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     z-index: 10;
     position: relative;
     & .header {
       position: absolute;
-      top: 0;
+      top: 3rem;
       & h2 {
         margin: 0.75rem 0;
       }
@@ -943,7 +941,6 @@ export const StyledCurrentListings = styled.main`
           position: absolute;
           top: 10px;
           right: 15px;
-          ${'' /* padding: 0.25rem; */}
           cursor: pointer;
           background: none;
           border: none;
@@ -959,8 +956,25 @@ export const StyledCurrentListings = styled.main`
 
 // Styling for capabilities page
 export const StyledCapabilities = styled.div`
-  height: 130vh;
+  height: 90vh;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & .cap-container {
+    & img {
+      height: 100%;
+    }
+    background: url('https://images.unsplash.com/photo-1615874694520-474822394e73?q=80&w=2080');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
 `;
 //Styling for the footer section
 export const StyledFooter = styled.footer`
@@ -1006,7 +1020,6 @@ export const StyledFooter = styled.footer`
       & a {
         color: #fff;
         text-decoration: none;
-        ${'' /* margin: 0 1rem; */}
       }
     }
 
@@ -1031,12 +1044,22 @@ export const StyledFooter = styled.footer`
         }
       }
     }
+    &.privacy-policy {
+      height: 198px;
+      text-align: center;
+      border-left: 1px solid rgba(255, 255, 255, 0.35);
+      & small {
+        padding: 0.5rem 2rem;
+        font-size: 0.85rem;
+        line-height: 1.2rem;
+      }
+    }
   }
-
   & .copyright {
     position: absolute;
     bottom: 15px;
     font-size: 1rem;
+    text-align: center;
     & a {
       color: #fff;
     }
