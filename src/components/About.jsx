@@ -9,9 +9,6 @@ const About = () => {
           src="https://ap.rdcpix.com/7f0e9ca475f1f6e543f686cdd6b3be71a-e2979978654sd-w260_h260_q50.jpg"
           alt="headshot of Marcy Jones"
         />
-        {/* <div className="dre-info">
-          <p>DRE#: 02081683</p>
-        </div> */}
         <p>
           I am <span>Marcy Jones</span> a Kern County Resident and Realtor. I am
           committed to ensuring that all of your real estate needs are not just

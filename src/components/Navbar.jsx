@@ -1,12 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import Fade from '@mui/material/Fade';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { StyledNav } from '../styles/Stylesheet';
-import { shallowEqual, useDispatch, useSelector } from 'react-redux';
-import { setIsLoggedIn } from '../store/adminSlice';
+import { StyledNav, OpenBtn } from '../styles/Stylesheet';
+import openBtn from '../images/hamburger-dark.png';
 
 const StyledMenu = styled(Menu)`
   & ul {
@@ -32,56 +31,81 @@ const StyledMenu = styled(Menu)`
 `;
 
 const Navbar = () => {
-  const dispatch = useDispatch();
-  const { isLoggedIn } = useSelector((state) => state.navbar, shallowEqual);
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [navIsOpen, setNavIsOpen] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
 
   return (
-    <StyledNav>
-      <div className="nav-links">
-        <Link to="/">Home</Link>
-        <Link to="current-listings">Listings</Link>
-        <Button
-          id="fade-button"
-          aria-controls={open ? 'fade-menu' : undefined}
-          aria-haspopup="true"
-          aria-expanded={open ? 'true' : undefined}
-          onClick={handleClick}
-        >
-          Resources
-        </Button>
-        <StyledMenu
-          id="fade-menu"
-          MenuListProps={{
-            'aria-labelledby': 'fade-button',
-          }}
-          anchorEl={anchorEl}
-          open={open}
-          onClose={handleClose}
-          TransitionComponent={Fade}
-        >
-          <Link to="we-buy-houses" onClick={handleClose}>
-            We Buy Houses Cash
-          </Link>
-          <Link to="calculator" onClick={handleClose}>
-            Mortgage Calculator
-          </Link>
-          <Link to="home-worth" onClick={handleClose}>
-            What is my house worth?
-          </Link>
-        </StyledMenu>
-        <Link to="blog">Blog</Link>
-        <Link to="contact">Contact</Link>
-        <Link to="faq">FAQs</Link>
-      </div>
-    </StyledNav>
+    <>
+      {!navIsOpen && (
+        <OpenBtn>
+          <button
+            onClick={() => {
+              setNavIsOpen(true);
+            }}
+          >
+            <img src={openBtn} alt="hamburger menu button" />
+          </button>
+        </OpenBtn>
+      )}
+
+      <StyledNav className={navIsOpen ? 'open' : 'closed'}>
+        <div className="nav-links">
+          <Link to="/">Home</Link>
+          <Link to="current-listings">Listings</Link>
+          <Button
+            id="fade-button"
+            aria-controls={open ? 'fade-menu' : undefined}
+            aria-haspopup="true"
+            aria-expanded={open ? 'true' : undefined}
+            onClick={handleClick}
+          >
+            Resources
+          </Button>
+          <StyledMenu
+            id="fade-menu"
+            MenuListProps={{
+              'aria-labelledby': 'fade-button',
+            }}
+            anchorEl={anchorEl}
+            open={open}
+            onClose={handleClose}
+            TransitionComponent={Fade}
+          >
+            <Link to="we-buy-houses" onClick={handleClose}>
+              We Buy Houses Cash
+            </Link>
+            <Link to="calculator" onClick={handleClose}>
+              Mortgage Calculator
+            </Link>
+            <Link to="home-worth" onClick={handleClose}>
+              What is my house worth?
+            </Link>
+          </StyledMenu>
+          <Link to="blog">Blog</Link>
+          <Link to="contact">Contact</Link>
+          <Link to="faq">FAQs</Link>
+          {navIsOpen && (
+            <div
+              className="close-btn"
+              onClick={() => {
+                setNavIsOpen(false);
+              }}
+            >
+              Close
+            </div>
+          )}
+        </div>
+      </StyledNav>
+    </>
   );
 };
 

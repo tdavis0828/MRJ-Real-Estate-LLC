@@ -5,14 +5,13 @@ import { nanoid } from 'nanoid';
 import deafultImg from '../images/default-image-icon-missing-picture-page-vector-40546530.jpg';
 import upArrow from '../images/up-arrow.png';
 import downArrow from '../images/arrow-down.png';
-import directionsBtn from '../images/gps.png';
 
 function CurrentListings() {
   const [homes, setHomes] = useState([]);
   const center = useMemo(() => ({ lat: 35.393528, lng: -119.043732 }), []);
   const [currentListing, setCurrentListing] = useState({});
   const [isPageOpen, setIsPageOpen] = useState(false);
-  const height = isPageOpen ? '2500px' : '750px';
+  const height = isPageOpen ? '2500px' : '350px';
 
   // Populates homes array
   const MY_KEY = process.env.REACT_APP_ZILLOW_API_KEY;
@@ -88,7 +87,7 @@ function CurrentListings() {
         {homes.map((home) => {
           const color =
             currentListing.streetAddress === home.streetAddress
-              ? 'green'
+              ? 'red'
               : 'blue';
 
           return (
@@ -152,7 +151,7 @@ function CurrentListings() {
                   rel="noreferrer"
                 >
                   {home.streetAddress}, {home.state} {home.zipcode}
-                  <img src={directionsBtn} alt="/" />
+                  {/* <img src={directionsBtn} alt="/" /> */}
                 </a>
               </div>
             </div>
