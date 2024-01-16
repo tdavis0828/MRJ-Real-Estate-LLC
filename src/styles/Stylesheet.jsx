@@ -767,7 +767,7 @@ export const StyledHomeWorth = styled.main`
     }
     small {
       text-align: center;
-      margin: 10px;
+      margin: 10px 5px;
     }
     & button {
       height: 35px;
@@ -778,6 +778,45 @@ export const StyledHomeWorth = styled.main`
       border: 1px solid #000;
       border-radius: 5px;
       cursor: pointer;
+    }
+  }
+  @media (max-width: 1440px) {
+    & form {
+      width: 40%;
+    }
+  }
+  @media (max-width: 1024px) {
+    & form {
+      width: 50%;
+    }
+  }
+  @media (max-width: 768px) {
+    & form {
+      width: 65%;
+      & .header {
+        top: 10px;
+        left: 5%;
+      }
+      & label {
+        font-size: 0.95rem;
+      }
+    }
+  }
+  @media (max-width: 425px) {
+    & form {
+      width: 75%;
+      & .header {
+        font-size: 0.9rem;
+      }
+      & label {
+        margin-right: 0;
+        &.textarea {
+          margin: 0;
+        }
+      }
+      & button {
+        margin-left: 1.5rem;
+      }
     }
   }
 `;
@@ -798,7 +837,6 @@ export const StyledBuyHouses = styled.main`
     height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, 0.1);
-    // backdrop-filter: blur(2px);
     position: absolute;
     bottom: 0;
   }
@@ -837,11 +875,70 @@ export const StyledBuyHouses = styled.main`
       }
     }
   }
+
+  @media (max-width: 1024px) {
+    & .links-container {
+      & .link {
+        & img {
+          width: 400px;
+          height: 300px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    & .links-container {
+      width: 65vw;
+      & h2 {
+        font-size: 1.25rem;
+      }
+      & .link {
+        & p {
+          &.header {
+            font-size: 1.3rem;
+          }
+        }
+        & img {
+          width: 350px;
+          height: 250px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 425px) {
+    & .links-container {
+      & h2 {
+        font-size: 1rem;
+      }
+      & .link {
+        & p {
+          &.header {
+            font-size: 1rem;
+          }
+          &.sub-header {
+            font-size: 1rem;
+          }
+        }
+        & img {
+          width: 250px;
+          height: 150px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    & .links-container {
+      width: 70vw;
+    }
+  }
 `;
 
 // Styling for the blog page
 export const StyledBlog = styled.main`
-  height 120vh;
+  height: 120vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -849,7 +946,7 @@ export const StyledBlog = styled.main`
   align-items: center;
   position: relative;
   overflow: scroll;
-  background: url("https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background: url('https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

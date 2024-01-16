@@ -1,23 +1,23 @@
-import React, { useState, useRef } from "react";
-import { StyledHomeWorth } from "../styles/Stylesheet";
-import emailjs from "@emailjs/browser";
+import React, { useState, useRef } from 'react';
+import { StyledHomeWorth } from '../styles/Stylesheet';
+import emailjs from '@emailjs/browser';
 
 const HomeWorth = () => {
   const form = useRef();
   const [formData, setFormData] = useState({
-    name: "",
-    number: "",
-    email: "",
-    address: "",
-    city: "",
-    state: "",
-    propertyType: "",
-    condition: "",
-    bedrooms: "",
-    bathrooms: "",
-    size: "",
-    buildYear: "",
-    additionalComments: "",
+    name: '',
+    number: '',
+    email: '',
+    address: '',
+    city: '',
+    state: '',
+    propertyType: '',
+    condition: '',
+    bedrooms: '',
+    bathrooms: '',
+    size: '',
+    buildYear: '',
+    additionalComments: '',
   });
 
   const handleChange = (e) => {
@@ -28,10 +28,10 @@ const HomeWorth = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_sktr7g1",
-        "template_ihijgv7",
+        'service_sktr7g1',
+        'template_ihijgv7',
         form.current,
-        "uHBGQxiG0Tp_1kI1r"
+        'uHBGQxiG0Tp_1kI1r'
       )
       .then(
         (result) => {
@@ -43,19 +43,19 @@ const HomeWorth = () => {
       );
 
     setFormData({
-      name: "",
-      number: "",
-      email: "",
-      address: "",
-      city: "",
-      state: "",
-      propertyType: "",
-      condition: "",
-      bedrooms: "",
-      bathrooms: "",
-      size: "",
-      buildYear: "",
-      additionalComments: "",
+      name: '',
+      number: '',
+      email: '',
+      address: '',
+      city: '',
+      state: '',
+      propertyType: '',
+      condition: '',
+      bedrooms: '',
+      bathrooms: '',
+      size: '',
+      buildYear: '',
+      additionalComments: '',
     });
   }
 
@@ -95,7 +95,7 @@ const HomeWorth = () => {
         </label>
         <br />
         <label>
-          Email Address:
+          Email:
           <input
             type="email"
             name="email"
@@ -143,13 +143,13 @@ const HomeWorth = () => {
         </label>
         <br />
         <label>
-          Type of property:
+          Type:
           <input
             type="text"
             name="propertyType"
             value={formData.propertyType}
             onChange={handleChange}
-            placeholder="Residential or Commercial"
+            placeholder="Residential"
             required
           />
         </label>

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { StyledCalculator } from "../styles/Stylesheet";
+import React, { useState } from 'react';
+import { StyledCalculator } from '../styles/Stylesheet';
 
 function Calculator() {
   const [loanAmount, setLoanAmount] = useState(300000);

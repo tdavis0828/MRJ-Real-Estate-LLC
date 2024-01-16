@@ -1,10 +1,10 @@
-import React from "react";
-import { StyledBuyHouses } from "../styles/Stylesheet";
-import moneyHouse from "../images/moneyHouse.png";
-import flower from "../images/flower.png";
-import avoidSign from "../images/avoidSign.png";
-import piggyBank from "../images/piggyBank.png";
-import mapImage from "../images/mapImage.png";
+import React from 'react';
+import { StyledBuyHouses } from '../styles/Stylesheet';
+import moneyHouse from '../images/moneyHouse.png';
+import flower from '../images/flower.png';
+import avoidSign from '../images/avoidSign.png';
+import piggyBank from '../images/piggyBank.png';
+import mapImage from '../images/mapImage.png';
 
 function BuyHouses() {
   return (
@@ -18,7 +18,9 @@ function BuyHouses() {
           <p className="header">As-Is Any</p>
           <p className="header">Condition For Cash</p>
           <img src={moneyHouse} alt="House made of money" />
-          <p>No Need For repairs, Hidden Fees Or Commissions.</p>
+          <p className="sub-header">
+            No Need For repairs, Hidden Fees Or Commissions.
+          </p>
         </div>
 
         <h2>Unlocking Your House Value: Top Reasons To Sell For Cash!</h2>
@@ -26,7 +28,7 @@ function BuyHouses() {
         <div className="link">
           <p className="header">Divorce Or Separation</p>
           <img src={flower} alt="House made of money" />
-          <p>
+          <p className="sub-header">
             Selling The House For Cash Can Simplify The Asset Division Process.
           </p>
         </div>
@@ -34,7 +36,7 @@ function BuyHouses() {
         <div className="link">
           <p className="header"> Avoid Foreclosure</p>
           <img src={avoidSign} alt="street sign" />
-          <p>
+          <p className="sub-header">
             Selling For Cash Can Help Settle Debts And Avoid Negative
             Consequences Of Foreclosure On Credit History.
           </p>
@@ -43,13 +45,15 @@ function BuyHouses() {
         <div className="link">
           <p className="header">Financial Urgency</p>
           <img src={piggyBank} alt="gold piggy bank next to rulers" />
-          <p>Selling For Cash Can Provide Immediate Access To Funds.</p>
+          <p className="sub-header">
+            Selling For Cash Can Provide Immediate Access To Funds.
+          </p>
         </div>
 
         <div className="link">
           <p className="header">Relocating Quickly</p>
           <img src={mapImage} alt="woman holding map" />
-          <p>A Cash Sale Can Expedite The Process.</p>
+          <p className="sub-header">A Cash Sale Can Expedite The Process.</p>
         </div>
       </div>
     </StyledBuyHouses>
