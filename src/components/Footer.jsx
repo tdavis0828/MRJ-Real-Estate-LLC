@@ -84,8 +84,15 @@ const Footer = () => {
         </p>
       </div>
       <p className="copyright">
-        Created by <a href="/">Davis Digital Designs</a> Copyright ©{' '}
-        {currentYear}
+        Created by{' '}
+        <a
+          href="https://tdavis0828.github.io/portfoliov3/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Davis Digital Designs
+        </a>{' '}
+        Copyright © {currentYear}
       </p>
     </StyledFooter>
   );

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { StyledCalculator } from "../styles/Stylesheet";
+import React, { useState } from 'react';
+import { StyledCalculator } from '../styles/Stylesheet';
 const MortgageCalculator = () => {
   const [loanAmount, setLoanAmount] = useState(300000);
   const [interestRate, setInterestRate] = useState(4.25);
@@ -63,7 +63,7 @@ const MortgageCalculator = () => {
         <button type="submit">Calculate</button>
       </form>
       <div>
-        <h2>Estimated Monthly Payment: ${monthlyPayment}</h2>
+        <p className="total">Estimated Monthly Payment: ${monthlyPayment}</p>
       </div>
       <div className="disclaimer">
         <small>

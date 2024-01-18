@@ -66,8 +66,8 @@ const HomeWorth = () => {
         <div className="header">
           <h2>Find out what your home is worth</h2>
           <p>
-            Please provide the information below and someone will reach out with
-            an evaluation
+            Please provide the information below you will be contacted with an
+            evaluation
           </p>
         </div>
         <label>

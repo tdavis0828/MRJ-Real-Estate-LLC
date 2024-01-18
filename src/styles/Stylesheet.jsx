@@ -13,6 +13,12 @@ export const StyledHeader = styled.div`
     height: 350px;
     width: 350px;
   }
+  @media (max-width: 320px) {
+    & img {
+      height: 320px;
+      width: 320px;
+    }
+  }
 `;
 
 // Styles for open button on navbar
@@ -63,8 +69,9 @@ export const StyledNav = styled.nav`
     }
     & .close-btn {
       color: #fff;
-      font-size: 1.25rem;
-      text-transform: lowercase;
+      font-size: 1.15rem;
+      text-transform: uppercase;
+      border-bottom: 1px solid #fff;
     }
   }
 
@@ -177,6 +184,22 @@ export const StyledHero = styled.main`
       flex-direction: column;
     }
   }
+  @media (max-width: 375px) {
+    & .text-content {
+      & img {
+        width: 375px;
+        height: 225px;
+      }
+    }
+  }
+  @media (max-width: 320px) {
+    & .text-content {
+      & img {
+        width: 320px;
+        height: 175px;
+      }
+    }
+  }
 `;
 
 // Styles for the resources bar
@@ -218,6 +241,30 @@ export const StyledResourcesBar = styled.aside`
       }
       & a {
         font-size: 0.85rem;
+      }
+    }
+  }
+  @media (max-width: 375px) {
+    & div {
+      & img {
+        height: 25px;
+        width: 25px;
+        margin: 0.5rem;
+      }
+      & a {
+        font-size: 0.85rem;
+      }
+    }
+  }
+  @media (max-width: 320px) {
+    & div {
+      & img {
+        height: 25px;
+        width: 25px;
+        margin: 0.5rem;
+      }
+      & a {
+        font-size: 0.75rem;
       }
     }
   }
@@ -301,6 +348,14 @@ export const StlyedCertification = styled.section`
       }
     }
   }
+  @media (max-width: 320px) {
+    & .cert-container:nth-child(2) {
+      text-align: center;
+      & p {
+        font-size: 0.95rem;
+      }
+    }
+  }
 `;
 
 // Styling for the about section;
@@ -350,6 +405,11 @@ export const StyledAbout = styled.section`
         height: 150px;
         width: 150px;
       }
+    }
+  }
+  @media (max-width: 320px) {
+    & .about-container {
+      font-size: 0.95rem;
     }
   }
 `;
@@ -403,6 +463,9 @@ export const StyledReviews = styled.section`
         font-size: 1rem;
       }
     }
+  }
+  @media (max-width: 320px) {
+    height: 575px;
   }
 `;
 
@@ -563,14 +626,11 @@ export const StyledContact = styled.section`
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      // padding: 1rem;
       text-align: center;
       & p {
-        // background: #bebebe;
         background: #fff;
         color: #181818;
         padding-top: 0.75rem;
-        // font-family: "Alkatra", cursive;
         width: 80%;
         padding-left: 0.75rem;
         font-weight: 500;
@@ -583,6 +643,75 @@ export const StyledContact = styled.section`
       & .overlay {
         color: #fff;
         font-size: 2rem;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    height: 100vh;
+    flex-direction: column-reverse;
+    & .contact-form {
+      padding: 1rem;
+    }
+    & .contact-text {
+      height: 100%;
+    }
+  }
+  @media (max-width: 425px) {
+    & div {
+      &.contact-form {
+        padding: 0;
+        & form {
+          & input,
+          textarea,
+          button {
+            width: 350px;
+          }
+          & button {
+            transform: translateX(25px);
+          }
+        }
+      }
+      &.contact-text {
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: 375px) {
+    & div {
+      &.contact-form {
+        padding: 0;
+        & form {
+          & input,
+          textarea,
+          button {
+            width: 275px;
+          }
+          & label {
+            font-size: 1rem;
+          }
+          & button {
+            transform: translateX(25px);
+          }
+        }
+      }
+      &.contact-text {
+        & p {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 320px) {
+    & div {
+      &.contact-form {
+        padding: 0;
+        & form {
+          & input,
+          textarea,
+          button {
+            width: 250px;
+          }
+        }
       }
     }
   }
@@ -639,11 +768,26 @@ export const StyledFaq = styled.main`
     width: 50%;
     text-align: center;
   }
-  & h1 {
-    // font-family: "Alkatra", cursive;
-  }
   & div p {
     font-size: 1.15rem;
+  }
+  @media (max-width: 768px) {
+    justify-content: center;
+    & .faq {
+      margin: 0.35rem;
+      padding: 0.5rem;
+    }
+  }
+  @media (max-width: 425px) {
+    & .faq {
+      width: 75%;
+      & p {
+        font-size: 1rem;
+      }
+    }
+  }
+  @media (max-width: 375px) {
+    height: 170vh;
   }
 `;
 
@@ -698,6 +842,50 @@ export const StyledCalculator = styled.main`
   & div {
     & p {
       font-size: 1.55rem;
+    }
+  }
+  @media (max-width: 425px) {
+    height: 80vh;
+    & h1 {
+      font-size: 1.75rem;
+    }
+    & form {
+      height: 80vh;
+      width: 385px;
+      box-shadow: none;
+
+      & label {
+        font-size: 1rem;
+      }
+      & input {
+        font-size: 1rem;
+      }
+      & button {
+        width: 300px;
+        height: 35px;
+      }
+    }
+    & div {
+      p {
+        font-size: 1.15rem;
+      }
+    }
+  }
+  @media (max-width: 320px) {
+    & h1 {
+      font-size: 1.5rem;
+    }
+    & form {
+      width: 320px;
+      & label {
+        font-size: 0.95rem;
+      }
+      & input {
+        font-size: 0.85rem;
+      }
+      & button {
+        width: 275px;
+      }
     }
   }
 `;
@@ -805,6 +993,7 @@ export const StyledHomeWorth = styled.main`
   @media (max-width: 425px) {
     & form {
       width: 75%;
+      padding: 2rem;
       & .header {
         font-size: 0.9rem;
       }
@@ -816,6 +1005,31 @@ export const StyledHomeWorth = styled.main`
       }
       & button {
         margin-left: 1.5rem;
+      }
+    }
+  }
+  @media (max-width: 375px) {
+    & form {
+      width: 84%;
+    }
+  }
+  @media (max-width: 320px) {
+    & form {
+      & .header {
+        & h2 {
+          font-size: 1.15rem;
+        }
+      }
+      & label {
+        font-size: 0.8rem;
+      }
+      & input {
+        font-size: 0.8rem;
+      }
+      & textarea,
+      .textarea {
+        margin: 0;
+        transform: translateX(5px);
       }
     }
   }
@@ -945,7 +1159,6 @@ export const StyledBlog = styled.main`
   justify-content: space-around;
   align-items: center;
   position: relative;
-  overflow: scroll;
   background: url('https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   background-size: cover;
   background-position: center;
@@ -964,6 +1177,9 @@ export const StyledBlog = styled.main`
     left: 0;
     margin: 2rem;
     font-size: 1.65rem;
+  }
+  @media (max-width: 1024px) {
+    justify-content: center;
   }
 `;
 
@@ -1011,6 +1227,74 @@ export const StyledSingleBlog = styled.div`
     bottom: 10%;
     font-size: 0.85rem;
     opacity: 0.75;
+  }
+
+  @media (max-width: 768px) {
+    width: 700px;
+    & .post-title {
+      font-size: 1.1rem;
+      left: 40%;
+    }
+    & .post-desc {
+      font-size: 0.95rem;
+      left: 40%;
+    }
+    & .post-author {
+      left: 40%;
+    }
+    & .post-tag {
+      font-size: 0.8rem;
+      left: 65%;
+    }
+  }
+
+  @media (max-width: 425px) {
+    width: 375px;
+    & .post-img {
+      width: 150px;
+      height: 100px;
+    }
+    & .post-title {
+      font-size: 0.95rem;
+      left: 43%;
+      top: 15%;
+    }
+    & .post-desc {
+      width: 95%;
+      left: 4%;
+      top: 55%;
+      font-size: 0.85rem;
+    }
+    & .post-author {
+      left: 4%;
+      font-size: 0.85rem;
+    }
+    & .post-tag {
+      left: 45%;
+      font-size: 0.7rem;
+    }
+  }
+  @media (max-width: 375px) {
+    width: 320px;
+    & .post-title {
+      width: 50%;
+      left: 50%;
+    }
+  }
+  @media (max-width: 320px) {
+    width: 280px;
+    & .post-title {
+      width: 45%;
+      left: 55%;
+      font-size: 0.85rem;
+    }
+    & .post-author {
+      font-size: 0.75rem;
+    }
+    & .post-tag {
+      bottom: 10%;
+      font-size: 0.65rem;
+    }
   }
 `;
 
@@ -1305,6 +1589,7 @@ export const StyledFooter = styled.footer`
     bottom: 5px;
     font-size: 1rem;
     text-align: center;
+    margin-bottom: 10px;
     & a {
       color: #fff;
     }
@@ -1322,6 +1607,10 @@ export const StyledFooter = styled.footer`
   }
   @media (max-width: 768px) {
     flex-direction: column;
+    & .legal,
+    & .privacy-policy {
+      border: none !important;
+    }
   }
 
   @media (max-width: 576px) {
@@ -1342,6 +1631,36 @@ export const StyledFooter = styled.footer`
       & p {
         font-size: 1rem;
         &.privacy-info {
+          transform: translateY(-15px);
+        }
+      }
+    }
+  }
+  @media (max-width: 375px) {
+    & .copyright {
+      position: static;
+      font-size: 0.85rem;
+    }
+    & .privacy-policy {
+      & p {
+        font-size: 1rem;
+        &.privacy-info {
+          height: 300px;
+          transform: translateY(-15px);
+        }
+      }
+    }
+  }
+  @media (max-width: 320px) {
+    & .copyright {
+      position: static;
+      font-size: 0.75rem;
+    }
+    & .privacy-policy {
+      & p {
+        font-size: 1rem;
+        &.privacy-info {
+          height: 300px;
           transform: translateY(-15px);
         }
       }

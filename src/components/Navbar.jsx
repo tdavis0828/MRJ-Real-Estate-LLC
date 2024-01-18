@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import Fade from '@mui/material/Fade';
@@ -41,6 +41,7 @@ const Navbar = () => {
 
   const handleClose = () => {
     setAnchorEl(null);
+    setNavIsOpen(false);
   };
 
   return (
@@ -59,8 +60,12 @@ const Navbar = () => {
 
       <StyledNav className={navIsOpen ? 'open' : 'closed'}>
         <div className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="current-listings">Listings</Link>
+          <Link to="/" onClick={() => setNavIsOpen(false)}>
+            Home
+          </Link>
+          <Link to="current-listings" onClick={() => setNavIsOpen(false)}>
+            Listings
+          </Link>
           <Button
             id="fade-button"
             aria-controls={open ? 'fade-menu' : undefined}
@@ -90,9 +95,15 @@ const Navbar = () => {
               What is my house worth?
             </Link>
           </StyledMenu>
-          <Link to="blog">Blog</Link>
-          <Link to="contact">Contact</Link>
-          <Link to="faq">FAQs</Link>
+          <Link to="blog" onClick={() => setNavIsOpen(false)}>
+            Blog
+          </Link>
+          <Link to="contact" onClick={() => setNavIsOpen(false)}>
+            Contact
+          </Link>
+          <Link to="faq" onClick={() => setNavIsOpen(false)}>
+            FAQs
+          </Link>
           {navIsOpen && (
             <div
               className="close-btn"
