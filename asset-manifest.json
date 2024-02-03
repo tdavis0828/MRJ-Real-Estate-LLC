@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.js": "/MRJ-Real-Estate-LLC/static/js/main.95d2e215.js",
+    "main.js": "/MRJ-Real-Estate-LLC/static/js/main.c83fd402.js",
     "static/media/mapImage.png": "/MRJ-Real-Estate-LLC/static/media/mapImage.2a62acb4a22819ed4c14.png",
     "static/media/piggyBank.png": "/MRJ-Real-Estate-LLC/static/media/piggyBank.16d4e6feda657b239170.png",
     "static/media/avoidSign.png": "/MRJ-Real-Estate-LLC/static/media/avoidSign.c9ec4ff694a330b1c1b5.png",
     "static/media/moneyHouse.png": "/MRJ-Real-Estate-LLC/static/media/moneyHouse.6ee430a799105278759c.png",
     "static/media/flower.png": "/MRJ-Real-Estate-LLC/static/media/flower.5b2e7822d9af07f6a20b.png",
     "static/media/capabilitiesStatement.png": "/MRJ-Real-Estate-LLC/static/media/capabilitiesStatement.b75a39e244af3a4c2881.png",
-    "static/media/IMG-3402.jpg": "/MRJ-Real-Estate-LLC/static/media/IMG-3402.28b2a7acc526e97c3d7f.jpg",
-    "static/media/mrjLogo.png": "/MRJ-Real-Estate-LLC/static/media/mrjLogo.878adf9dc7a00b88e1b7.png",
+    "static/media/consultant.jpg": "/MRJ-Real-Estate-LLC/static/media/consultant.a93a80787d334f76a9e0.jpg",
+    "static/media/logo-new (1).jpg": "/MRJ-Real-Estate-LLC/static/media/logo-new (1).9bece8e0dca0d448805f.jpg",
     "static/media/logo2-light.png": "/MRJ-Real-Estate-LLC/static/media/logo2-light.6ac7a9d768a649e4796c.png",
     "static/media/logo2-dark.png": "/MRJ-Real-Estate-LLC/static/media/logo2-dark.9fce2248b0aeb10c1964.png",
     "static/media/email-light.png": "/MRJ-Real-Estate-LLC/static/media/email-light.b9aacace25e582bf0a70.png",
     "static/media/home-light.png": "/MRJ-Real-Estate-LLC/static/media/home-light.4ea4306559e6b0530834.png",
     "index.html": "/MRJ-Real-Estate-LLC/index.html",
-    "main.95d2e215.js.map": "/MRJ-Real-Estate-LLC/static/js/main.95d2e215.js.map"
+    "main.c83fd402.js.map": "/MRJ-Real-Estate-LLC/static/js/main.c83fd402.js.map"
   },
   "entrypoints": [
-    "static/js/main.95d2e215.js"
+    "static/js/main.c83fd402.js"
   ]
 }
