@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/MRJ-Real-Estate-LLC/static/js/main.ba8473b7.js",
+    "main.js": "/MRJ-Real-Estate-LLC/static/js/main.95d2e215.js",
     "static/media/mapImage.png": "/MRJ-Real-Estate-LLC/static/media/mapImage.2a62acb4a22819ed4c14.png",
     "static/media/piggyBank.png": "/MRJ-Real-Estate-LLC/static/media/piggyBank.16d4e6feda657b239170.png",
     "static/media/avoidSign.png": "/MRJ-Real-Estate-LLC/static/media/avoidSign.c9ec4ff694a330b1c1b5.png",
@@ -14,9 +14,9 @@
     "static/media/email-light.png": "/MRJ-Real-Estate-LLC/static/media/email-light.b9aacace25e582bf0a70.png",
     "static/media/home-light.png": "/MRJ-Real-Estate-LLC/static/media/home-light.4ea4306559e6b0530834.png",
     "index.html": "/MRJ-Real-Estate-LLC/index.html",
-    "main.ba8473b7.js.map": "/MRJ-Real-Estate-LLC/static/js/main.ba8473b7.js.map"
+    "main.95d2e215.js.map": "/MRJ-Real-Estate-LLC/static/js/main.95d2e215.js.map"
   },
   "entrypoints": [
-    "static/js/main.ba8473b7.js"
+    "static/js/main.95d2e215.js"
   ]
 }
