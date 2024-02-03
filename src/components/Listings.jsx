@@ -12,6 +12,7 @@ function Listings() {
     arrows: false,
     className: 'image-slider',
     autoplay: true,
+    pauseOnHover: true,
   };
   return (
     <StyledListings>
@@ -23,6 +24,9 @@ function Listings() {
             style={{
               background:
                 'url(https://ap.rdcpix.com/d256462895026384d52a6aa85ec89b41l-m2399071125od-w480_h360_x2.webp?w=640&q=75)',
+              backgroundPosition: 'center',
+              backgroundSize: '100% 100%',
+              backgroundRepeat: 'no-repeat',
             }}
           >
             <div className="overlay" />
@@ -36,6 +40,9 @@ function Listings() {
             style={{
               background:
                 'url(https://ap.rdcpix.com/62dc21a9cd234aa0d79af39829a5d9a9l-m2771632218od-w480_h360_x2.webp?w=640&q=75)',
+              backgroundPosition: 'center',
+              backgroundSize: '100% 100%',
+              backgroundRepeat: 'no-repeat',
             }}
           >
             <div className="overlay" />
@@ -49,6 +56,9 @@ function Listings() {
             style={{
               background:
                 'url(https://ap.rdcpix.com/967f5ddaad5856f117cfb1bcafe1385el-m4152255083od-w480_h360_x2.webp?w=640&q=75)',
+              backgroundPosition: 'center',
+              backgroundSize: '100% 100%',
+              backgroundRepeat: 'no-repeat',
             }}
           >
             <div className="overlay" />
@@ -62,6 +72,9 @@ function Listings() {
             style={{
               background:
                 'url(https://ap.rdcpix.com/23e8a00a176015fdc5898c38a8d8e472l-m1275221697od-w480_h360_x2.webp?w=640&q=75)',
+              backgroundPosition: 'center',
+              backgroundSize: '100% 100%',
+              backgroundRepeat: 'no-repeat',
             }}
           >
             <p>617 Meadow Grove Ct, Bakersfield, CA 93308</p>

@@ -6,7 +6,6 @@ import locationIcon from '../images/location-light.png';
 import phoneIcon from '../images/telephone-light.png';
 import emailIcon from '../images/email-light.png';
 import instagramIcom from '../images/instagram.png';
-import linkedInIcon from '../images/linkedin.png';
 import facebookIcon from '../images/facebook-app-symbol.png';
 import logo from '../images/logo2-light.png';
 import mrjLogo from '../images/mrjLogo.png';
@@ -40,7 +39,7 @@ const Footer = () => {
             <img src={instagramIcom} alt="Instagram Icon" />
           </Link>
 
-          <Link to="/">
+          <Link to="https://m.facebook.com/Soldbymarcyjones/" target="_blank">
             <img src={facebookIcon} alt="Facebook Icon" />
           </Link>
         </div>
@@ -68,7 +67,6 @@ const Footer = () => {
           <p>SIC: 6531 Real Estate Agent Managers</p>
 
           <div className="legal-logos">
-            <img src={linkedInIcon} alt="/" />
             <img src={mrjLogo} alt="/" className="mrjLogo" />
           </div>
         </div>

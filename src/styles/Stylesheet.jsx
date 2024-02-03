@@ -399,16 +399,30 @@ export const StyledAbout = styled.section`
   }
 
   @media (max-width: 425px) {
+    height: 115vh;
+
     & .about-container {
       font-size: 1.1rem;
+      width: 65%;
       & img {
         height: 150px;
         width: 150px;
       }
     }
   }
+  @media (max-width: 375px) {
+    height: 115vh;
+    & .about-container {
+      & img {
+        height: 125px;
+        width: 125px;
+      }
+      width: 70%;
+    }
+  }
   @media (max-width: 320px) {
     & .about-container {
+      width: 75%;
       font-size: 0.95rem;
     }
   }
@@ -535,11 +549,42 @@ export const StyledListings = styled.section`
   @media (max-width: 425px) {
     & .image-slider {
       transform: translateY(150px);
+      width: 400px;
       & div {
         &.slide-content {
-          width: 65vw;
+          width: 400px;
+
           & .overlay {
-            width: 65vw;
+            width: 400px;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 375px) {
+    & .image-slider {
+      width: 350px;
+      & div {
+        &.slide-content {
+          width: 350px;
+          & .overlay {
+            width: 350px;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 320px) {
+    & .image-slider {
+      width: 300px;
+      & div {
+        &.slide-content {
+          width: 300px;
+          & p {
+            font-size: 1.5rem;
+          }
+          & .overlay {
+            width: 300px;
           }
         }
       }
@@ -659,12 +704,16 @@ export const StyledContact = styled.section`
   @media (max-width: 425px) {
     & div {
       &.contact-form {
-        padding: 0;
+        padding: 1rem 0;
         & form {
           & input,
           textarea,
           button {
-            width: 350px;
+            width: 275px;
+          }
+          & label,
+          input {
+            font-size: 1rem;
           }
           & button {
             transform: translateX(25px);
@@ -991,16 +1040,22 @@ export const StyledHomeWorth = styled.main`
     }
   }
   @media (max-width: 425px) {
+    height: 115vh;
     & form {
-      width: 75%;
+      width: 85%;
       padding: 2rem;
       & .header {
         font-size: 0.9rem;
+        & h2 {
+          margin-top: 0;
+        }
       }
       & label {
         margin-right: 0;
+        transform: translateX(-50px);
         &.textarea {
           margin: 0;
+          transform: translateX(0);
         }
       }
       & button {
@@ -1022,6 +1077,7 @@ export const StyledHomeWorth = styled.main`
       }
       & label {
         font-size: 0.8rem;
+        transform: translateX(0px);
       }
       & input {
         font-size: 0.8rem;
@@ -1504,6 +1560,30 @@ export const StyledCapabilities = styled.div`
     height: 100%;
     width: 100%;
   }
+  @media (max-width: 425px) {
+    & .cap-container {
+      & img {
+        height: 80%;
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: 375px) {
+    & .cap-container {
+      & img {
+        height: 75%;
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: 320px) {
+    & .cap-container {
+      & img {
+        height: 70%;
+        width: 100%;
+      }
+    }
+  }
 `;
 //Styling for the footer section
 export const StyledFooter = styled.footer`
@@ -1596,7 +1676,7 @@ export const StyledFooter = styled.footer`
   }
 
   @media (max-width: 1024px) {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     text-align: center;
     & .privacy-policy {
       & p:nth-child(2) {
