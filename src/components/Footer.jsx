@@ -1,14 +1,11 @@
 import React from 'react';
 import { StyledFooter } from '../styles/Stylesheet';
-import { Link } from 'react-router-dom';
 import homeIcon from '../images/home-light.png';
 import locationIcon from '../images/location-light.png';
 import phoneIcon from '../images/telephone-light.png';
 import emailIcon from '../images/email-light.png';
-import instagramIcom from '../images/instagram.png';
-import facebookIcon from '../images/facebook-app-symbol.png';
 import logo from '../images/logo2-light.png';
-import mrjLogo from '../images/mrjLogo.png';
+import consultantLogo from '../images/consultant.jpg';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -21,7 +18,7 @@ const Footer = () => {
         </p>
         <p>
           <img src={locationIcon} alt="/" />
-          10803 Myers Ranch Ct. Bakersfield, CA 93311
+          5701 Truxtun ave. Ste #220 Bakersfield, CA 93309
         </p>
         <p>
           <img src={phoneIcon} alt="/" />
@@ -32,16 +29,7 @@ const Footer = () => {
           Jonesrealty3369@gmail.com
         </p>
         <div className="socials">
-          <Link
-            to="https://www.instagram.com/realtormarcyjones/"
-            target="_blank"
-          >
-            <img src={instagramIcom} alt="Instagram Icon" />
-          </Link>
-
-          <Link to="https://m.facebook.com/Soldbymarcyjones/" target="_blank">
-            <img src={facebookIcon} alt="Facebook Icon" />
-          </Link>
+          <img src={consultantLogo} alt="united real estate logo" />
         </div>
       </div>
       <div className="logo">
@@ -60,15 +48,11 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        <div className="legal">
+        <div className="legal secondary">
           <p>DRE#: 02081683</p>
           <p>UNSPSC: 80131600 / Tax EIN: 92-1387516</p>
           <p>DUNS: 118884164 / Certifications: SBE# 2030911</p>
           <p>SIC: 6531 Real Estate Agent Managers</p>
-
-          <div className="legal-logos">
-            <img src={mrjLogo} alt="/" className="mrjLogo" />
-          </div>
         </div>
       </div>
       <div className="privacy-policy">

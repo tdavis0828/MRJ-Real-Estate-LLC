@@ -123,8 +123,9 @@ export const StyledHero = styled.main`
     z-index: 10;
     margin-top: 100px;
     & img {
-      width: 1100px;
-      height: 375px;
+      width: 800px;
+      height: 250px;
+      border-radius: 5px;
     }
     & p {
       letter-spacing: 5px;
@@ -177,7 +178,7 @@ export const StyledHero = styled.main`
     & .text-content {
       & img {
         width: 400px;
-        height: 250px;
+        height: 150px;
       }
     }
     & .hero-buttons-container {
@@ -187,16 +188,16 @@ export const StyledHero = styled.main`
   @media (max-width: 375px) {
     & .text-content {
       & img {
-        width: 375px;
-        height: 225px;
+        width: 365px;
+        height: 155px;
       }
     }
   }
   @media (max-width: 320px) {
     & .text-content {
       & img {
-        width: 320px;
-        height: 175px;
+        width: 310px;
+        height: 125px;
       }
     }
   }
@@ -1626,6 +1627,11 @@ export const StyledFooter = styled.footer`
       border-right: 0;
       height: 75px;
       flex-direction: row;
+      & img {
+        width: 250px;
+        height: 75px;
+        margin-top: 25px;
+      }
       & a {
         color: #fff;
         text-decoration: none;
@@ -1640,8 +1646,11 @@ export const StyledFooter = styled.footer`
         flex-direction: row;
         &.primary {
           position: absolute;
-          bottom: 90px;
+          bottom: 75px;
         }
+      }
+      &.secondary {
+        height: 198px;
       }
       & img {
         margin-top: 10px;
