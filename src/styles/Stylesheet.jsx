@@ -829,7 +829,7 @@ export const StyledFaq = styled.main`
     }
   }
   @media (max-width: 425px) {
-    height: 250vh;
+    height: 200vh;
     & .faq {
       width: 75%;
       & p {
