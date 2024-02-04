@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { StyledHero } from '../styles/Stylesheet';
 import { motion } from 'framer-motion';
 import newLogo from '../images/logo-new (1).jpg';
 
 const Hero = () => {
+  const [divScroll, setDivScroll] = useState();
+  useEffect(() => {
+    const certDiv = document.getElementById('certifications');
+    setDivScroll(certDiv);
+  }, []);
+
   return (
     <StyledHero id="home">
       <motion.div
@@ -14,9 +21,20 @@ const Hero = () => {
       >
         <img src={newLogo} className="hero-image" alt="hero-logo" />
         <div className="hero-buttons-container">
-          <a href="#certifications">Contact Realtor</a>
+          <Link to="contact" className="hero-btns">
+            Contact Realtor
+          </Link>
           <hr></hr>
-          <a href="#certifications">SBE License</a>
+          <button
+            className="hero-btns"
+            onClick={() => {
+              if (divScroll) {
+                divScroll.scrollIntoView();
+              }
+            }}
+          >
+            SBE License
+          </button>
         </div>
       </motion.div>
     </StyledHero>

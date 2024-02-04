@@ -134,7 +134,7 @@ export const StyledHero = styled.main`
     & .hero-buttons-container {
       display: flex;
       margin-top: 1rem;
-      & a {
+      & .hero-btns {
         background: #fff;
         width: 200px;
         height: 55px;
