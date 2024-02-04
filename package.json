@@ -1,7 +1,7 @@
 {
   "name": "marcy-realty",
   "version": "0.1.0",
-  "homepage": "https://tdavis0828.github.io/MRJ-Real-Estate-LLC",
+  "homepage": "",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
