@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 //Styles for the header
 export const StyledHeader = styled.div`
@@ -102,7 +102,7 @@ export const StyledHero = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('https://images.unsplash.com/photo-1571624436279-b272aff752b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-image: url("https://images.unsplash.com/photo-1571624436279-b272aff752b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-postion: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -145,7 +145,7 @@ export const StyledHero = styled.main`
         margin: 1rem;
         border: none;
         border-radius: 5px;
-        font-family: 'Quicksand', sans-serif;
+        font-family: "Quicksand", sans-serif;
         font-size: 1.25rem;
         font-weight: 500;
         cursor: pointer;
@@ -668,7 +668,7 @@ export const StyledContact = styled.section`
       }
     }
     &.contact-text {
-      background: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fG9mZmljZSUyMHNwYWNlfGVufDB8MHwwfHx8MA%3D%3D');
+      background: url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fG9mZmljZSUyMHNwYWNlfGVufDB8MHwwfHx8MA%3D%3D");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -776,7 +776,7 @@ export const StyledFaq = styled.main`
   justify-content: space-around;
   align-items: center;
   color: #181818;
-  background: url('https://images.unsplash.com/photo-1605146769289-440113cc3d00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fHJlYWwlMjBlc3RhdGUlMjBhZ2VudHxlbnwwfDB8MHx8fDA%3D');
+  background: url("https://images.unsplash.com/photo-1605146769289-440113cc3d00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fHJlYWwlMjBlc3RhdGUlMjBhZ2VudHxlbnwwfDB8MHx8fDA%3D");
   background-size: cover;
   backround-position: center;
   background-repeat: no-repeat;
@@ -829,6 +829,7 @@ export const StyledFaq = styled.main`
     }
   }
   @media (max-width: 425px) {
+    height: 250vh;
     & .faq {
       width: 75%;
       & p {
@@ -847,7 +848,7 @@ export const StyledCalculator = styled.main`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: url('https://images.unsplash.com/photo-1592595896551-12b371d546d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background: url("https://images.unsplash.com/photo-1592595896551-12b371d546d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-postion: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -948,7 +949,7 @@ export const StyledHomeWorth = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url('https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background: url("https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1000,7 +1001,7 @@ export const StyledHomeWorth = styled.main`
     & textarea {
       width: 275px;
       margin: 0 1rem;
-      font-family: 'Quicksand', sans-serif;
+      font-family: "Quicksand", sans-serif;
       padding: 5px;
     }
     small {
@@ -1096,7 +1097,7 @@ export const StyledHomeWorth = styled.main`
 export const StyledBuyHouses = styled.main`
   height: 100vh;
   width: 100%;
-  background: url('https://images.unsplash.com/photo-1609766856939-5b5a934af3d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background: url("https://images.unsplash.com/photo-1609766856939-5b5a934af3d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1216,7 +1217,7 @@ export const StyledBlog = styled.main`
   justify-content: space-around;
   align-items: center;
   position: relative;
-  background: url('https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background: url("https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1364,7 +1365,7 @@ export const StyledCurrentListings = styled.main`
   justify-content: center;
   align-items: center;
   position: relative;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   & .open-page {
     width: 100%;
     height: 25px;
@@ -1551,7 +1552,7 @@ export const StyledCapabilities = styled.div`
     & img {
       height: 100%;
     }
-    background: url('https://images.unsplash.com/photo-1615874694520-474822394e73?q=80&w=2080');
+    background: url("https://images.unsplash.com/photo-1615874694520-474822394e73?q=80&w=2080");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
