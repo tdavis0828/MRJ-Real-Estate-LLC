@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { StyledHero } from "../styles/Stylesheet";
 import { motion } from "framer-motion";
-import newLogo from "../images/logo-new(1).jpg";
 import logo2 from "../images/logo2-light (1).png";
 
 const Hero = () => {
@@ -21,7 +20,6 @@ const Hero = () => {
         className="text-content"
       >
         <div className="hero-image-container">
-          {/* <p>Marcy Renae Jones</p> */}
           <img src={logo2} className="hero-image" alt="hero-logo" />
         </div>
         <div className="hero-buttons-container">
