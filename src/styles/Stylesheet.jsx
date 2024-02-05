@@ -1217,6 +1217,7 @@ export const StyledBuyHouses = styled.main`
             width: 250px;
             height: 250px;
           }
+
           &.cash-house {
             width: 250px;
             height: 250px;
