@@ -1,25 +1,24 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import { StyledCurrentListings } from '../styles/Stylesheet';
-import { GoogleMap, MarkerF } from '@react-google-maps/api';
-import { nanoid } from 'nanoid';
-import deafultImg from '../images/default-image-icon-missing-picture-page-vector-40546530.jpg';
-import upArrow from '../images/up-arrow.png';
-import downArrow from '../images/arrow-down.png';
+import React, { useEffect, useMemo, useState } from "react";
+import { StyledCurrentListings } from "../styles/Stylesheet";
+import { GoogleMap, MarkerF } from "@react-google-maps/api";
+import { nanoid } from "nanoid";
+import deafultImg from "../images/default-image-icon-missing-picture-page-vector-40546530.jpg";
+import upArrow from "../images/up-arrow.png";
+import downArrow from "../images/arrow-down.png";
 
 function CurrentListings() {
   const [homes, setHomes] = useState([]);
   const center = useMemo(() => ({ lat: 35.393528, lng: -119.043732 }), []);
   const [currentListing, setCurrentListing] = useState({});
   const [isPageOpen, setIsPageOpen] = useState(false);
-  const height = isPageOpen ? '2500px' : '350px';
+  const height = isPageOpen ? "2500px" : "350px";
 
   // Populates homes array
-  const MY_KEY = process.env.REACT_APP_ZILLOW_API_KEY;
   const options = {
-    method: 'GET',
+    method: "GET",
     headers: {
-      'X-RapidAPI-Key': MY_KEY,
-      'X-RapidAPI-Host': 'zillow56.p.rapidapi.com',
+      "X-RapidAPI-Key": "0cc29cce87msh85a4f650fff05e6p1ec97bjsn7783d537ee80",
+      "X-RapidAPI-Host": "zillow56.p.rapidapi.com",
     },
   };
   async function getMLSData() {
@@ -27,33 +26,33 @@ function CurrentListings() {
     const formatNumber = (num) => {
       parseInt(num);
       const options = { maximumFractionDigits: 2 };
-      const formattedNumber = Intl.NumberFormat('en-US', options).format(num);
+      const formattedNumber = Intl.NumberFormat("en-US", options).format(num);
       return formattedNumber;
     };
     // Fetches data from API
     const res = await fetch(
-      'https://zillow56.p.rapidapi.com/search?location=bakersfield%2C%20ca',
+      "https://zillow56.p.rapidapi.com/search?location=bakersfield%2C%20ca",
       options
     );
     const data = await res.json();
 
     // Removes the underscore from the home type key value pair
     data.results.forEach((res) => {
-      if (res.homeType.includes('_')) {
-        res.homeType = res.homeType.replace('_', ' ');
+      if (res.homeType.includes("_")) {
+        res.homeType = res.homeType.replace("_", " ");
       }
     });
 
     // Removes any listings that are plotes of land with no houses
     data.results.forEach((res, i) => {
-      if (res.homeType === 'LOT') {
+      if (res.homeType === "LOT") {
         data.results.splice(i, 1);
       }
     });
 
     // Removes any listings without images
     data.results.forEach((res, i) => {
-      if (res.imgSrc.includes('googleapis')) {
+      if (res.imgSrc.includes("googleapis")) {
         data.results.splice(i, 1);
       }
     });
@@ -87,8 +86,8 @@ function CurrentListings() {
         {homes.map((home) => {
           const color =
             currentListing.streetAddress === home.streetAddress
-              ? 'red'
-              : 'blue';
+              ? "red"
+              : "blue";
 
           return (
             <MarkerF
@@ -126,8 +125,8 @@ function CurrentListings() {
               key={nanoid()}
               className={
                 currentListing.streetAddress === home.streetAddress
-                  ? 'listing selected'
-                  : 'listing'
+                  ? "listing selected"
+                  : "listing"
               }
               id={home.streetAddress}
               onClick={() => {
@@ -140,8 +139,8 @@ function CurrentListings() {
               <div className="listing-info">
                 <p className="price">${home.price}</p>
                 <p className="details">
-                  {home.bedrooms} bed | {home.bathrooms} bath |{' '}
-                  {home.livingArea} sqft |{' '}
+                  {home.bedrooms} bed | {home.bathrooms} bath |{" "}
+                  {home.livingArea} sqft |{" "}
                   <span className="home-type">{home.homeType}</span>
                 </p>
                 <a
