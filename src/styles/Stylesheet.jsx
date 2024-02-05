@@ -188,6 +188,9 @@ export const StyledHero = styled.main`
   }
   @media (max-width: 425px) {
     & .text-content {
+      & .hero-image-container {
+        height: 250px;
+      }
       & img {
         width: 400px;
         height: 350px;
