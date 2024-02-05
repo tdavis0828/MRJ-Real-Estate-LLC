@@ -190,7 +190,7 @@ export const StyledHero = styled.main`
     & .text-content {
       & img {
         width: 400px;
-        height: 150px;
+        height: 350px;
       }
     }
     & .hero-buttons-container {
