@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { StyledHero } from '../styles/Stylesheet';
-import { motion } from 'framer-motion';
-import newLogo from '../images/logo-new (1).jpg';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { StyledHero } from "../styles/Stylesheet";
+import { motion } from "framer-motion";
+import newLogo from "../images/logo-new(1).jpg";
 
 const Hero = () => {
   const [divScroll, setDivScroll] = useState();
   useEffect(() => {
-    const certDiv = document.getElementById('certifications');
+    const certDiv = document.getElementById("certifications");
     setDivScroll(certDiv);
   }, []);
 

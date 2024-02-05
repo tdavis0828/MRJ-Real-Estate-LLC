@@ -237,8 +237,8 @@ export const StyledResourcesBar = styled.aside`
   @media (max-width: 425px) {
     & div {
       & img {
-        height: 30px;
-        width: 30px;
+        height: 25px;
+        width: 25px;
       }
       & a {
         font-size: 0.85rem;
