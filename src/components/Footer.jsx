@@ -5,7 +5,6 @@ import locationIcon from "../images/location-light.png";
 import phoneIcon from "../images/telephone-light.png";
 import emailIcon from "../images/email-light.png";
 import logo from "../images/logo2-light.png";
-import consultantLogo from "../images/consultant.jpg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
