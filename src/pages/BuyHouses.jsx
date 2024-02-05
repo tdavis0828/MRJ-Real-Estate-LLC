@@ -1,10 +1,10 @@
-import React from 'react';
-import { StyledBuyHouses } from '../styles/Stylesheet';
-import moneyHouse from '../images/moneyHouse.png';
-import flower from '../images/flower.png';
-import avoidSign from '../images/avoidSign.png';
-import piggyBank from '../images/piggyBank.png';
-import mapImage from '../images/mapImage.png';
+import React from "react";
+import { StyledBuyHouses } from "../styles/Stylesheet";
+import moneyHouse from "../images/moneyHouse.png";
+import flower from "../images/flower.png";
+import avoidSign from "../images/avoidSign.png";
+import piggyBank from "../images/piggyBank.png";
+import mapImage from "../images/mapImage.png";
 
 function BuyHouses() {
   return (
@@ -17,7 +17,11 @@ function BuyHouses() {
           <p className="header">We Buy Houses</p>
           <p className="header">As-Is Any</p>
           <p className="header">Condition For Cash</p>
-          <img src={moneyHouse} alt="House made of money" />
+          <img
+            className="cash-house"
+            src={moneyHouse}
+            alt="House made of money"
+          />
           <p className="sub-header">
             No Need For repairs, Hidden Fees Or Commissions.
           </p>
@@ -44,7 +48,11 @@ function BuyHouses() {
 
         <div className="link">
           <p className="header">Financial Urgency</p>
-          <img src={piggyBank} alt="gold piggy bank next to rulers" />
+          <img
+            className="piggy-bank"
+            src={piggyBank}
+            alt="gold piggy bank next to rulers"
+          />
           <p className="sub-header">
             Selling For Cash Can Provide Immediate Access To Funds.
           </p>
