@@ -115,6 +115,7 @@ export const StyledHero = styled.main`
     top: 0;
   }
   & .text-content {
+    width: 100%;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -123,13 +124,24 @@ export const StyledHero = styled.main`
     z-index: 10;
     margin-top: 100px;
     & img {
-      width: 800px;
-      height: 250px;
+      width: 40%;
+      height: 575px;
       border-radius: 5px;
     }
     & p {
       letter-spacing: 5px;
       font-size: 4rem;
+    }
+    & .hero-image-container {
+      background: black;
+      width: 100%;
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & p {
+        font-family: "Kolker Brush", cursive;
+      }
     }
     & .hero-buttons-container {
       display: flex;
@@ -236,7 +248,7 @@ export const StyledResourcesBar = styled.aside`
   }
   @media (max-width: 425px) {
     & div {
-      padding-right: 5px;
+      padding-right: 10px;
       & img {
         height: 25px;
         width: 25px;
