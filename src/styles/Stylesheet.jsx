@@ -135,7 +135,7 @@ export const StyledHero = styled.main`
     & .hero-image-container {
       background: black;
       width: 100%;
-      height: 250px;
+      height: 350px;
       display: flex;
       justify-content: center;
       align-items: center;
