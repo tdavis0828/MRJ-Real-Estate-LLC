@@ -236,10 +236,12 @@ export const StyledResourcesBar = styled.aside`
   }
   @media (max-width: 425px) {
     & div {
+      padding-right: 5px;
       & img {
         height: 25px;
         width: 25px;
       }
+
       & a {
         font-size: 0.85rem;
       }
