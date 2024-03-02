@@ -1,6 +1,6 @@
-import React from 'react';
-import { StyledBlog } from '../styles/Stylesheet';
-import SingleBlog from '../components/SingleBlog';
+import React from "react";
+import { StyledBlog } from "../styles/Stylesheet";
+import SingleBlog from "../components/SingleBlog";
 
 function Blog() {
   return (
@@ -9,7 +9,6 @@ function Blog() {
 
       <div className="header">
         <h2>Blogs</h2>
-        <p>News & Events</p>
       </div>
       <SingleBlog
         link="https://www.nar.realtor/blogs/styled-staged-sold/home-maintenance-checklist-to-avoid-costly-repairs"

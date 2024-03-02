@@ -19,11 +19,10 @@ function CurrentListings() {
   const height = isPageOpen ? '2500px' : '350px';
 
   // Populates homes array
-  const MY_KEY = process.env.REACT_APP_ZILLOW_API_KEY;
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': MY_KEY,
+      'X-RapidAPI-Key': '0cc29cce87msh85a4f650fff05e6p1ec97bjsn7783d537ee80',
       'X-RapidAPI-Host': 'zillow56.p.rapidapi.com',
     },
   };

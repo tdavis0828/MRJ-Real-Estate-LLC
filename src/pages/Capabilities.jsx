@@ -1,6 +1,6 @@
-import React from 'react';
-import { StyledCapabilities } from '../styles/Stylesheet';
-import capabilitiesStatement from '../images/capabilitiesStatement.png';
+import React from "react";
+import { StyledCapabilities } from "../styles/Stylesheet";
+import capabilitiesStatement from "../images/capabilitiesStatement.jpg";
 
 const Capabilities = () => {
   return (

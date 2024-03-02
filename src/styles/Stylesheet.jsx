@@ -115,6 +115,7 @@ export const StyledHero = styled.main`
     top: 0;
   }
   & .text-content {
+    width: 100%;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -131,6 +132,17 @@ export const StyledHero = styled.main`
     & p {
       letter-spacing: 5px;
       font-size: 4rem;
+    }
+    & .hero-image-container {
+      background: black;
+      width: 100%;
+      height: 350px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & p {
+        font-family: 'Kolker Brush', cursive;
+      }
     }
     & .hero-buttons-container {
       display: flex;
@@ -177,9 +189,12 @@ export const StyledHero = styled.main`
   }
   @media (max-width: 425px) {
     & .text-content {
+      & .hero-image-container {
+        height: 250px;
+      }
       & img {
         width: 400px;
-        height: 150px;
+        height: 350px;
       }
     }
     & .hero-buttons-container {
@@ -237,10 +252,12 @@ export const StyledResourcesBar = styled.aside`
   }
   @media (max-width: 425px) {
     & div {
+      padding-right: 10px;
       & img {
-        height: 30px;
-        width: 30px;
+        height: 25px;
+        width: 25px;
       }
+
       & a {
         font-size: 0.85rem;
       }
@@ -435,7 +452,7 @@ export const StyledReviews = styled.section`
   height: 475px;
   width: 100%;
   background: #181818;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  border-bottom: 15px solid #fff;
   color: #fff;
   text-align: center;
   & .image-slider {
@@ -830,6 +847,7 @@ export const StyledFaq = styled.main`
     }
   }
   @media (max-width: 425px) {
+    height: 200vh;
     & .faq {
       width: 75%;
       & p {
@@ -1196,6 +1214,15 @@ export const StyledBuyHouses = styled.main`
         & img {
           width: 250px;
           height: 150px;
+          &.piggy-bank {
+            width: 250px;
+            height: 250px;
+          }
+
+          &.cash-house {
+            width: 250px;
+            height: 250px;
+          }
         }
       }
     }
@@ -1259,7 +1286,8 @@ export const StyledSingleBlog = styled.div`
     bottom: 0;
     left: 0;
     width: 250px;
-    height: 200px;
+    height: 150px;
+    transform: translateY(25px);
   }
   & .post-title {
     position: absolute;
@@ -1605,13 +1633,22 @@ export const StyledFooter = styled.footer`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: #fff;
   background: #181818;
   position: relative;
   & .realtor-info {
     height: 198px;
     border-right: 1px solid rgba(255, 255, 255, 0.35);
+    & p {
+      &.urec {
+        transform: translateX(25px);
+      }
+      & img {
+        height: 25px;
+        width: 25px;
+      }
+    }
   }
   & .logo {
     & img {
@@ -1659,10 +1696,20 @@ export const StyledFooter = styled.footer`
         &.primary {
           position: absolute;
           bottom: 75px;
+          & img {
+            width: 45px;
+            height: 45px;
+          }
         }
       }
       &.secondary {
         height: 198px;
+        & img {
+          width: 25px;
+          height: 25px;
+        }
+        }
+        
       }
       & img {
         margin-top: 10px;
