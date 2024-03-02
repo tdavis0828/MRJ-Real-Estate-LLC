@@ -10,8 +10,8 @@ export const StyledHeader = styled.div`
   justify-content: center;
   align-items: center;
   & img {
-    height: 350px;
-    width: 350px;
+    height: 550px;
+    width: 550px;
   }
   @media (max-width: 320px) {
     & img {
@@ -123,9 +123,10 @@ export const StyledHero = styled.main`
     z-index: 10;
     margin-top: 100px;
     & img {
-      width: 800px;
-      height: 250px;
+      width: 600px;
+      height: 350px;
       border-radius: 5px;
+      background: #181818;
     }
     & p {
       letter-spacing: 5px;
@@ -1367,11 +1368,22 @@ export const StyledCurrentListings = styled.main`
   font-family: 'Roboto';
   & .open-page {
     width: 100%;
-    height: 25px;
+    height: 75px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-top: 1px solid #000;
+    & .filter-btn {
+      padding: 0.5rem 1rem;
+      margin: 0 1rem;
+      background: #fff;
+      border: 1px solid #181818;
+      border-radius: 5px;
+      &.active {
+        background: #65b741;
+        border: 1px solid #114232;
+      }
+    }
     & img {
       height: 25px;
       width: 25px;
@@ -1395,8 +1407,8 @@ export const StyledCurrentListings = styled.main`
       display: none;
     }
     & .listing {
-      width: 400px;
-      height: 215px;
+      width: 350px;
+      height: 275px;
       display: flex;
       flex-direction: column;
       margin: 1rem auto;

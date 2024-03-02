@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import logo from '../images/logo2-light.png';
 import { Link } from 'react-router-dom';
 import { StyledHero } from '../styles/Stylesheet';
 import { motion } from 'framer-motion';
-import newLogo from '../images/logo-new (1).jpg';
 
 const Hero = () => {
   const [divScroll, setDivScroll] = useState();
@@ -19,7 +19,7 @@ const Hero = () => {
         transition={{ duration: 0.3 }}
         className="text-content"
       >
-        <img src={newLogo} className="hero-image" alt="hero-logo" />
+        <img src={logo} className="hero-image" alt="hero-logo" />
         <div className="hero-buttons-container">
           <Link to="contact" className="hero-btns">
             Contact Realtor

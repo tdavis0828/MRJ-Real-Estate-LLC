@@ -1,11 +1,11 @@
-import React from "react";
-import { StyledHeader } from "../styles/Stylesheet";
-import logo from "../images/logo2-dark.png";
+import React from 'react';
+import { StyledHeader } from '../styles/Stylesheet';
+import logoV2 from '../images/logoV2.png';
 
 function Header() {
   return (
     <StyledHeader>
-      <img src={logo} alt="company logo" />
+      <img src={logoV2} alt="company logo" />
     </StyledHeader>
   );
 }
