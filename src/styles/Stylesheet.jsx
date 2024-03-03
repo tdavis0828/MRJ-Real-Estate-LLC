@@ -1402,9 +1402,18 @@ export const StyledCurrentListings = styled.main`
     justify-content: center;
     align-items: center;
     border-top: 1px solid #000;
+    & img {
+      height: 25px;
+      width: 25px;
+      cursor: pointer;
+      margin: 1rem;
+    }
+  }
+  & .button-container {
+    align-items: center;
     & .filter-btn {
       padding: 0.5rem 1rem;
-      margin: 0 1rem;
+      margin: 5px 1rem;
       background: #fff;
       border: 1px solid #181818;
       border-radius: 5px;
@@ -1412,12 +1421,6 @@ export const StyledCurrentListings = styled.main`
         background: #65b741;
         border: 1px solid #114232;
       }
-    }
-    & img {
-      height: 25px;
-      width: 25px;
-      cursor: pointer;
-      margin: 1rem;
     }
   }
   & .map-container {
@@ -1541,15 +1544,27 @@ export const StyledCurrentListings = styled.main`
     }
   }
   @media (max-width: 425px) {
+    & .button-container {
+      & .filter-btn {
+        padding: 0.25rem 0.5rem;
+        margin: 5px 0.5rem;
+      }
+    }
     & .list {
       grid-template-columns: repeat(1, 1fr);
       & .listing {
         width: 95%;
-        height: 225px;
+        height: 250px;
       }
     }
   }
   @media (max-width: 375px) {
+    & .button-container {
+      & .filter-btn {
+        padding: 0.2rem 0.45rem;
+        margin: 5px 0.15rem;
+      }
+    }
     & .list {
       & .listing {
         & .listing-info {
@@ -1565,6 +1580,12 @@ export const StyledCurrentListings = styled.main`
     }
   }
   @media (max-width: 320px) {
+    & .button-container {
+      & .filter-btn {
+        padding: 0.2rem 0.2rem;
+        margin: 5px 0.1rem;
+      }
+    }
     & .list {
       & .listing {
         & .listing-info {

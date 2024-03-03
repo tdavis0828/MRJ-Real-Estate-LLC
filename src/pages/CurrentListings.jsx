@@ -63,7 +63,7 @@ function CurrentListings() {
     });
 
     // Removes any listings without images
-    // (UPDATED) New request url should remove these by default
+    // (UPDATED//REDUNDANCY) Request url should remove these by default
     data.results.forEach((res, i) => {
       if (res.imgSrc.includes('googleapis')) {
         data.results.splice(i, 1);
@@ -82,22 +82,6 @@ function CurrentListings() {
     data2.results.forEach((res) => {
       res.price = formatNumber(res.price);
     });
-
-    // Removes any listings with a price of 0
-    // (UPDATED) New request url should remove these by default
-    // data.results.forEach((res, i) => {
-    //   if (res.price === 0) {
-    //     data.results.splice(i, 1);
-    //   }
-    // });
-
-    // Removes any listings that are plotes of land with no houses
-    // (UPDATED) New request url should remove these by default
-    // data.results.forEach((res, i) => {
-    //   if (res.homeType === 'LOT') {
-    //     data.results.splice(i, 1);
-    //   }
-    // });
 
     setHomes([...data.results, ...data2.results]);
   }
@@ -183,6 +167,15 @@ function CurrentListings() {
             })}
       </GoogleMap>
       <div className="open-page">
+        <img
+          src={!isPageOpen ? upArrow : downArrow}
+          alt="upwards arrow"
+          onClick={() => {
+            !isPageOpen ? setIsPageOpen(true) : setIsPageOpen(false);
+          }}
+        />
+      </div>
+      <div className="button-container">
         <button
           className={delano ? 'filter-btn active' : 'filter-btn'}
           onClick={() => {
@@ -207,13 +200,7 @@ function CurrentListings() {
         >
           Shafter
         </button>
-        <img
-          src={!isPageOpen ? upArrow : downArrow}
-          alt="upwards arrow"
-          onClick={() => {
-            !isPageOpen ? setIsPageOpen(true) : setIsPageOpen(false);
-          }}
-        />
+
         <button
           className={bakersfield ? 'filter-btn active' : 'filter-btn'}
           onClick={() => {
