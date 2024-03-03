@@ -12,6 +12,7 @@ export const StyledHeader = styled.div`
   & img {
     height: 550px;
     width: 550px;
+    overflow: hidden;
   }
   @media (max-width: 320px) {
     & img {
@@ -1708,30 +1709,29 @@ export const StyledFooter = styled.footer`
           width: 25px;
           height: 25px;
         }
-        }
-        
-      }
-      & img {
-        margin-top: 10px;
-        height: 45px;
-        width: 45px;
-        &.mrjLogo {
-          width: 175px;
-          height: 60px;
-        }
       }
     }
-    &.privacy-policy {
-      height: 198px;
-      text-align: center;
-      border-left: 1px solid rgba(255, 255, 255, 0.35);
-      & p:nth-child(2) {
-        padding: 0.5rem 2rem;
-        font-size: 0.85rem;
-        line-height: 1.2rem;
+    & img {
+      margin-top: 10px;
+      height: 45px;
+      width: 45px;
+      &.mrjLogo {
+        width: 175px;
+        height: 60px;
       }
     }
   }
+  & .privacy-policy {
+    height: 198px;
+    text-align: center;
+    border-left: 1px solid rgba(255, 255, 255, 0.35);
+    & p:nth-child(2) {
+      padding: 0.5rem 2rem;
+      font-size: 0.85rem;
+      line-height: 1.2rem;
+    }
+  }
+
   & .copyright {
     position: absolute;
     bottom: 5px;
@@ -1749,7 +1749,6 @@ export const StyledFooter = styled.footer`
     & .privacy-policy {
       & p:nth-child(2) {
         font-size: 0.5rem;
-        line-height: 0px;
       }
     }
   }
