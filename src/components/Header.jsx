@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyledHeader } from '../styles/Stylesheet';
-import logoV2 from '../images/logoV2.png';
+import logoV2 from '../images/mrjLogo.png';
 
 function Header() {
   return (

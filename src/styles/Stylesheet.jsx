@@ -10,15 +10,7 @@ export const StyledHeader = styled.div`
   justify-content: center;
   align-items: center;
   & img {
-    height: 550px;
-    width: 550px;
     overflow: hidden;
-  }
-  @media (max-width: 320px) {
-    & img {
-      height: 320px;
-      width: 320px;
-    }
   }
 `;
 
@@ -126,7 +118,7 @@ export const StyledHero = styled.main`
     margin-top: 100px;
     & img {
       width: 600px;
-      height: 350px;
+      height: 375px;
       border-radius: 5px;
       background: #181818;
     }
@@ -177,14 +169,8 @@ export const StyledHero = styled.main`
   @media (max-width: 1024px) {
     & .text-content {
       & img {
-        width: 900px;
-      }
-    }
-  }
-  @media (max-width: 768px) {
-    & .text-content {
-      & img {
-        width: 650px;
+        width: 600px;
+        height: 375px;
       }
     }
   }
@@ -195,7 +181,7 @@ export const StyledHero = styled.main`
       }
       & img {
         width: 400px;
-        height: 350px;
+        height: 250px;
       }
     }
     & .hero-buttons-container {
@@ -206,7 +192,7 @@ export const StyledHero = styled.main`
     & .text-content {
       & img {
         width: 365px;
-        height: 155px;
+        height: 250px;
       }
     }
   }
@@ -214,7 +200,7 @@ export const StyledHero = styled.main`
     & .text-content {
       & img {
         width: 310px;
-        height: 125px;
+        height: 225px;
       }
     }
   }
@@ -1763,9 +1749,18 @@ export const StyledFooter = styled.footer`
       color: #fff;
     }
   }
-
+  @media (max-width: 1440px) {
+    font-size: 0.75rem;
+    & .realtor-info {
+      & p {
+        & img {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+  }
   @media (max-width: 1024px) {
-    font-size: 0.9rem;
     text-align: center;
     & .privacy-policy {
       & p:nth-child(2) {

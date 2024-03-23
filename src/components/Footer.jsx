@@ -1,10 +1,10 @@
-import React from "react";
-import { StyledFooter } from "../styles/Stylesheet";
-import homeIcon from "../images/home-light.png";
-import locationIcon from "../images/location-light.png";
-import phoneIcon from "../images/telephone-light.png";
-import emailIcon from "../images/email-light.png";
-import logo from "../images/logo2-light.png";
+import React from 'react';
+import { StyledFooter } from '../styles/Stylesheet';
+import homeIcon from '../images/home-light.png';
+import locationIcon from '../images/location-light.png';
+import phoneIcon from '../images/telephone-light.png';
+import emailIcon from '../images/email-light.png';
+import logo from '../images/logo2-light.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -67,14 +67,14 @@ const Footer = () => {
         </p>
       </div>
       <p className="copyright">
-        Created by{" "}
+        Created by{' '}
         <a
           href="https://tdavis0828.github.io/portfoliov3/"
           target="_blank"
           rel="noreferrer"
         >
           Davis Digital Designs
-        </a>{" "}
+        </a>{' '}
         Copyright © {currentYear}
       </p>
     </StyledFooter>
